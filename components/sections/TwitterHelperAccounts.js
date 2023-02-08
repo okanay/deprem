@@ -4,7 +4,7 @@ const TwitterHelperAccounts = () => {
   return (
     <div className={'px-4 mt-12'}>
 
-    <div className={"grid grid-cols-2 gap-4"}>
+    <div className={"grid grid-cols-1 gap-4"}>
       {/*  CARD */}
       <div
         className={

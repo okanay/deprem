@@ -33,7 +33,7 @@ const NavigationBar = () => {
 
             <div
               className={
-                "hidden group-hover:block bg-red-400 absolute -bottom-[11.2rem] -right-[10.80rem] py-24 px-80"
+                "hidden group-hover:block bg-neutral-200/50 absolute -bottom-[7.1rem] -right-[1.15rem] py-16 px-48"
               }
             ></div>
           </div>
