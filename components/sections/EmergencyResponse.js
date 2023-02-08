@@ -66,7 +66,7 @@ const EmergencyResponse = () => {
                     }
                   />
                   <span className={"duration-500 group-hover:text-sky-700"}>
-                    Gidaya / İlaca Ihtiyacim Var
+                    Gidaya Ihtiyacim Var
                   </span>
                 </span>
               </Link>

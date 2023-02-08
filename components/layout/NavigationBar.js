@@ -18,6 +18,8 @@ const NavigationBar = () => {
         <div className={"flex justify-between gap-4 pr-5 items-center"}>
           {/*HAMBURGER MENU COME HERE*/}
 
+          <h1 className={"text-4xl mb-2 text-gray-500/80 font-light"}>|</h1>
+
           <div className={"py-4 flex-col flex gap-2 relative group"}>
             <Link href={"/"}>
               <Image
@@ -29,21 +31,12 @@ const NavigationBar = () => {
               />
             </Link>
 
-            <div className={'hidden group-hover:block bg-red-400 absolute -bottom-[11.2rem] -right-[10.80rem] py-24 px-80'}>
-
-            </div>
+            <div
+              className={
+                "hidden group-hover:block bg-red-400 absolute -bottom-[11.2rem] -right-[10.80rem] py-24 px-80"
+              }
+            ></div>
           </div>
-
-          <h1 className={"text-4xl mb-2 text-gray-500/80 font-light"}>|</h1>
-
-          <Link
-            href={"/"}
-            className={
-              "transition-colors duration-[450ms] py-1 px-2 bg-gray-50/80 text-neutral-800/90 hover:bg-gray-800/80 hover:text-gray-50/90 border border-slate-800/25 border-opacity-20 shadow shadow-slate-800/25 rounded-lg text-2xl font-semibold"
-            }
-          >
-            PAYLAS
-          </Link>
         </div>
       </div>
     </div>

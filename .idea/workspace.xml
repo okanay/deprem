@@ -5,35 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/costumHooks/useDynamicClass.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layout/NavigationBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layout/colorPalet.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layout/footer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layout/layout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layout/layoutData/pagesData.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layout/mobileNavBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layout/navBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sections/TwitterHelperAccounts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sections/mainSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/sections/secondSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/about.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/bus-driver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/construction-worker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/earthquake.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/foods.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/hamburgermenu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/help.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/house.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/warm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/counter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/hello.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/hello.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/NavigationBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +76,7 @@
       <workItem from="1675254569656" duration="183000" />
       <workItem from="1675254860996" duration="27239000" />
       <workItem from="1675416945204" duration="11629000" />
-      <workItem from="1675799496492" duration="26808000" />
+      <workItem from="1675799496492" duration="27658000" />
     </task>
     <servers />
   </component>
