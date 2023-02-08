@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/costumHooks/useDynamicClass.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/NavigationBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/colorPalet.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/layout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/layoutData/pagesData.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/mobileNavBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/navBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/TwitterHelperAccounts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/mainSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/sections/secondSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/about.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bus-driver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/construction-worker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/earthquake.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/foods.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hamburgermenu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/house.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/warm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/counter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/hello.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/hello.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KpD2mLEd8xqfHGFmEpz5YaiXUk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.16.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/okan/Desktop/project-cv-02/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/okan/Desktop/project-cv-02/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/okan/Desktop/project-cv-02/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/app" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="" />
+      <created>1674662427286</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674662427286</updated>
+      <workItem from="1674662430203" duration="39434000" />
+      <workItem from="1674860948703" duration="11334000" />
+      <workItem from="1675143358665" duration="5359000" />
+      <workItem from="1675254569656" duration="183000" />
+      <workItem from="1675254860996" duration="27239000" />
+      <workItem from="1675416945204" duration="11629000" />
+      <workItem from="1675799496492" duration="26808000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
