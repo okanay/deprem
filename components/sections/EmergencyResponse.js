@@ -118,7 +118,7 @@ const EmergencyResponse = () => {
                           "w-8 h-8 duration-300 group-hover:animate-pulse inline mr-4"
                         }
                       />
-                      <span className={"duration-500 group-hover:text-sky-700"}>
+                      <span className={"duration-500 group-hover:text-lime-700"}>
                         {item.description}
                       </span>
                     </span>
