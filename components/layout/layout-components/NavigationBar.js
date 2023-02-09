@@ -1,9 +1,9 @@
 
 import React, { useState } from "react";
 import FormsMenues from "./formsMenues";
-import Diveded from "../UI/diveded";
-import Logo from "../UI/Logo";
-import HamburgerMenuIcon from "../UI/HamburgerMenuIcon";
+import Diveded from "../../UI/diveded";
+import Logo from "../../UI/Logo";
+import HamburgerMenuIcon from "../../UI/HamburgerMenuIcon";
 
 const NavigationBar = () => {
   // React Hooks = React Hooks Functions
@@ -26,7 +26,7 @@ const NavigationBar = () => {
           />
         </div>
       </div>
-      <FormsMenues hamburgerState={hamburgerState} hamburger={hamburger} />
+      <FormsMenues hamburger={hamburger} />
     </div>
   );
 };

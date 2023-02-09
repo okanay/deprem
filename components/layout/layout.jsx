@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import NavigationBar from "./NavigationBar";
-import Footer from "./footer";
+import NavigationBar from "./layout-components/NavigationBar";
+import Footer from "./layout-components/footer";
 import Head from "next/head";
 import { AnimatePresence, motion as m } from "framer-motion";
 

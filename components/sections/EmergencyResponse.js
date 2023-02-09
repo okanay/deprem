@@ -8,19 +8,22 @@ const EmergencyResponse = () => {
     {
       key: "YA0",
       url: "/",
-      src: "/help.png",
+      src: "/menuIcons/help.png",
+      alt : "help",
       description: "Ben / Tanidigim Enkazda",
     },
     {
       key: "YA1",
       url: "/",
-      src: "/foods.png",
+      src: "/menuIcons/foods.png",
+      alt : "help",
       description: "Gidaya Ihtiyacim Var",
     },
     {
       key: "YA2",
       url: "/",
-      src: "/warm.png",
+      src: "/menuIcons/warm.png",
+      alt : "help",
       description: "Isinmaya Ihtiyacim Var",
     },
   ];
@@ -29,19 +32,22 @@ const EmergencyResponse = () => {
     {
       key: "YV0",
       url: "/",
-      src: "/house.png",
+      src: "/menuIcons/house.png",
+      alt : "share-house",
       description: "Konaklama Saglayabilirim",
     },
     {
       key: "YV1",
       url: "/",
-      src: "/construction-worker.png",
+      src: "/menuIcons/construction-worker.png",
+      alt : "construction-worker",
       description: "İş Makinesi Kullanabilirim",
     },
     {
       key: "YV2",
       url: "/",
-      src: "/bus-driver.png",
+      src: "/menuIcons/bus-driver.png",
+      alt : "bus-driver",
       description: "Yolcu Taşıyabilirim",
     },
   ];
@@ -51,8 +57,8 @@ const EmergencyResponse = () => {
       <div className={"bg-gray-50/80 pt-12 px-4 pb-8"}>
         <div className={"grid grid-rows-2 gap-12"}>
           <div>
-            <h1 className={"text-3xl font-semibold text-neutral-700 text-start mb-5"}>
-              Yardim <span className={"text-sky-800/75"}>Al</span>
+            <h1 className={"text-[1.75rem] font-semibold text-neutral-700 text-start mb-5"}>
+              Yardim <span className={"text-sky-800/75"}>İste</span>
             </h1>
 
             {YardimAl.map((item) => {
@@ -74,7 +80,7 @@ const EmergencyResponse = () => {
                         src={item.src}
                         width={"200"}
                         height={"200"}
-                        alt={"help"}
+                        alt={item.alt}
                         className={
                           "w-8 h-8 duration-300 group-hover:animate-pulse inline mr-4"
                         }
@@ -90,8 +96,8 @@ const EmergencyResponse = () => {
           </div>
           <div>
 
-            <h1 className={"text-3xl font-semibold text-neutral-700 text-start mb-5"}>
-              Yardim <span className={"text-lime-800/75"}>Gönder</span>
+            <h1 className={"text-[1.75rem] font-semibold text-neutral-700 text-start mb-5"}>
+              Destek <span className={"text-lime-800/75"}>Olustur</span>
             </h1>
 
             {YardimVer.map((item) => {
@@ -113,7 +119,7 @@ const EmergencyResponse = () => {
                         src={item.src}
                         width={"200"}
                         height={"200"}
-                        alt={"share my house"}
+                        alt={item.alt}
                         className={
                           "w-8 h-8 duration-300 group-hover:animate-pulse inline mr-4"
                         }
