@@ -4,8 +4,20 @@ import { AnimatePresence, motion as m } from "framer-motion";
 import { useState } from "react";
 
 const NavigationBar = () => {
+
+  const [hamburger, setHamburger] = useState('hidden')
+  const [hamburgerImage, setHamburgerImage] = useState('/hamburgermenu.png')
+  const hamburgerState = () => {
+    return setHamburger((prevState) => { return prevState === "hidden" ? "block" : "hidden"});
+  }
+
+  const hamburgerMenu = {
+    hidden : { y : -450, opacity : 0, transition : {duration : 0.5, type : 'bounce'} },
+    open : { y : 0, opacity : 1, transition : {duration : 0.5, type : 'bounce'} }
+  }
+
   return (
-    <div className={"pb-8 "}>
+    <div className={"pb-8"}>
       <div className={"flex justify-between items-center"}>
         <Link
           href={"/"}
@@ -20,8 +32,8 @@ const NavigationBar = () => {
 
           <h1 className={"text-4xl mb-2 text-gray-500/80 font-light"}>|</h1>
 
-          <div className={"py-4 flex-col flex gap-2 relative group"}>
-            <Link href={"/"}>
+          <div className={"py-4 flex-col flex gap-2"}>
+            <Link href={"/"} onClick={hamburgerState}>
               <Image
                 src={"/hamburgermenu.png"}
                 width={"200"}
@@ -30,15 +42,18 @@ const NavigationBar = () => {
                 alt={"hamburgermenu"}
               />
             </Link>
-
-            <div
-              className={
-                "hidden group-hover:block bg-neutral-200/50 absolute -bottom-[7.1rem] -right-[1.15rem] py-16 px-48"
-              }
-            ></div>
           </div>
         </div>
       </div>
+      <m.div
+
+        variants={hamburgerMenu}
+        initial = 'hidden'
+        animate={hamburger === 'hidden' ? 'hidden' : 'open'}
+        className={
+          `absolute top-[6rem] bg-slate-300/90 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full h-40 mx-auto`
+        }
+      ></m.div>
     </div>
   );
 };

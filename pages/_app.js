@@ -5,7 +5,7 @@ import store from "../src/app/store";
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <div className={"my-12"}>
+      <div className={""}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
