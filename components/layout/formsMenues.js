@@ -7,6 +7,12 @@ const FormsMenues = ({hamburger, hamburgerState}) =>
 {
 
   const hamburgerMenu = {
+    initial: {
+      opacity: 0.8,
+      scaleY: 0,
+      y: -87,
+      transition: { duration: 0 },
+    },
     hidden: {
       opacity: 0.8,
       scaleY: 0,
@@ -25,9 +31,9 @@ const FormsMenues = ({hamburger, hamburgerState}) =>
   return (
     <m.div
       variants={hamburgerMenu}
-      initial = 'hidden'
+      initial = 'initial'
       animate={hamburger === "hidden" ? "hidden" : "open"}
-      className={`absolute top-[6rem] bg-gradient-to-tl from-gray-100 via-slate-50 to-gray-100 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full h-44 mx-auto border border-gray-200/90 text-center`}
+      className={`hidden absolute top-[6rem] bg-gradient-to-tl from-gray-100 via-slate-50 to-gray-100 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full h-44 mx-auto border border-gray-200/90 text-center`}
     >
       <div className={"flex flex-row justify-around pt-[1.2rem]"}>
         <div>

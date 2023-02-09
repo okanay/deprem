@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/UI/HamburgerMenuIcon.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UI/Logo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UI/diveded.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layout/formsMenues.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/NavigationBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/formsMenues.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/formsMenues.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +77,7 @@
       <workItem from="1675254860996" duration="27239000" />
       <workItem from="1675416945204" duration="11629000" />
       <workItem from="1675799496492" duration="36907000" />
-      <workItem from="1675952209564" duration="6945000" />
+      <workItem from="1675952209564" duration="7213000" />
     </task>
     <servers />
   </component>
