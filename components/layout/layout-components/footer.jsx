@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 gap-8 phoneXS:gap-6">
           <div>
             <h2 className="mb-4 text-[0.80rem] phoneLG:text-sm font-semibold text-gray-900 uppercase">
-              OLUSUMLAR
+              OLUŞUMLAR
             </h2>
             <ul className="text-gray-600 text-[0.80rem] phoneLG:text-sm">
               <li className="mb-4">
@@ -46,7 +46,7 @@ const Footer = () => {
       <hr className="my-6 border-gray-200 mx-auto" />
       <div className="sm:flex sm:items-center sm:justify-between">
         <span className="text-[0.70rem] phone:text-[0.85rem] phoneLG:text-sm text-gray-500 text-center">
-          Okan Ay tarafindan gelistirilmektedir || <span className={'text-emerald-600'}>Version - 0.1</span>
+          Okan Ay tarafindan gelistirilmektedir <span className={'font-semibold'}>||</span> <span className={'text-sky-500 font-semibold'}>Version - 0.2</span>
         </span>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <Link

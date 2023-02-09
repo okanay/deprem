@@ -87,7 +87,7 @@ const FormsMenues = ({ hamburger }) => {
                 <Link
                   href={item.url}
                   className={
-                    "hover:text-red-400 hover:font-light hover:underline hover:underline-offset-[3px]"
+                    "hover:text-red-700 hover:font-light hover:underline hover:underline-offset-[3px]"
                   }
                   key={item.key}
                 >
@@ -119,7 +119,7 @@ const FormsMenues = ({ hamburger }) => {
                 <Link
                   href={item.url}
                   className={
-                    "hover:text-sky-400 hover:font-light hover:underline hover:underline-offset-[3px]"
+                    "hover:text-sky-700 hover:font-light hover:underline hover:underline-offset-[3px]"
                   }
                   key={item.key}
                 >

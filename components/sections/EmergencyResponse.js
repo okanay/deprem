@@ -10,21 +10,21 @@ const EmergencyResponse = () => {
       url: "/",
       src: "/menuIcons/help.png",
       alt : "help",
-      description: "Ben / Tanidigim Enkazda",
+      description: "Ben / Tanıdığım Enkazda",
     },
     {
       key: "YA1",
       url: "/",
       src: "/menuIcons/foods.png",
       alt : "help",
-      description: "Gidaya Ihtiyacim Var",
+      description: "Gıdaya Ihtiyacım Var",
     },
     {
       key: "YA2",
       url: "/",
       src: "/menuIcons/warm.png",
       alt : "help",
-      description: "Isinmaya Ihtiyacim Var",
+      description: "Isınmaya Ihtiyacım Var",
     },
   ];
 
@@ -34,7 +34,7 @@ const EmergencyResponse = () => {
       url: "/",
       src: "/menuIcons/house.png",
       alt : "share-house",
-      description: "Konaklama Saglayabilirim",
+      description: "Konaklama Sağlayabilirim",
     },
     {
       key: "YV1",
@@ -54,11 +54,11 @@ const EmergencyResponse = () => {
 
   return (
     <>
-      <div className={"bg-gray-50/80 pt-12 px-4 pb-8"}>
+      <div className={"bg-gray-50/80 pt-5 px-4 pb-8"}>
         <div className={"grid grid-rows-2 gap-12"}>
           <div>
-            <h1 className={"text-[1.75rem] font-semibold text-neutral-700 text-start mb-5"}>
-              <span className={"text-red-800/70"}>Yardim</span> Olustur
+            <h1 className={"text-[1.4rem] font-semibold text-neutral-700 text-start mb-5"}>
+              <span className={"text-slate-600/90 "}>Yardım</span> <span className={'font-light font-serif'}>Oluştur</span>
             </h1>
 
             {YardimAl.map((item) => {
@@ -66,7 +66,7 @@ const EmergencyResponse = () => {
                 <div
                   key={item.key}
                   className={
-                    "mx-3 py-4 rounded-2xl shadow-md shadow-red-800/10 mb-3"
+                    "mx-3 py-4 rounded-2xl shadow-md shadow-pink-900/10 mb-3"
                   }
                 >
                   <Link
@@ -96,8 +96,8 @@ const EmergencyResponse = () => {
           </div>
           <div>
 
-            <h1 className={"text-[1.75rem] font-semibold text-neutral-700 text-start mb-5"}>
-              <span className={"text-sky-800/70"}>Destek</span> Olustur
+            <h1 className={"text-[1.4rem] font-semibold text-neutral-700 text-start mb-5"}>
+              <span className={"text-slate-600/90"}>Destek</span> <span className={'font-light font-serif'}>Oluştur</span>
             </h1>
 
             {YardimVer.map((item) => {
@@ -105,7 +105,7 @@ const EmergencyResponse = () => {
                 <div
                   key={item.key}
                   className={
-                    "mx-3 py-4 rounded-2xl shadow-md shadow-sky-800/10 mb-3"
+                    "mx-3 py-4 rounded-2xl shadow-md shadow-sky-900/10 mb-3"
                   }
                 >
                   <Link

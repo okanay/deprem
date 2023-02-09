@@ -73,7 +73,7 @@ const TwitterHelperAccounts = () => {
                   <div className="flex mt-4 space-x-3 md:mt-6">
                     <Link
                       href={item.sendMessageUrl}
-                      className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg"
+                      className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white hover:bg-gray-500 hover:text-white border border-gray-300 rounded-lg"
                     >
                       Mesaj Gönder
                     </Link>

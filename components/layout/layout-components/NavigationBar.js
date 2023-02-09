@@ -15,7 +15,7 @@ const NavigationBar = () => {
   };
 
   return (
-    <div className={"pb-8"}>
+    <div className={"py-6"}>
       <div className={"flex justify-between items-center"}>
         <Logo />
         <div className={"flex justify-between gap-4 pr-5 items-center"}>
