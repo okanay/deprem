@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="">
         <div className="grid grid-cols-2 gap-8 phoneXS:gap-6">
           <div>
-            <h2 className="mb-6 text-[0.80rem] phoneLG:text-sm font-semibold text-gray-900 uppercase">
+            <h2 className="mb-4 text-[0.80rem] phoneLG:text-sm font-semibold text-gray-900 uppercase">
               OLUSUMLAR
             </h2>
             <ul className="text-gray-600 text-[0.80rem] phoneLG:text-sm">
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h2 className="mb-6 text-[0.80rem] phoneLG:text-sm font-semibold text-gray-900 uppercase">
+            <h2 className="mb-4 text-[0.80rem] phoneLG:text-sm font-semibold text-gray-900 uppercase">
               Şartlar ve Koşullar
             </h2>
             <ul className="text-gray-600 text-[0.80rem] phoneLG:text-sm">
@@ -36,7 +36,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="components/layout#" className="hover:underline">
-                  Ben Kimim?
+                  Ben Kimim
                 </Link>
               </li>
             </ul>

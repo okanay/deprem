@@ -40,15 +40,15 @@ const TwitterHelperAccounts = () => {
         <h1
           className={"text-lg font-semibold text-neutral-700 text-start my-5"}
         >
-          <span className={"text-blue-800/75"}>Twitter</span> Hesaplari
+          <span className={"text-slate-50 bg-blue-400/90 p-2 rounded-lg"}>Twitter</span> <span className={'font-serif font-light'}>Hesaplari</span>
         </h1>
         <Link
           href={"/"}
           className={
-            "py-3 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-blue-800/75 shadow shadow-blue-800/75 uppercase font-bold text-sm"
+            "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-blue-400/90 shadow shadow-blue-400/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-blue-400/90 hover:text-slate-50"
           }
         >
-          Hesaplar
+          TAM-LISTE
         </Link>
       </div>
 
