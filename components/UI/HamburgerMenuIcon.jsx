@@ -28,7 +28,7 @@ const HamburgerMenuIcon = ({hamburger, hamburgerState}) => {
     >
       <Link href={"/"} onClick={hamburgerState}>
         <Image
-          src={"/hamburgermenu.png"}
+          src={"/menuIcons/hamburgermenu.png"}
           width={"200"}
           height={"200"}
           className={"w-9 h-9 hover:bg-neutral-50 group"}
