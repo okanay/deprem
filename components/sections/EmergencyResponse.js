@@ -24,7 +24,7 @@ const EmergencyResponse = () => {
               <Link
                 href={"/"}
                 className={
-                  "group px-4 text-xl font-semibold space-x-4 text-slate-600"
+                  "group px-4 font-semibold space-x-4 text-slate-600 text-[0.95rem] phone:text-lg"
                 }
               >
                 <span>
@@ -52,7 +52,7 @@ const EmergencyResponse = () => {
               <Link
                 href={"/"}
                 className={
-                  "group px-4 text-xl font-semibold space-x-4 text-slate-600"
+                  "group px-4 font-semibold space-x-4 text-slate-600 text-slate-600 text-[0.95rem] phone:text-lg"
                 }
               >
                 <span>
@@ -80,7 +80,7 @@ const EmergencyResponse = () => {
               <Link
                 href={"/"}
                 className={
-                  "group px-4 text-xl font-semibold space-x-4 text-slate-600"
+                  "group px-4 font-semibold space-x-4 text-slate-600 text-slate-600 text-[0.95rem] phone:text-lg"
                 }
               >
                 <span>
@@ -118,7 +118,7 @@ const EmergencyResponse = () => {
               <Link
                 href={"/"}
                 className={
-                  "group px-4 text-xl font-semibold space-x-4 text-slate-600"
+                  "group px-4 font-semibold space-x-4 text-slate-600 text-slate-600 text-[0.95rem] phone:text-lg"
                 }
               >
                 <span>
@@ -146,7 +146,7 @@ const EmergencyResponse = () => {
               <Link
                 href={"/"}
                 className={
-                  "group px-4 text-xl font-semibold space-x-4 text-slate-600"
+                  "group px-4 font-semibold space-x-4 text-slate-600 text-slate-600 text-[0.95rem] phone:text-lg"
                 }
               >
                 <span>
@@ -174,7 +174,7 @@ const EmergencyResponse = () => {
               <Link
                 href={"/"}
                 className={
-                  "group px-4 text-xl font-semibold space-x-4 text-slate-600"
+                  "group px-4 font-semibold space-x-4 text-slate-600 text-slate-600 text-[0.95rem] phone:text-lg"
                 }
               >
                 <span>
