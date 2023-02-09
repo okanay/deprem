@@ -6,38 +6,50 @@ const TwitterHelperAccounts = () => {
   const TwitterAccounts = [
     {
       key: "TA0",
-      profilePhoto : "TwitterAccounts/teyfiksikret.jpg",
+      profilePhoto: "TwitterAccounts/teyfiksikret.jpg",
       profileUrl: "/",
       sendMessageUrl: "/house.png",
       name: "Teyfik Sikret",
-      follower : '305.619'
+      follower: "305.619",
     },
     {
       key: "TA0",
-      profilePhoto : "TwitterAccounts/player2.jpg",
+      profilePhoto: "TwitterAccounts/player2.jpg",
       profileUrl: "/",
       sendMessageUrl: "/warm.png",
       name: "Player 2",
-      follower : '50.439'
+      follower: "50.439",
     },
     {
       key: "TA0",
-      profilePhoto : "TwitterAccounts/sunguralpesat.jpg",
+      profilePhoto: "TwitterAccounts/sunguralpesat.jpg",
       profileUrl: "/",
       sendMessageUrl: "/warm.png",
       name: "Sunguralp Esat",
-      follower : '83.821'
+      follower: "83.821",
     },
   ];
 
   return (
-    <div className={"max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto text-center pt-4"}>
-
-      <div className={'flex flex-row justify-between items-center px-4'}>
-        <h1 className={"text-lg font-semibold text-neutral-700 text-start my-5"}>
+    <div
+      className={
+        "max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto text-center pt-4"
+      }
+    >
+      <div className={"flex flex-row justify-between items-center px-4"}>
+        <h1
+          className={"text-lg font-semibold text-neutral-700 text-start my-5"}
+        >
           <span className={"text-blue-800/75"}>Twitter</span> Hesaplari
         </h1>
-        <Link href={'/'} className={'py-3 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-blue-800/75 shadow shadow-blue-800/75 uppercase font-bold text-sm'} >Hesaplar</Link>
+        <Link
+          href={"/"}
+          className={
+            "py-3 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-blue-800/75 shadow shadow-blue-800/75 uppercase font-bold text-sm"
+          }
+        >
+          Hesaplar
+        </Link>
       </div>
 
       <Carousel interval={8000} renderDots={() => {}}>
@@ -74,7 +86,6 @@ const TwitterHelperAccounts = () => {
       </Carousel>
 
       <div></div>
-
     </div>
   );
 };

@@ -39,7 +39,7 @@ const FormsMenues = ({hamburger, hamburgerState}) =>
         <div>
           <h1
             className={
-              "text-sm font-bold text-red-400 bg-slate-200 px-2 py-1 rounded-md shadow-md shadow-red-800/30"
+              "text-sm font-bold text-slate-700 bg-slate-200 px-2 py-1 rounded-md shadow-md shadow-sky-900/10"
             }
           >
             Ihtiyac Formlari
@@ -84,7 +84,7 @@ const FormsMenues = ({hamburger, hamburgerState}) =>
         <div>
           <h1
             className={
-              "text-sm font-bold text-sky-400 bg-slate-200 px-2 py-1 rounded-md shadow-md shadow-sky-800/30"
+              "text-sm font-bold text-slate-700 bg-slate-200 px-2 py-1 rounded-md shadow-md shadow-sky-900/10"
             }
           >
             Yardim Formlari
