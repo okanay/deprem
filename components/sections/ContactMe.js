@@ -45,7 +45,7 @@ const ContactMe = () => {
           <label htmlFor={'message'} className={'absolute left-0 -top-1.5 text-gray-400 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-3 transition-all duration-150 pointer-events-none'}>Dusuncelerinizi yazabilirsiniz..</label>
         </div>
           <div className={'flex flex-col-4 justify-end items-end'}>
-            <button type={"submit"} className={'py-2 px-6 bg-blue-400 border border-gray-400/20 rounded-md text-center text-slate-50'}>Gönder</button>
+            <button type={"submit"} className={'py-2 px-6 bg-blue-400 border border-gray-400/20 rounded-md text-center text-slate-50 transition duration-300 hover:text-slate-50 hover:bg-slate-500'}>Gönder</button>
           </div>
       </form>
     </div>

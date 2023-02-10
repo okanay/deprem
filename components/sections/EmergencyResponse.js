@@ -10,21 +10,21 @@ const EmergencyResponse = () => {
       url: "/",
       src: "/menuIcons/help.png",
       alt : "help",
-      description: "Ben / Tanıdığım Enkazda",
+      description: "Enkaz Formu Oluştur",
     },
     {
       key: "YA1",
       url: "/",
       src: "/menuIcons/foods.png",
       alt : "help",
-      description: "Gıdaya Ihtiyacım Var",
+      description: "Gıda Formu Oluştur",
     },
     {
       key: "YA2",
       url: "/",
       src: "/menuIcons/warm.png",
       alt : "help",
-      description: "Isınmaya Ihtiyacım Var",
+      description: "Barınma Formu Oluştur",
     },
   ];
 
@@ -34,21 +34,21 @@ const EmergencyResponse = () => {
       url: "/",
       src: "/menuIcons/house.png",
       alt : "share-house",
-      description: "Konaklama Sağlayabilirim",
+      description: "Konaklama Teklif Et",
     },
     {
       key: "YV1",
       url: "/",
       src: "/menuIcons/construction-worker.png",
       alt : "construction-worker",
-      description: "İş Makinesi Kullanabilirim",
+      description: "Operasyonlarda Bulunabılırım",
     },
     {
       key: "YV2",
       url: "/",
       src: "/menuIcons/bus-driver.png",
       alt : "bus-driver",
-      description: "Yolcu Taşıyabilirim",
+      description: "Nakliye ve Taşıma Yapabilirim",
     },
   ];
 
