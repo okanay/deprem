@@ -26,7 +26,7 @@ const HamburgerMenuIcon = ({hamburger, hamburgerState}) => {
       variants={menuAnimation}
       animate={hamburger === "hidden" ? "open" : "close"}
     >
-      <Link href={"/"} onClick={hamburgerState}>
+      <div onClick={hamburgerState}>
         <Image
           src={"/menuIcons/hamburgermenu.png"}
           width={"200"}
@@ -34,7 +34,7 @@ const HamburgerMenuIcon = ({hamburger, hamburgerState}) => {
           className={"w-9 h-9 hover:bg-neutral-50 group"}
           alt={"hamburgermenu"}
         />
-      </Link>
+      </div>
     </m.div>
   )
 }

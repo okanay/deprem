@@ -20,7 +20,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="//" className="hover:underline">
+                <Link href="/" className="hover:underline">
                   Deprem.io
                 </Link>
               </li>
@@ -33,12 +33,12 @@ const Footer = () => {
             </h2>
             <ul className="text-gray-600 text-[0.80rem] phoneLG:text-sm">
               <li className="mb-4">
-                <Link href="components/layout#" className="hover:underline">
+                <Link href="/" className="hover:underline">
                   Gizlilik Politikası
                 </Link>
               </li>
               <li>
-                <Link href="components/layout#" className="hover:underline">
+                <Link href="/" className="hover:underline">
                   Ben Kimim
                 </Link>
               </li>
@@ -53,7 +53,7 @@ const Footer = () => {
         </span>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <Link
-            href="components/layout#"
+            href="/"
             className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
           >
             <svg
@@ -70,8 +70,8 @@ const Footer = () => {
             </svg>
             <span className="sr-only">Facebook page</span>
           </Link>
-          <a
-            href="components/layout#"
+          <Link
+            href="/"
             className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
           >
             <svg
@@ -87,9 +87,9 @@ const Footer = () => {
               />
             </svg>
             <span className="sr-only">Instagram page</span>
-          </a>
+          </Link>
           <Link
-            href="components/layout#"
+            href="/"
             className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
           >
             <svg
@@ -103,7 +103,7 @@ const Footer = () => {
             <span className="sr-only">Twitter page</span>
           </Link>
           <Link
-            href="components/layout#"
+            href="/"
             className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
           >
             <svg
@@ -121,7 +121,7 @@ const Footer = () => {
             <span className="sr-only">GitHub account</span>
           </Link>
           <Link
-            href="components/layout#"
+            href="/"
             className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
           >
             <svg

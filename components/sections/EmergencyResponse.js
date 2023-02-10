@@ -7,21 +7,21 @@ const EmergencyResponse = () => {
   const YardimAl = [
     {
       key: "YA0",
-      url: "/",
+      url: "/form/enkazTalep",
       src: "/menuIcons/help.png",
       alt : "help",
       description: "Enkaz Formu Oluştur",
     },
     {
       key: "YA1",
-      url: "/",
+      url: "/form/gidaTalep",
       src: "/menuIcons/foods.png",
       alt : "help",
       description: "Gıda Formu Oluştur",
     },
     {
       key: "YA2",
-      url: "/",
+      url: "/form/barinmaTalep",
       src: "/menuIcons/warm.png",
       alt : "help",
       description: "Barınma Formu Oluştur",
@@ -41,7 +41,7 @@ const EmergencyResponse = () => {
       url: "/",
       src: "/menuIcons/construction-worker.png",
       alt : "construction-worker",
-      description: "Operasyonlarda Bulunabılırım",
+      description: "Operasyonlarda Bulunabilirim",
     },
     {
       key: "YV2",
@@ -97,7 +97,7 @@ const EmergencyResponse = () => {
           <div>
 
             <h1 className={"text-[1.4rem] font-semibold text-neutral-700 text-start mb-5"}>
-              <span className={"text-slate-600/90"}>Yardım</span> <span className={'font-light font-serif'}>Oluştur</span>
+              <span className={"text-slate-600/90"}>Yardım</span> <span className={'font-light font-serif'}>Oluştur</span> <span className={'text-[0.6rem] text-gray-400 text-light'}>wait until V0-0.5</span>
             </h1>
 
             {YardimVer.map((item) => {
