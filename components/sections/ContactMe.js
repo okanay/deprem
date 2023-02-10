@@ -16,7 +16,7 @@ const ContactMe = () => {
 
       <form className={"flex flex-col gap-4 justify-between"} onSubmit={event => event.preventDefault()}>
         <div className={'relative py-2'}>
-          <input className={"peer focus:outline-none focus:border-blue-400 placeholder:text-transparent w-full h-10 bg-gray-50 border-b-2 border-gray-400"}
+          <input className={"peer focus:outline-none transition duration-300 focus:border-blue-400 placeholder:text-transparent w-full h-10 bg-gray-50 border-b-2 border-gray-400"}
                  type={"text"}
                  placeholder={"Adiniz"}
                  name="name"
@@ -26,7 +26,7 @@ const ContactMe = () => {
         </div>
 
         <div className={'relative py-2'}>
-          <input className={"peer focus:outline-none focus:border-blue-400 placeholder:text-transparent w-full h-10 bg-gray-50 border-b-2 border-gray-400"}
+          <input className={"peer focus:outline-none transition duration-300 focus:border-blue-400 placeholder:text-transparent w-full h-10 bg-gray-50 border-b-2 border-gray-400"}
                  type={"email"}
                  placeholder={"Email Adresiniz"}
                  name="email"
@@ -35,7 +35,7 @@ const ContactMe = () => {
         </div>
 
         <div className={'relative py-2'}>
-          <textarea className={"peer focus:outline-none focus:border-blue-400 placeholder:text-transparent w-full h-32 bg-gray-50 border-b-2 border-gray-400"}
+          <textarea className={"peer focus:outline-none transition duration-300 focus:border-blue-400 placeholder:text-transparent w-full h-32 bg-gray-50 border-b-2 border-gray-400"}
                     rows="8"
                     maxlength="400"
                     type={"text"}
