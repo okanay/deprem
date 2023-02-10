@@ -11,7 +11,7 @@ const ContactMe = () => {
         }
       >
         <span className={"text-slate-600/90 "}>Mesaj</span>{" "}
-        <span className={"font-light font-serif"}>Oluştur</span>
+        <span className={"font-light font-serif"}>Gönder</span>
       </h1>
 
       <form className={"flex flex-col gap-4 justify-between"} onSubmit={event => event.preventDefault()}>
