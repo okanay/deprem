@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
 
-  const versionText = "Version - 0.3";
+  const versionText = "Version - 0.4";
 
   return (
     <footer className="px-4 py-4">
