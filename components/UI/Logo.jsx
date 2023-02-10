@@ -2,6 +2,9 @@ import Link from "next/link";
 import React from "react";
 
 const Logo = () => {
+
+  const versionText = "V-0.3";
+
   return (
     <div className={'flex flex-col gap-4 relative'}>
 
@@ -14,7 +17,7 @@ const Logo = () => {
      DEPREM
     </Link>
       <h1 className={'absolute text-[0.75rem] uppercase text-slate-800 font-bold -top-[8.5px] right-0'}>Alpha</h1>
-      <h1 className={'absolute text-[0.6rem] uppercase text-slate-800 font-bold   top-[28px] left-[18px]'}>V-0.2</h1>
+      <h1 className={'absolute text-[0.6rem] uppercase text-slate-800 font-bold   top-[28px] left-[18px]'}>{versionText}</h1>
 
     </div>
 

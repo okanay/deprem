@@ -8,40 +8,21 @@
 @tailwind utilities;
 
 @layer components {
-    .btn {
-        @apply uppercase p-4 font-semibold shadow shadow-gray-800/30 bg-violet-200/50 rounded-l border border-opacity-20 border-b-gray-900 duration-300 hover:bg-gray-100 hover:shadow-indigo-100 hover:py-6;
-    }
-
-    .page {
-        @apply px-4 text-xl font-Roboto font-light text-neutral-800 hover:text-gray-500
-    }
-
-    .logo {
-        @apply text-4xl uppercase text-gray-700 font-light font-Roboto
-    }
 
 }
 
 @layer utilities {
 
-    .link-underline {
-        border-bottom-width: 0;
-        background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
-        background-size: 0px 3px;
-        background-position: 50% 100%;
-        background-repeat: no-repeat;
-        transition: background-size .5s ease;
+
+
+}
+
+@layer base {
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active{
+        -webkit-box-shadow: 0 0 0 30px rgb(249,250,251) inset !important;
     }
-
-    .link-underline-black {
-
-        background-image: linear-gradient(transparent, transparent), linear-gradient(#ddd6fe, #a5b4fc)
-    }
-
-    .link-underline:hover {
-        background-size: 100% 3px;
-        background-position: 50% 100%
-    }
-
 }
 

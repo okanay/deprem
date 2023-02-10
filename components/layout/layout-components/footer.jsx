@@ -2,6 +2,9 @@ import Logo from "../../UI/Logo";
 import Link from "next/link";
 
 const Footer = () => {
+
+  const versionText = "Version - 0.3";
+
   return (
     <footer className="px-4 py-4">
       <div className="">
@@ -46,7 +49,7 @@ const Footer = () => {
       <hr className="my-6 border-gray-200 mx-auto" />
       <div className="sm:flex sm:items-center sm:justify-between">
         <span className="text-[0.70rem] phone:text-[0.85rem] phoneLG:text-sm text-gray-500 text-center">
-          Okan Ay tarafindan gelistirilmektedir <span className={'font-semibold'}>||</span> <span className={'text-sky-500 font-semibold'}>Version - 0.2</span>
+          Okan Ay tarafindan gelistirilmektedir <span className={'font-semibold'}>||</span> <span className={'text-sky-500 font-semibold'}>{versionText}</span>
         </span>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <Link
