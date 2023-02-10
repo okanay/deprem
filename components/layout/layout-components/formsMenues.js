@@ -21,27 +21,31 @@ const FormsMenues = ({ hamburger }) => {
     },
   };
 
+  const YardimAlTitle = 'İhtiyaç Formları';
+  const YardimVerTitle = 'Yardım Formları';
+
+
   const YardimAl = [
     {
       key: "FYA0",
       url: "/",
       src: "/menuIcons/help.png",
       alt: "help",
-      description: "Enkaz Formlari",
+      description: "Enkaz Formları",
     },
     {
       key: "FYA1",
       url: "/",
       src: "/menuIcons/foods.png",
       alt: "help",
-      description: "Gidaya Formlari",
+      description: "Gida Formları",
     },
     {
       key: "FYA2",
       url: "/",
       src: "/menuIcons/warm.png",
       alt: "help",
-      description: "Barinma Formlari",
+      description: "Barinma Formları",
     },
   ];
 
@@ -51,21 +55,21 @@ const FormsMenues = ({ hamburger }) => {
       url: "/",
       src: "/menuIcons/house.png",
       alt: "share-house",
-      description: "Konaklama Formlari",
+      description: "Konaklama Formları",
     },
     {
       key: "FYV1",
       url: "/",
       src: "/menuIcons/construction-worker.png",
       alt: "construction-worker",
-      description: "İş Makinesi Formlari",
+      description: "İş Makinesi Formları",
     },
     {
       key: "FYV2",
       url: "/",
       src: "/menuIcons/bus-driver.png",
       alt: "bus-driver",
-      description: "Ulasim Formlari",
+      description: "Ulaşım Formları",
     },
   ];
 
@@ -79,7 +83,7 @@ const FormsMenues = ({ hamburger }) => {
       <div className={"flex flex-row justify-around pt-[1.2rem]"}>
         <div>
           <h1 className={"text-sm font-bold text-slate-700 bg-slate-200 px-2 py-1 rounded-md shadow-md shadow-sky-900/10"}>
-            Ihtiyac Formlari
+            {YardimAlTitle}
           </h1>
           <div className={"pt-4 flex flex-col gap-4 pl-2 text-[0.8rem] font-light text-gray-800 items-start"}>
             {YardimAl.map((item) => {
@@ -111,7 +115,7 @@ const FormsMenues = ({ hamburger }) => {
         </div>
         <div>
           <h1 className={"text-sm font-bold text-slate-700 bg-slate-200 px-2 py-1 rounded-md shadow-md shadow-sky-900/10"}>
-            Yardim Formlari
+            {YardimVerTitle}
           </h1>
           <div className={"pt-4 flex flex-col gap-4  text-[0.8rem] font-light text-gray-800 items-start"}>
             {YardimVer.map((item) => {
