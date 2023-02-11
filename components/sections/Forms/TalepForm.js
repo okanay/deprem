@@ -314,6 +314,7 @@ const TalepForm = ({ formName, formFullListURL }) => {
                         "peer focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-10 bg-gray-50 border-b-2 border-slate-500"
                       }
                       type={item.type}
+                      pattern={"[0-9]*"}
                       maxLength={6}
                       minLength={4}
                       inputMode={item.inputMode}
