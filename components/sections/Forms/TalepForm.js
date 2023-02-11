@@ -8,6 +8,7 @@ import React, { useState } from "react";
 
 const TalepForm = ({ formName, formFullListURL }) => {
 
+  const [isFormSucces, setIsFormSucces] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const handleSelectedOption = (event) => {
     setSelectedOption(() => {
@@ -15,14 +16,11 @@ const TalepForm = ({ formName, formFullListURL }) => {
       return event.target.value;
     });
   };
-
   const [checkedOption, setCheckedOption] = useState(false);
   const handleKVKChecked = (event) => {
-    setSelectedOption(() => {
-
-      talepFormik.values.kvk = event.target.checked ? "true" : null;
-      return event.target.checkbox;
-    });
+    const state = event.target.checked ? "true" : undefined;
+    talepFormik.values.kvk = state;
+    setCheckedOption(state);
   };
 
   const talepSchema = Yup.object({
@@ -34,15 +32,22 @@ const TalepForm = ({ formName, formFullListURL }) => {
     address: Yup.string().required("Lütfen adresinizi girin."),
     addressDes: Yup.string().required("Lütfen adresinizi detaylandırın."),
     status: Yup.string().required("Lütfen ifade edecek durumu seçin"),
-    password: Yup.string()
+    password: Yup.number()
       .required("Lütfen şifrenizi girin.")
-      .min(4, "Şifreniz minimum 4 karakterden oluşmalı."),
-    confirmPassword: Yup.string()
+      .moreThan(999, 'Sifreniz minimum 4 haneli olmalidir.')
+      .lessThan(1000000, 'Sifreniz maksimum 6 haneli olmalidir.')
+      .typeError("Şifre rakamlardan oluşmalıdır"),
+    confirmPassword: Yup.number()
       .required("Lütfen tekrar şifrenizi girin.")
       .oneOf([Yup.ref("password")], "Tekrar şifreniz ile şifreniz eşleşmiyor."),
-    details: Yup.string().required("Lütfen talebinizi dikkatli bir şekilde detaylandırın."),
-    kvk: Yup.string().required("KVKK kurallarını okuyup onaylamanız gerekiyor."),
+    details: Yup.string().required(
+      "Lütfen talebinizi dikkatli bir şekilde detaylandırın."
+    ),
+    kvk: Yup.string().required(
+      "KVKK kurallarını okuyup onaylamanız gerekiyor."
+    ),
   });
+
   const talepFormik = useFormik({
     initialValues: {
       name: "",
@@ -54,7 +59,7 @@ const TalepForm = ({ formName, formFullListURL }) => {
       password: "",
       confirmPassword: "",
       details: "",
-      kvk : "",
+      kvk: "",
     },
     validateOnChange: false, // this one
     validateOnBlur: false,
@@ -62,6 +67,8 @@ const TalepForm = ({ formName, formFullListURL }) => {
 
     onSubmit: (values) => {
       console.log(values);
+
+      talepFormik.setErrors({ error: "form ready for backend server" });
     },
   });
 
@@ -69,57 +76,57 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE0",
       type: "text",
-      auto: "false",
+      inputMode : "text",
       id: "formElementsTalepName",
       name: "name",
       description: "Adınız",
       src: "/formIcons/profile.png",
       formik: talepFormik.values.name,
-      error : talepFormik.errors.name,
+      error: talepFormik.errors.name,
     },
     {
       key: "FE1",
       type: "email",
-      auto: "false",
+      inputMode : "email",
       id: "formElementsTalepEmail",
       name: "email",
       description: "Email Adresiniz",
       src: "/formIcons/email.png",
       formik: talepFormik.values.email,
-      error : talepFormik.errors.email,
+      error: talepFormik.errors.email,
     },
     {
       key: "FE2",
       type: "number",
-      auto: "false",
+      inputMode : "tel",
       id: "formElementsTalepPhone",
       name: "phone",
       description: "Telefon Numaranız",
       src: "/formIcons/phone.png",
       formik: talepFormik.values.phone,
-      error : talepFormik.errors.phone,
+      error: talepFormik.errors.phone,
     },
     {
       key: "FE4",
       type: "text",
-      auto: "false",
+      inputMode : "text",
       id: "formElementsTalepAddress",
       name: "address",
       description: "Adres Tarifiniz",
       src: "/formIcons/address.png",
       formik: talepFormik.values.address,
-      error : talepFormik.errors.address,
+      error: talepFormik.errors.address,
     },
     {
       key: "FE5",
       type: "text",
-      auto: "false",
+      inputMode : "text",
       id: "formElementsTalepAddressDes",
       name: "addressDes",
       description: "Açık Adres Tarifiniz",
       src: "/formIcons/infoAddress.png",
       formik: talepFormik.values.addressDes,
-      error : talepFormik.errors.addressDes,
+      error: talepFormik.errors.addressDes,
     },
   ];
   const radioInput = [
@@ -146,43 +153,51 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE11",
       type: "password",
+      inputMode : "number",
       auto: "false",
       id: "formElementsPassword",
       name: "password",
       description: "Sifrenizi Girin",
       src: "/formIcons/password.png",
       formik: talepFormik.values.password,
-      error : talepFormik.errors.password,
+      error: talepFormik.errors.password,
     },
     {
       key: "FE10",
       type: "password",
+      inputMode : "number",
       auto: "false",
       id: "formElementsConfirmPassword",
       name: "confirmPassword",
       description: "Sifrenizi Tekrar Girin",
       src: "/formIcons/confirmPassword.png",
       formik: talepFormik.values.confirmPassword,
-      error : talepFormik.errors.confirmPassword,
+      error: talepFormik.errors.confirmPassword,
     },
   ];
   const details = {
-      key: "FE12",
-      rows: 8,
-      maxLength: 400,
-      id: "formElementsDetails",
-      name: "details",
-      description: "Lütfen durumu detaylandırın.",
-      src: "/formIcons/details.png",
-      formik: talepFormik.values.details,
-      error : talepFormik.errors.details,
-    }
-
+    key: "FE12",
+    rows: 8,
+    maxLength: 400,
+    id: "formElementsDetails",
+    name: "details",
+    description: "Lütfen durumu detaylandırın.",
+    src: "/formIcons/details.png",
+    formik: talepFormik.values.details,
+    error: talepFormik.errors.details,
+  };
 
   return (
-    <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto"}>
+    <div
+      className={
+        "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto"
+      }
+    >
       <div className={"flex flex-col justify-between gap-6"}>
-        <div className=" bg-red-100 border-l-4 border-orange-400 text-orange-700 p-4" role="alert">
+        <div
+          className=" bg-red-100 border-l-4 border-orange-400 text-orange-700 p-4"
+          role="alert"
+        >
           <p className="font-bold">Lütfen Dikkat!</p>
 
           <p className={"row-span-1"}>
@@ -216,6 +231,7 @@ const TalepForm = ({ formName, formFullListURL }) => {
                   }
                   autoComplete={item.auto}
                   type={item.type}
+                  inputMode={item.inputMode}
                   placeholder={item.description}
                   name={item.name}
                   id={item.id}
@@ -233,9 +249,13 @@ const TalepForm = ({ formName, formFullListURL }) => {
 
                 <label
                   htmlFor={item.name}
-                  className={
-                    `absolute left-0 -top-3.5 ${item.error ? "text-red-400" : "text-gray-400"} ${item.error ? "peer-placeholder-shown:text-red-400" : "peer-placeholder-shown:text-gray-400"} text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`
-                  }
+                  className={`absolute left-0 -top-3.5 ${
+                    item.error ? "text-red-400" : "text-gray-400"
+                  } ${
+                    item.error
+                      ? "peer-placeholder-shown:text-red-400"
+                      : "peer-placeholder-shown:text-gray-400"
+                  } text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
                 >
                   {item.description}
                 </label>
@@ -246,7 +266,11 @@ const TalepForm = ({ formName, formFullListURL }) => {
           <div className="flex flex-row justify-between mt-5 content-center">
             <div className={"flex flex-col"}>
               <div className={"mb-3 "}>
-                <p className={`text-[0.7rem] ${talepFormik.errors.status ? "text-red-500" : "text-gray-400"}`}>
+                <p
+                  className={`text-[0.7rem] ${
+                    talepFormik.errors.status ? "text-red-500" : "text-gray-400"
+                  }`}
+                >
                   Doğru durumu secmeye özen gösterin.
                 </p>
               </div>
@@ -290,6 +314,7 @@ const TalepForm = ({ formName, formFullListURL }) => {
                         "peer focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-10 bg-gray-50 border-b-2 border-slate-500"
                       }
                       type={item.type}
+                      inputMode={item.inputMode}
                       placeholder={item.description}
                       name={item.name}
                       onChange={talepFormik.handleChange}
@@ -305,9 +330,13 @@ const TalepForm = ({ formName, formFullListURL }) => {
 
                     <label
                       htmlFor={item.name}
-                      className={
-                        `absolute left-0 -top-1  ${item.error ? "text-red-400" : "text-gray-400"} ${item.error ? "peer-placeholder-shown:text-red-400" : "peer-placeholder-shown:text-gray-400"} text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-3.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`
-                      }
+                      className={`absolute left-0 -top-1  ${
+                        item.error ? "text-red-400" : "text-gray-400"
+                      } ${
+                        item.error
+                          ? "peer-placeholder-shown:text-red-400"
+                          : "peer-placeholder-shown:text-gray-400"
+                      } text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-3.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
                     >
                       {item.description}
                     </label>
@@ -338,9 +367,13 @@ const TalepForm = ({ formName, formFullListURL }) => {
 
             <label
               htmlFor={details.name}
-              className={
-                `absolute left-0 -top-2.5 ${details.error ? "text-red-400" : "text-gray-400"} ${details.error ? "peer-placeholder-shown:text-red-400" : "peer-placeholder-shown:text-gray-400"} text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-4 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`
-              }
+              className={`absolute left-0 -top-2.5 ${
+                details.error ? "text-red-400" : "text-gray-400"
+              } ${
+                details.error
+                  ? "peer-placeholder-shown:text-red-400"
+                  : "peer-placeholder-shown:text-gray-400"
+              } text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-4 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
             >
               {details.description}
             </label>
@@ -360,16 +393,24 @@ const TalepForm = ({ formName, formFullListURL }) => {
             </p>
           </div>
           <div>
-            {Object.values(talepFormik.errors).length > 0 && (<h1
-              className={
-                "text-red-500 bg-red-200 border-l-2 border-orange-400 text-center text-sm text-semibold rounded py-1 mb-4 mx-4"
-              }
-            >
-              <span className={"text-gray-600  font-semibold"}>HATA : </span>
-              {Object.values(talepFormik.errors)[0]}
-            </h1>)}
+            {Object.values(talepFormik.errors).length > 0 && (
+              <h1
+                className={
+                  "text-red-500 bg-red-200 border-l-2 border-orange-400 text-center text-sm text-semibold rounded py-2 px-1 mb-4 mx-4"
+                }
+              >
+                <span className={"text-gray-600  font-semibold"}>
+                  {Object.values(talepFormik.errors).length} HATA :{" "}
+                </span>
+                {Object.values(talepFormik.errors)[0]}
+              </h1>
+            )}
           </div>
-          <div className={"flex flex-col-4 justify-between items-center content-center"}>
+          <div
+            className={
+              "flex flex-col-4 justify-between items-center content-center"
+            }
+          >
             <div className="mb-2 relative">
               <input
                 type="checkbox"
@@ -380,9 +421,9 @@ const TalepForm = ({ formName, formFullListURL }) => {
               />
               <label
                 htmlFor={"kvk"}
-                className={
-                  `absolute w-48 top-1 left-6 text-[0.7rem] ${talepFormik.errors.kvk ? "text-red-400" : "text-gray-400"} peer-checked:font-semibold peer-checked:text-gray-700`
-                }
+                className={`absolute w-48 top-1 left-6 text-[0.7rem] ${
+                  talepFormik.errors.kvk ? "text-red-400" : "text-gray-400"
+                } peer-checked:font-semibold peer-checked:text-gray-700`}
               >
                 KVK Kurallarini Onayliyorum
               </label>
