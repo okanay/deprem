@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import EnkazTalep from "../../components/sections/Forms/EnkazTalep";
+import TalepForm from "../../components/sections/Forms/TalepForm";
 import Loading from "../../components/sections/Forms/Loading";
 
 const FormType = () => {
@@ -11,13 +11,13 @@ const FormType = () => {
   }
 
   if (formType === "enkazTalep") {
-    return <EnkazTalep formName={'Enkaz Yardım'} formFullListURL={'/'}/>;
+    return <TalepForm formName={'Enkaz Yardım'} formFullListURL={'/'}/>;
   }
   else if (formType === "gidaTalep") {
-    return <EnkazTalep formName={'Gıda Yardım'} formFullListURL={'/'}/>;
+    return <TalepForm formName={'Gıda Yardım'} formFullListURL={'/'}/>;
   }
   else if (formType === "barinmaTalep") {
-    return <EnkazTalep formName={'Barınma Yardım'} formFullListURL={'/'}/>;
+    return <TalepForm formName={'Barınma Yardım'} formFullListURL={'/'}/>;
   }
   router.push("/form");
   return null;

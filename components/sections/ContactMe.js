@@ -84,7 +84,7 @@ const ContactMe = () => {
               name="message"
             />
           <Image
-            src={"/formIcons/information.png"}
+            src={"/formIcons/details.png"}
             width={"200"}
             height={"200"}
             alt={"hash"}
