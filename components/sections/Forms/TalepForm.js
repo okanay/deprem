@@ -32,12 +32,12 @@ const TalepForm = ({ formName, formFullListURL }) => {
     address: Yup.string().required("Lütfen adresinizi girin."),
     addressDes: Yup.string().required("Lütfen adresinizi detaylandırın."),
     status: Yup.string().required("Lütfen ifade edecek durumu seçin"),
-    password: Yup.number()
+    password: Yup.string()
       .required("Lütfen şifrenizi girin.")
-      .moreThan(999, 'Sifreniz minimum 4 haneli olmalidir.')
-      .lessThan(1000000, 'Sifreniz maksimum 6 haneli olmalidir.')
+      .max(6, 'Sifreniz minimum 6 haneli olmalidir.')
+      .min(4, 'Sifreniz maksimum 4 haneli olmalidir.')
       .typeError("Şifre rakamlardan oluşmalıdır"),
-    confirmPassword: Yup.number()
+    confirmPassword: Yup.string()
       .required("Lütfen tekrar şifrenizi girin.")
       .oneOf([Yup.ref("password")], "Tekrar şifreniz ile şifreniz eşleşmiyor."),
     details: Yup.string().required(
@@ -229,7 +229,6 @@ const TalepForm = ({ formName, formFullListURL }) => {
                   className={
                     "peer appearance-none focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-10 bg-gray-50 border-b-2 border-slate-500"
                   }
-                  autoComplete={item.auto}
                   type={item.type}
                   inputMode={item.inputMode}
                   placeholder={item.description}
@@ -314,7 +313,6 @@ const TalepForm = ({ formName, formFullListURL }) => {
                         "peer focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-10 bg-gray-50 border-b-2 border-slate-500"
                       }
                       type={item.type}
-                      pattern={"[0-9]*"}
                       maxLength={6}
                       minLength={4}
                       inputMode={item.inputMode}
