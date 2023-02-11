@@ -3,7 +3,7 @@ import React from "react";
 
 const Logo = () => {
 
-  const versionText = "V-0.4";
+  const versionText = "V-0.4.5";
 
   return (
     <div className={'flex flex-col gap-4 relative'}>

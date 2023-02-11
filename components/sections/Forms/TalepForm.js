@@ -5,8 +5,11 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 
 import React, { useState } from "react";
+import { useRouter } from "next/router";
+import fetchPostData from "../../costumHooks/useFetchData";
 
 const TalepForm = ({ formName, formFullListURL }) => {
+  const router = useRouter();
 
   const [isFormSucces, setIsFormSucces] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -34,8 +37,8 @@ const TalepForm = ({ formName, formFullListURL }) => {
     status: Yup.string().required("Lütfen ifade edecek durumu seçin"),
     password: Yup.string()
       .required("Lütfen şifrenizi girin.")
-      .max(6, 'Sifreniz minimum 6 haneli olmalidir.')
-      .min(4, 'Sifreniz maksimum 4 haneli olmalidir.')
+      .max(6, "Sifreniz minimum 6 haneli olmalidir.")
+      .min(4, "Sifreniz maksimum 4 haneli olmalidir.")
       .typeError("Şifre rakamlardan oluşmalıdır"),
     confirmPassword: Yup.string()
       .required("Lütfen tekrar şifrenizi girin.")
@@ -47,7 +50,6 @@ const TalepForm = ({ formName, formFullListURL }) => {
       "KVKK kurallarını okuyup onaylamanız gerekiyor."
     ),
   });
-
   const talepFormik = useFormik({
     initialValues: {
       name: "",
@@ -65,10 +67,19 @@ const TalepForm = ({ formName, formFullListURL }) => {
     validateOnBlur: false,
     validationSchema: talepSchema,
 
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values, actions) => {
+      const [error, result] = await fetchPostData(
+        "http://localhost:8888/deprem/talep.php",
+        values
+      );
 
-      talepFormik.setErrors({ error: "form ready for backend server" });
+      if (error !== null) {
+        talepFormik.setErrors({ error: error.systemMessage });
+        // talepFormik.setErrors({ error: error.message });
+        actions.setSubmitting(false);
+      } else {
+        router.push("/");
+      }
     },
   });
 
@@ -76,7 +87,9 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE0",
       type: "text",
-      inputMode : "text",
+      maxLength: 40,
+      minLength: 0,
+      inputMode: "text",
       id: "formElementsTalepName",
       name: "name",
       description: "Adınız",
@@ -87,7 +100,9 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE1",
       type: "email",
-      inputMode : "email",
+      maxLength: 40,
+      minLength: 0,
+      inputMode: "email",
       id: "formElementsTalepEmail",
       name: "email",
       description: "Email Adresiniz",
@@ -98,7 +113,9 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE2",
       type: "number",
-      inputMode : "tel",
+      maxLength: 40,
+      minLength: 0,
+      inputMode: "tel",
       id: "formElementsTalepPhone",
       name: "phone",
       description: "Telefon Numaranız",
@@ -109,7 +126,9 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE4",
       type: "text",
-      inputMode : "text",
+      maxLength: 100,
+      minLength: 0,
+      inputMode: "text",
       id: "formElementsTalepAddress",
       name: "address",
       description: "Adres Tarifiniz",
@@ -120,7 +139,9 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE5",
       type: "text",
-      inputMode : "text",
+      maxLength: 100,
+      minLength: 0,
+      inputMode: "text",
       id: "formElementsTalepAddressDes",
       name: "addressDes",
       description: "Açık Adres Tarifiniz",
@@ -134,18 +155,21 @@ const TalepForm = ({ formName, formFullListURL }) => {
       key: "FE6",
       id: "radioInputEnkazTalepHafif",
       name: "Hafif",
+      value: "0",
       labelColor: "peer-checked:text-emerald-400",
     },
     {
       key: "FE7",
       id: "radioInputEnkazTalepOrta",
       name: "Orta",
+      value: "1",
       labelColor: "peer-checked:text-orange-300",
     },
     {
       key: "FE8",
       id: "radioInputEnkazTalepKritik",
       name: "Kritik",
+      value: "2",
       labelColor: "peer-checked:text-red-400",
     },
   ];
@@ -153,7 +177,9 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE11",
       type: "password",
-      inputMode : "number",
+      inputMode: "number",
+      maxLength: 6,
+      minLength: 4,
       auto: "false",
       id: "formElementsPassword",
       name: "password",
@@ -165,7 +191,9 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE10",
       type: "password",
-      inputMode : "number",
+      maxLength: 6,
+      minLength: 4,
+      inputMode: "number",
       auto: "false",
       id: "formElementsConfirmPassword",
       name: "confirmPassword",
@@ -230,6 +258,8 @@ const TalepForm = ({ formName, formFullListURL }) => {
                     "peer appearance-none focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-10 bg-gray-50 border-b-2 border-slate-500"
                   }
                   type={item.type}
+                  maxLength={item.maxLength}
+                  minLength={item.minLength}
                   inputMode={item.inputMode}
                   placeholder={item.description}
                   name={item.name}
@@ -279,15 +309,14 @@ const TalepForm = ({ formName, formFullListURL }) => {
                     <input
                       type="radio"
                       id={item.id}
-                      name={item.name}
-                      value={item.name}
-                      checked={selectedOption === item.name}
+                      name={item.value}
+                      value={item.value}
+                      checked={selectedOption === item.value}
                       onChange={handleSelectedOption}
-                      placeholder={"test"}
                       className="rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer peer"
                     />
                     <label
-                      htmlFor={item.name}
+                      htmlFor={item.value}
                       className={`${item.labelColor} absolute top-0 left-6 peer-checked:font-semibold`}
                     >
                       {item.name}
@@ -313,8 +342,8 @@ const TalepForm = ({ formName, formFullListURL }) => {
                         "peer focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-10 bg-gray-50 border-b-2 border-slate-500"
                       }
                       type={item.type}
-                      maxLength={6}
-                      minLength={4}
+                      maxLength={item.maxLength}
+                      minLength={item.minLength}
                       inputMode={item.inputMode}
                       placeholder={item.description}
                       name={item.name}
