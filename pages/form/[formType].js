@@ -10,7 +10,7 @@ const FormType = () => {
     return <Loading />;
   }
 
-  if (formType === "bt") {
+  if (formType === "ct") {
     return <TalepForm formName={'Çadır Yardım'} formFullListURL={'/'}/>;
   }
   else if (formType === "gt") {
