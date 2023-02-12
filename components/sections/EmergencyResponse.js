@@ -72,7 +72,7 @@ const EmergencyResponse = () => {
         <div className={"grid grid-rows-2 gap-12"}>
           <div>
             <h1 className={"text-[1.4rem] font-semibold text-neutral-700 text-start mb-5"}>
-              <span className={"text-slate-600/90 "}>Talep</span> <span className={'font-light font-serif'}>Oluştur</span>
+              <span className={"text-slate-600/90 "}>İhtiyaç</span> <span className={'font-light font-serif'}>Oluştur</span>
             </h1>
 
             {YardimAl.map((item) => {

@@ -18,7 +18,7 @@ const FormTitle = ({formName, formFullListURL}) => {
           "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-slate-700/90 shadow shadow-blue-400/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-slate-600/90 hover:text-slate-50"
         }
       >
-        TAM-LISTE
+        TAM-LİSTE
       </Link>
     </div>
   )
