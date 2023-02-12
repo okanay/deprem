@@ -1,11 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import { useQuery } from "react-query";
+import { getVersion } from "/helper/getVersion";
+
 
 const Logo = () => {
 
-  const {data, error, isLoading, isSuccess} = useQuery("version");
-  const versionText = isSuccess ? data.version : "V0.A23";
+  const versionText = getVersion();
 
 
 

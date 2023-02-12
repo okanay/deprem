@@ -3,73 +3,70 @@ import Image from "next/image";
 import FormTitle from "../UI/FormTitle";
 
 const EmergencyResponse = () => {
-
-
   const YardimAl = [
     {
       key: "YA0",
       url: "/form/bt",
       src: "/menuIcons/cabin.png",
-      alt : "Barınmaya İhtiyacım Var",
+      alt: "Barınmaya İhtiyacım Var",
       description: "Barınmaya İhtiyacım Var",
     },
     {
       key: "YA1",
       url: "/form/ct",
       src: "/menuIcons/camp.png",
-      alt : "Çadıra İhtiyacım Var",
+      alt: "Çadıra İhtiyacım Var",
       description: "Çadıra İhtiyacım Var",
     },
     {
       key: "YA2",
       url: "/form/gt",
       src: "/menuIcons/foods.png",
-      alt : "Gıdaya İhtiyacım Var",
+      alt: "Gıdaya İhtiyacım Var",
       description: "Gıdaya İhtiyacım Var",
     },
     {
       key: "YA3",
       url: "/form/it",
       src: "/menuIcons/medicine.png",
-      alt : "İlaca İhtiyacım Var",
+      alt: "İlaca İhtiyacım Var",
       description: "İlaca İhtiyacım Var",
     },
     {
       key: "YA4",
       url: "/form/ht",
       src: "/menuIcons/amenities.png",
-      alt : "Hijyen Ürünlerine İhtiyacım Var",
+      alt: "Hijyen Ürünlerine İhtiyacım Var",
       description: "Hijyen Ürünlerine İhtiyacım Var",
     },
   ];
-
   const YardimVer = [
     {
       key: "YV0",
       url: "/",
       src: "/menuIcons/house.png",
-      alt : "Konaklama Teklif Et",
+      alt: "Konaklama Teklif Et",
       description: "Konaklama Teklif Et",
     },
     {
       key: "YV1",
       url: "/",
       src: "/menuIcons/footprints.png",
-      alt : "Arama Kurtarmaya Katilabilirim",
+      alt: "Arama Kurtarmaya Katilabilirim",
       description: "Arama Kurtarmaya Katılabilirim",
     },
     {
       key: "YV2",
       url: "/",
       src: "/menuIcons/construction-worker.png",
-      alt : "Operasyonlarda Bulunabilirim",
+      alt: "Operasyonlarda Bulunabilirim",
       description: "Operasyonlarda Bulunabilirim",
     },
     {
       key: "YV3",
       url: "/",
       src: "/menuIcons/bus-driver.png",
-      alt : "Nakliye ve Taşıma Yapabilirim",
+      alt: "Nakliye ve Taşıma Yapabilirim",
       description: "Nakliye ve Taşıma Yapabilirim",
     },
   ];
@@ -79,9 +76,30 @@ const EmergencyResponse = () => {
       <div className={"bg-gray-50/80 pt-5 px-4 pb-8"}>
         <div className={"flex flex-col gap-12"}>
           <div>
-            <h1 className={"text-[1.4rem] font-semibold text-neutral-700 text-start mb-5"}>
-              <span className={"text-slate-600/90 "}>İhtiyaç</span> <span className={'font-light font-serif'}>Oluştur</span>
-            </h1>
+            <div className="flex justify-between">
+              <div>
+                <h1
+                  className={
+                    "text-[1.2rem] font-semibold text-neutral-700 text-start mb-5"
+                  }
+                >
+                  <span className={"text-slate-600/90"}>İhtiyaç </span>
+                  <span className={"font-light font-serif"}>Oluştur</span>
+                </h1>
+              </div>
+
+              <div>
+                <Link
+                  href={"/"}
+                  className={
+                    "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-red-400/90 shadow shadow-red-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-red-400/80 hover:text-slate-50"
+                  }
+                >
+                  TAM-LİSTE
+                </Link>
+              </div>
+            </div>
+
             {YardimAl.map((item) => {
               return (
                 <div
@@ -116,10 +134,29 @@ const EmergencyResponse = () => {
             })}
           </div>
           <div>
+            <div className="flex justify-between">
+              <div>
+                <h1
+                  className={
+                    "text-[1.2rem] font-semibold text-neutral-700 text-start mb-5"
+                  }
+                >
+                  <span className={"text-slate-600/90"}>Destek </span>
+                  <span className={"font-light font-serif"}>Oluştur</span>
+                </h1>
+              </div>
 
-            <h1 className={"text-[1.4rem] font-semibold text-neutral-700 text-start mb-5"}>
-              <span className={"text-slate-600/90"}>Destek</span> <span className={'font-light font-serif'}>Oluştur</span> <span className={'text-[0.6rem] text-gray-400 text-light'}>wait until V1.2</span>
-            </h1>
+              <div>
+                <Link
+                  href={"/"}
+                  className={
+                    "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-emerald-500/90 shadow shadow-emerald-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-emerald-400/80 hover:text-slate-50"
+                  }
+                >
+                  TAM-LİSTE
+                </Link>
+              </div>
+            </div>
 
             {YardimVer.map((item) => {
               return (

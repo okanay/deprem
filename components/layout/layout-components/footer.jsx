@@ -1,12 +1,11 @@
 import Logo from "../../UI/Logo";
 import Link from "next/link";
 import { useQuery } from "react-query";
+import { getVersion } from "/helper/getVersion";
 
 const Footer = () => {
 
-  const {data, error, isLoading, isSuccess} = useQuery("version");
-  const versionText = isSuccess ? data.version : "V0.A23";
-
+  const versionText = getVersion();
 
 
   return (

@@ -36,13 +36,23 @@ const TalepForm = ({ formName, formFullListURL }) => {
   const [isFormSucces, setIsFormSucces] = useState(false);
 
   const talepSchema = Yup.object({
-    name: Yup.string().required("Lütfen adınızı girin."),
+    name: Yup.string()
+      .required("Lütfen adınızı girin.")
+      .max(40, "Adınız için maksimum karakter sayısı 40'dır"),
     email: Yup.string()
       .email("Girdiğiniz email adresi geçersiz.")
-      .required("Lütfen aktif kullandığınız bir email adresi girin."),
-    phone: Yup.number().required("Lütfen telefon numaranızı girin."),
-    address: Yup.string().required("Lütfen adresinizi girin."),
-    addressDes: Yup.string().required("Lütfen adresinizi detaylandırın."),
+      .required("Lütfen aktif kullandığınız bir email adresi girin.")
+      .max(40, "Email adresiniz için maksimum karakter sayısı 40'dır"),
+    phone: Yup.number()
+      .required("Lütfen telefon numaranızı girin.")
+      .lessThan(10000000000, "Örnek telefon numarası || 532-456-78-90")
+      .moreThan(999999999, "Örnek telefon numarası || 532-456-78-90"),
+    address: Yup.string()
+      .required("Lütfen adresinizi girin.")
+      .max(80, "Adresiniz için maksimum karakter sayısı 80'dir"),
+    addressDes: Yup.string()
+      .required("Lütfen adresinizi detaylandırın.")
+      .max(80, "Açık adresiniz için maksimum karakter sayısı 80'dir"),
     status: Yup.string().required("Lütfen ifade edecek durumu seçin"),
     password: Yup.string()
       .required("Lütfen şifrenizi girin.")
@@ -54,7 +64,7 @@ const TalepForm = ({ formName, formFullListURL }) => {
       .oneOf([Yup.ref("password")], "Tekrar şifreniz ile şifreniz eşleşmiyor."),
     details: Yup.string().required(
       "Lütfen talebinizi dikkatli bir şekilde detaylandırın."
-    ),
+    ) .max(400, "Detaylandırmanız için maksimum karakter sayısı 400'dür"),
     kvk: Yup.string().required(
       "KVKK kurallarını okuyup onaylamanız gerekiyor."
     ),
@@ -83,6 +93,8 @@ const TalepForm = ({ formName, formFullListURL }) => {
       );
 
       if (error !== null) {
+
+        console.log(values);
         talepFormik.setErrors({ error: error.systemMessage });
         // talepFormik.setErrors({ error: error.message });
         actions.setSubmitting(false);
@@ -96,8 +108,8 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE0",
       type: "text",
-      maxLength: 40,
-      minLength: 0,
+      maxLength: "40",
+      minLength: "0",
       inputMode: "text",
       id: "formElementsTalepName",
       name: "name",
@@ -109,8 +121,8 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE1",
       type: "email",
-      maxLength: 40,
-      minLength: 0,
+      maxLength: "40",
+      minLength: "0",
       inputMode: "email",
       id: "formElementsTalepEmail",
       name: "email",
@@ -122,8 +134,8 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE2",
       type: "number",
-      maxLength: 40,
-      minLength: 0,
+      maxLength: "40",
+      minLength: "0",
       inputMode: "tel",
       id: "formElementsTalepPhone",
       name: "phone",
@@ -135,8 +147,8 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE4",
       type: "text",
-      maxLength: 100,
-      minLength: 0,
+      maxLength: "80",
+      minLength: "0",
       inputMode: "text",
       id: "formElementsTalepAddress",
       name: "address",
@@ -148,8 +160,8 @@ const TalepForm = ({ formName, formFullListURL }) => {
     {
       key: "FE5",
       type: "text",
-      maxLength: 100,
-      minLength: 0,
+      maxLength: "80",
+      minLength: "0",
       inputMode: "text",
       id: "formElementsTalepAddressDes",
       name: "addressDes",
@@ -225,10 +237,12 @@ const TalepForm = ({ formName, formFullListURL }) => {
   };
 
   return (
-    <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto"}>
-
+    <div
+      className={
+        "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto"
+      }
+    >
       <div className={"flex flex-col justify-between gap-6"}>
-
         {/* TALEP PAGE || Dikkat Uyarisi ve Baslik */}
 
         <RedAlert title={"Lütfen Dikkat!"}>
@@ -238,7 +252,6 @@ const TalepForm = ({ formName, formFullListURL }) => {
 
         {/* FORMIK */}
         <form onSubmit={talepFormik.handleSubmit}>
-
           {/* FORM SECTION - 1 || Name,Email,Phone,Addresses */}
           {formElements.map((item) => {
             return (
@@ -248,7 +261,6 @@ const TalepForm = ({ formName, formFullListURL }) => {
 
           {/* FORM SECTION - 2 || Hafif,Orta,Kritik ve Sifre */}
           <div className="flex flex-row justify-between mt-5 content-center">
-
             {/* Doğru durumu secmeye özen gösterin. || State Inputs */}
             <div className={"flex flex-col"}>
               <div className={"mb-3 "}>
@@ -316,16 +328,18 @@ const TalepForm = ({ formName, formFullListURL }) => {
           </div>
 
           {/* FORM SECTION - 6 || KVK Checkbox - Submit Buttons */}
-          <div className={"flex flex-col-4 justify-between items-center content-center"}>
+          <div
+            className={
+              "flex flex-col-4 justify-between items-center content-center"
+            }
+          >
             <KvkCheckBox
               formik={talepFormik}
               handleKVKChecked={handleKVKChecked}
             />
             <SubmitButton />
           </div>
-
         </form>
-
       </div>
     </div>
   );
