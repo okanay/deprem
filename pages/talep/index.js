@@ -57,7 +57,7 @@ const Talep = () => {
       opacity: 0,
       scaleY: 0,
       y: -10,
-      transition: { duration: 0.1 },
+      transition: { duration: 0.25 },
     },
     open: {
       opacity: 1,
@@ -65,7 +65,7 @@ const Talep = () => {
       y: 0,
       display: "block",
       scaleX: 0.95,
-      transition: { duration: 0.3, type: "spring" },
+      transition: { duration: 0.5, type: "spring" },
     },
   };
   const handleFilterForm = (formName) => {
@@ -111,10 +111,10 @@ const Talep = () => {
               onClick={() => {
                 handleFilterForm(item.name);
               }}
-              className={`w-10 h-10 p-2 border-2 border-gray-500 rounded flex flex-col items-center group ${
+              className={`w-10 h-10 p-2 border-2 transition duration-300 border-gray-500 rounded flex flex-col items-center group ${
                 selected === item.name
                   ? `${item.color} border-b-[4px]`
-                  : "transition duration-300 hover:border-slate-400"
+                  : ""
               } relative`}
             >
               <Image
