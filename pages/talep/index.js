@@ -113,14 +113,14 @@ const Talep = () => {
         "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full m-20 my-8 mx-auto px-4 py-8"
       }
     >
-      {/*Uyari*/}
+      {/* Uyari */}
 
       <Alert title={"Lütfen Dikkat!"}>
         İnsanlara yardım edebileceğinizden emin olmadan iletişim teklifinde
         bulunmayın.
       </Alert>
 
-      {/*Baslik*/}
+      {/* Baslik */}
       <div className="my-6 flex justify-between items-center text-center">
         <div>
           <h1
@@ -142,7 +142,7 @@ const Talep = () => {
         </Link>
       </div>
 
-      {/*  FILTER*/}
+      {/* FILTER */}
       <div
         className={
           "flex flex-row justify-center gap-4 bg-gray-50 w-full pb-7 pt-2 border-b-2 border-gray-800 rounded-[2px]"
@@ -150,9 +150,9 @@ const Talep = () => {
       >
         {talepFilter.map((item) => {
           return (
-            <div className={'relative flex flex-col items-center text-center group'}>
+            <div className={'relative flex flex-col items-center text-center group'} key={item.name}>
               <m.div
-                key={item.name}
+
                 variants={imageContainer}
                 initial={"unselected"}
                 animate={selected === item.name ? "selected" : "unselected"}
@@ -190,7 +190,7 @@ const Talep = () => {
         })}
       </div>
 
-      {/*  TAILWIND CLASS CREATOR*/}
+      {/*  TAILWIND CLASS CREATOR */}
       <div>
         {/* BackGround*/}
         <div
