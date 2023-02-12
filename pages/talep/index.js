@@ -19,7 +19,7 @@ const Talep = () => {
       src: "/menuIcons/cabin.png",
       alt: "Barınmaya İhtiyacım Var",
       description: "Barınma",
-      color : "border-sky-400 group-hover:border-sky-300",
+      color : "border-red-400 group-hover:border-red-300",
     },
     {
       name: "TFCadir",
@@ -111,7 +111,7 @@ const Talep = () => {
               onClick={() => {
                 handleFilterForm(item.name);
               }}
-              className={`w-10 h-10 p-2 border-2 transition duration-300 border-gray-500 rounded flex flex-col items-center group ${
+              className={`w-10 h-10 p-2 border-2 transition duration-300 rounded flex flex-col items-center group ${
                 selected === item.name
                   ? `${item.color} border-b-[4px]`
                   : ""
