@@ -93,12 +93,9 @@ const Talep = () => {
   };
 
   return (
-    <div
-      className={
-        "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full m-20 my-8 mx-auto px-4 py-8"
-      }
-    >
+    <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full m-20 my-8 mx-auto px-4 py-8"}>
       {/*Uyari*/}
+
       <Alert title={"Lütfen Dikkat!"}>
         İnsanlara yardım edebileceğinizden emin olmadan iletişim teklifinde
         bulunmayın.
@@ -117,20 +114,17 @@ const Talep = () => {
           </h1>
         </div>
 
+        {/* YENI TALEP OLUSTURMA BUTONU*/}
         <Link
           href={createButton.url}
-          className={`mb-4 py-2 px-2 rounded-md bg-slate-50 border-[0.01rem] border-gray-400 text-${createButton.color} shadow shadow-red-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-${createButton.color} hover:text-slate-50`}
+          className={`mb-4 py-2 px-2 rounded-md bg-slate-50 border-[0.01rem] border-gray-200 text-${createButton.color} shadow shadow-gray-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-${createButton.color} hover:text-slate-50`}
         >
           YENİ-TALEP
         </Link>
       </div>
 
       {/*  Talep Iconlari olsun ve o iconlara gore filtreleme olsun.. baslayalim..*/}
-      <div
-        className={
-          "flex flex-row justify-center gap-4 bg-gray-50 w-full pb-7 pt-2 border-b-2 border-gray-800 rounded-[2px]"
-        }
-      >
+      <div className={"flex flex-row justify-center gap-4 bg-gray-50 w-full pb-7 pt-2 border-b-2 border-gray-800 rounded-[2px]"}>
         {talepFilter.map((item) => {
           return (
             <button
@@ -166,10 +160,7 @@ const Talep = () => {
       </div>
 
       {/*  TAILWIND CLASS CREATOR*/}
-      <div
-        className={
-          "text-red-400 text-teal-400 text-pink-400 text-blue-400 hover:bg-slate-600 text-emerald-400 hover:bg-red-400 hover:bg-teal-400 hover:bg-pink-400 hover:bg-blue-400 hover:bg-emerald-400"
-        }
+      <div className={"text-red-400 text-teal-400 text-pink-400 text-blue-400 hover:bg-slate-600 text-emerald-400 hover:bg-red-400 hover:bg-teal-400 hover:bg-pink-400 hover:bg-blue-400 hover:bg-emerald-400"}
       ></div>
     </div>
   );
