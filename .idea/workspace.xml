@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/menuIcons/translator.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Logo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Logo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout/layout-components/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout-components/footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/Forms/TalepForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/Forms/TalepForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper/getVersion.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getVersion.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +85,7 @@
       <workItem from="1675799496492" duration="36907000" />
       <workItem from="1675952209564" duration="73865000" />
       <workItem from="1676207298298" duration="3378000" />
-      <workItem from="1676211911419" duration="10858000" />
+      <workItem from="1676211911419" duration="11533000" />
     </task>
     <servers />
   </component>
@@ -103,7 +100,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/components/sections/EmergencyResponse.js</url>
-          <line>102</line>
+          <line>109</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>

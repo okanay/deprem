@@ -69,6 +69,13 @@ const EmergencyResponse = () => {
       alt: "Nakliye ve Taşıma Yapabilirim",
       description: "Nakliye ve Taşıma Yapabilirim",
     },
+    {
+      key: "YV4",
+      url: "/",
+      src: "/menuIcons/translator.png",
+      alt: "Çevirmenlik Yapabilirim",
+      description: "Çevirmenlik Yapabilirim",
+    },
   ];
 
   return (
@@ -117,11 +124,11 @@ const EmergencyResponse = () => {
                     <span>
                       <Image
                         src={item.src}
-                        width={"200"}
-                        height={"200"}
+                        width={"300"}
+                        height={"300"}
                         alt={item.alt}
                         className={
-                          "w-7 h-7 duration-300 group-hover:animate-pulse inline mr-4"
+                          "w-6 h-6 duration-300 group-hover:animate-pulse inline mr-4"
                         }
                       />
                       <span className={"duration-500 group-hover:text-red-700"}>
@@ -175,11 +182,11 @@ const EmergencyResponse = () => {
                     <span>
                       <Image
                         src={item.src}
-                        width={"200"}
-                        height={"200"}
+                        width={"300"}
+                        height={"300"}
                         alt={item.alt}
                         className={
-                          "w-7 h-7 duration-300 group-hover:animate-pulse inline mr-4"
+                          "w-6 h-6 duration-300 group-hover:animate-pulse inline mr-4"
                         }
                       />
                       <span className={"duration-500 group-hover:text-sky-700"}>
