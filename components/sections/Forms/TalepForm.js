@@ -6,25 +6,34 @@ import { useFormik } from "formik";
 
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import fetchPostData from "../../costumHooks/useFetchData";
+import fetchPostData from "../../costumHooks/fetchPostData";
+import CostumInput from "../../UI/CostumInput";
+import CostumRadioInput from "../../UI/CostumRadioInput";
+import CostumTextAreaInput from "../../UI/CostumTextAreaInput";
+import RedAlert from "../../UI/RedAlert";
+import FormTitle from "../../UI/FormTitle";
+import Kvk from "../../UI/KVK";
+import KvkCheckBox from "../../UI/KvkCheckBox";
+import SubmitButton from "../../UI/SubmitButton";
 
 const TalepForm = ({ formName, formFullListURL }) => {
-  const router = useRouter();
-
-  const [isFormSucces, setIsFormSucces] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
   const handleSelectedOption = (event) => {
     setSelectedOption(() => {
       talepFormik.values.status = event.target.value;
       return event.target.value;
     });
   };
-  const [checkedOption, setCheckedOption] = useState(false);
   const handleKVKChecked = (event) => {
     const state = event.target.checked ? "true" : undefined;
     talepFormik.values.kvk = state;
     setCheckedOption(state);
   };
+
+  const router = useRouter();
+
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [checkedOption, setCheckedOption] = useState(false);
+  const [isFormSucces, setIsFormSucces] = useState(false);
 
   const talepSchema = Yup.object({
     name: Yup.string().required("Lütfen adınızı girin."),
@@ -216,83 +225,31 @@ const TalepForm = ({ formName, formFullListURL }) => {
   };
 
   return (
-    <div
-      className={
-        "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto"
-      }
-    >
-      <div className={"flex flex-col justify-between gap-6"}>
-        <div
-          className=" bg-red-100 border-l-4 border-orange-400 text-orange-700 p-4"
-          role="alert"
-        >
-          <p className="font-bold">Lütfen Dikkat!</p>
+    <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto"}>
 
-          <p className={"row-span-1"}>
-            Eğer bu yardım talebini daha önce gönderdiysen lütfen tekrar
-            gönderme.
-          </p>
-        </div>
-        <div className={"flex flex-row justify-between items-center"}>
-          <h1
-            className={"text-lg font-semibold text-neutral-700 text-start my-5"}
-          >
-            <span className={"text-slate-600/90 "}>{formName}</span>{" "}
-            <span className={"font-light font-serif"}>Formu</span>
-          </h1>
-          <Link
-            href={formFullListURL}
-            className={
-              "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-slate-700/90 shadow shadow-blue-400/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-slate-600/90 hover:text-slate-50"
-            }
-          >
-            TAM-LISTE
-          </Link>
-        </div>
+      <div className={"flex flex-col justify-between gap-6"}>
+
+        {/* TALEP PAGE || Dikkat Uyarisi ve Baslik */}
+
+        <RedAlert title={"Lütfen Dikkat!"}>
+          Eğer bu yardım talebini daha önce gönderdiysen lütfen tekrar gönderme.
+        </RedAlert>
+        <FormTitle formFullListURL={formFullListURL} formName={formName} />
+
+        {/* FORMIK */}
         <form onSubmit={talepFormik.handleSubmit}>
+
+          {/* FORM SECTION - 1 || Name,Email,Phone,Addresses */}
           {formElements.map((item) => {
             return (
-              <div key={item.key} className={"relative mb-1 pb-[0.7rem]"}>
-                <input
-                  className={
-                    "peer appearance-none focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-10 bg-gray-50 border-b-2 border-slate-500"
-                  }
-                  type={item.type}
-                  maxLength={item.maxLength}
-                  minLength={item.minLength}
-                  inputMode={item.inputMode}
-                  placeholder={item.description}
-                  name={item.name}
-                  id={item.id}
-                  onChange={talepFormik.handleChange}
-                  value={item.formik}
-                />
-
-                <Image
-                  src={item.src}
-                  width={"200"}
-                  height={"200"}
-                  alt={item.name}
-                  className={"absolute top-2.5 left-2 w-5 h-5"}
-                />
-
-                <label
-                  htmlFor={item.name}
-                  className={`absolute left-0 -top-3.5 ${
-                    item.error ? "text-red-400" : "text-gray-400"
-                  } ${
-                    item.error
-                      ? "peer-placeholder-shown:text-red-400"
-                      : "peer-placeholder-shown:text-gray-400"
-                  } text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
-                >
-                  {item.description}
-                </label>
-              </div>
+              <CostumInput key={item.key} item={item} formik={talepFormik} />
             );
           })}
 
+          {/* FORM SECTION - 2 || Hafif,Orta,Kritik ve Sifre */}
           <div className="flex flex-row justify-between mt-5 content-center">
+
+            {/* Doğru durumu secmeye özen gösterin. || State Inputs */}
             <div className={"flex flex-col"}>
               <div className={"mb-3 "}>
                 <p
@@ -305,27 +262,17 @@ const TalepForm = ({ formName, formFullListURL }) => {
               </div>
               {radioInput.map((item) => {
                 return (
-                  <div key={item.id} className="mb-2 relative">
-                    <input
-                      type="radio"
-                      id={item.id}
-                      name={item.value}
-                      value={item.value}
-                      checked={selectedOption === item.value}
-                      onChange={handleSelectedOption}
-                      className="rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer peer"
-                    />
-                    <label
-                      htmlFor={item.value}
-                      className={`${item.labelColor} absolute top-0 left-6 peer-checked:font-semibold`}
-                    >
-                      {item.name}
-                    </label>
-                  </div>
+                  <CostumRadioInput
+                    key={item.key}
+                    handleSelectedOption={handleSelectedOption}
+                    item={item}
+                    selectedOption={selectedOption}
+                  />
                 );
               })}
             </div>
 
+            {/* Bu formdaki paylaşılan kişisel bilgileri şifreleyin. || Password Inputs */}
             <div className={"flex flex-col"}>
               <div className={"mb-3 "}>
                 <p className={"text-[0.7rem] text-gray-400 w-48"}>
@@ -336,92 +283,23 @@ const TalepForm = ({ formName, formFullListURL }) => {
 
               {passwordInput.map((item) => {
                 return (
-                  <div key={item.key} className={"relative py-2"}>
-                    <input
-                      className={
-                        "peer focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-10 bg-gray-50 border-b-2 border-slate-500"
-                      }
-                      type={item.type}
-                      maxLength={item.maxLength}
-                      minLength={item.minLength}
-                      inputMode={item.inputMode}
-                      placeholder={item.description}
-                      name={item.name}
-                      onChange={talepFormik.handleChange}
-                      value={item.formik}
-                    />
-                    <Image
-                      src={item.src}
-                      width={"200"}
-                      height={"200"}
-                      alt={item.name}
-                      className={"absolute top-3.5 left-2 w-5 h-5"}
-                    />
-
-                    <label
-                      htmlFor={item.name}
-                      className={`absolute left-0 -top-1  ${
-                        item.error ? "text-red-400" : "text-gray-400"
-                      } ${
-                        item.error
-                          ? "peer-placeholder-shown:text-red-400"
-                          : "peer-placeholder-shown:text-gray-400"
-                      } text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-3.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
-                    >
-                      {item.description}
-                    </label>
-                  </div>
+                  <CostumInput
+                    key={item.key}
+                    item={item}
+                    formik={talepFormik}
+                  />
                 );
               })}
             </div>
           </div>
-          <div className={"relative py-2"}>
-            <textarea
-              className={
-                "peer focus:outline-none transition duration-300 focus:border-gray-800 placeholder:text-transparent w-full px-9 py-1 h-30 bg-gray-50 border-2 border-slate-500"
-              }
-              rows={details.rows}
-              maxLength={details.maxLength}
-              placeholder={details.description}
-              name={details.name}
-              onChange={talepFormik.handleChange}
-              value={details.formik}
-            />
-            <Image
-              src={details.src}
-              width={"200"}
-              height={"200"}
-              alt={details.name}
-              className={"absolute top-4 left-2 w-5 h-5"}
-            />
 
-            <label
-              htmlFor={details.name}
-              className={`absolute left-0 -top-2.5 ${
-                details.error ? "text-red-400" : "text-gray-400"
-              } ${
-                details.error
-                  ? "peer-placeholder-shown:text-red-400"
-                  : "peer-placeholder-shown:text-gray-400"
-              } text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-4 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
-            >
-              {details.description}
-            </label>
-          </div>
-          <div className={"text-[0.7rem] text-gray-400 pb-5"}>
-            <p>
-              6698 sayılı KVKK kapsamında “Uygulamamıza depremzede ya da
-              depremzede yakını olarak kaydolan kullanıcılardan ad, soyadı,
-              iletişim bilgisi, log kaydı ve depremzedenin sisteme girilen ve
-              kendileri tarafından alenileştirilmiş konum verilerini
-              topluyoruz.” Veri işleme hukuki sebeplerimizi, amaçlarımızı görmek
-              ve haklarınızı öğrenmek için{" "}
-              <Link href={"/kvk"} className={"text-gray-800 font-semilbold"}>
-                Aydınlatma Metnini
-              </Link>{" "}
-              ziyaret etmek ister misiniz?{" "}
-            </p>
-          </div>
+          {/* FORM SECTION - 3 || Detaylandirma TextArea */}
+          <CostumTextAreaInput formik={talepFormik} details={details} />
+
+          {/* FORM SECTION - 4 || KVK Component */}
+          <Kvk />
+
+          {/* FORM SECTION - 5 || ERRORS */}
           <div>
             {Object.values(talepFormik.errors).length > 0 && (
               <h1
@@ -436,38 +314,18 @@ const TalepForm = ({ formName, formFullListURL }) => {
               </h1>
             )}
           </div>
-          <div
-            className={
-              "flex flex-col-4 justify-between items-center content-center"
-            }
-          >
-            <div className="mb-2 relative">
-              <input
-                type="checkbox"
-                id={"kvk"}
-                name={"kvk"}
-                onChange={handleKVKChecked}
-                className="rounded-full h-4 w-4 border border-gray-300 bg-white active:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer peer"
-              />
-              <label
-                htmlFor={"kvk"}
-                className={`absolute w-48 top-1 left-6 text-[0.7rem] ${
-                  talepFormik.errors.kvk ? "text-red-400" : "text-gray-400"
-                } peer-checked:font-semibold peer-checked:text-gray-700`}
-              >
-                KVK Kurallarini Onayliyorum
-              </label>
-            </div>
-            <button
-              type={"submit "}
-              className={
-                "py-2 px-6 bg-blue-400 border border-gray-400/20 rounded-md text-center text-slate-50 transition duration-300 hover:text-slate-50 hover:bg-slate-500 mr-2"
-              }
-            >
-              Gönder
-            </button>
+
+          {/* FORM SECTION - 6 || KVK Checkbox - Submit Buttons */}
+          <div className={"flex flex-col-4 justify-between items-center content-center"}>
+            <KvkCheckBox
+              formik={talepFormik}
+              handleKVKChecked={handleKVKChecked}
+            />
+            <SubmitButton />
           </div>
+
         </form>
+
       </div>
     </div>
   );
