@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import FormsMenues from "./formsMenues";
+import HamburgerHiddenMenues from "./HamburgerHiddenMenues";
 import Diveded from "../../UI/diveded";
 import Logo from "../../UI/Logo";
 import HamburgerMenuIcon from "../../UI/HamburgerMenuIcon";
@@ -26,7 +26,7 @@ const NavigationBar = () => {
           />
         </div>
       </div>
-      <FormsMenues hamburger={hamburger} />
+      <HamburgerHiddenMenues hamburger={hamburger} />
     </div>
   );
 };

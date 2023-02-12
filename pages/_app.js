@@ -1,18 +1,17 @@
 import "../styles/globals.css";
 import Layout from "../components/layout/layout";
-// import { Provider } from "react-redux";
-// import store from "../src/app/store";
-
 import {
   useQuery,
   useMutation,
   useQueryClient,
   QueryClient,
   QueryClientProvider,
-} from 'react-query'
+} from "react-query";
+
+// import { Provider } from "react-redux";
+// import store from "../src/app/store";
 
 function MyApp({ Component, pageProps }) {
-
   const queryClient = new QueryClient();
 
   return (

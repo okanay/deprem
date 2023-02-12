@@ -1,26 +1,34 @@
 import Link from "next/link";
 import Image from "next/image";
+import FormTitle from "../UI/FormTitle";
 
 const EmergencyResponse = () => {
 
 
   const YardimAl = [
     {
-      key: "YA2",
+      key: "YA0",
+      url: "/form/bt",
+      src: "/menuIcons/cabin.png",
+      alt : "Barınmaya İhtiyacım Var",
+      description: "Barınmaya İhtiyacım Var",
+    },
+    {
+      key: "YA1",
       url: "/form/ct",
       src: "/menuIcons/camp.png",
       alt : "Çadıra İhtiyacım Var",
       description: "Çadıra İhtiyacım Var",
     },
     {
-      key: "YA1",
+      key: "YA2",
       url: "/form/gt",
       src: "/menuIcons/foods.png",
       alt : "Gıdaya İhtiyacım Var",
       description: "Gıdaya İhtiyacım Var",
     },
     {
-      key: "YA0",
+      key: "YA3",
       url: "/form/it",
       src: "/menuIcons/medicine.png",
       alt : "İlaca İhtiyacım Var",
@@ -44,21 +52,21 @@ const EmergencyResponse = () => {
       description: "Konaklama Teklif Et",
     },
     {
-      key: "YV0",
+      key: "YV1",
       url: "/",
       src: "/menuIcons/footprints.png",
       alt : "Arama Kurtarmaya Katilabilirim",
       description: "Arama Kurtarmaya Katılabilirim",
     },
     {
-      key: "YV1",
+      key: "YV2",
       url: "/",
       src: "/menuIcons/construction-worker.png",
       alt : "Operasyonlarda Bulunabilirim",
       description: "Operasyonlarda Bulunabilirim",
     },
     {
-      key: "YV2",
+      key: "YV3",
       url: "/",
       src: "/menuIcons/bus-driver.png",
       alt : "Nakliye ve Taşıma Yapabilirim",
@@ -69,12 +77,11 @@ const EmergencyResponse = () => {
   return (
     <>
       <div className={"bg-gray-50/80 pt-5 px-4 pb-8"}>
-        <div className={"grid grid-rows-2 gap-12"}>
+        <div className={"flex flex-col gap-12"}>
           <div>
             <h1 className={"text-[1.4rem] font-semibold text-neutral-700 text-start mb-5"}>
               <span className={"text-slate-600/90 "}>İhtiyaç</span> <span className={'font-light font-serif'}>Oluştur</span>
             </h1>
-
             {YardimAl.map((item) => {
               return (
                 <div
@@ -111,7 +118,7 @@ const EmergencyResponse = () => {
           <div>
 
             <h1 className={"text-[1.4rem] font-semibold text-neutral-700 text-start mb-5"}>
-              <span className={"text-slate-600/90"}>Destek</span> <span className={'font-light font-serif'}>Oluştur</span> <span className={'text-[0.6rem] text-gray-400 text-light'}>wait until V0-0.5</span>
+              <span className={"text-slate-600/90"}>Destek</span> <span className={'font-light font-serif'}>Oluştur</span> <span className={'text-[0.6rem] text-gray-400 text-light'}>wait until V1.2</span>
             </h1>
 
             {YardimVer.map((item) => {

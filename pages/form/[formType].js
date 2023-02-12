@@ -10,14 +10,17 @@ const FormType = () => {
     return <Loading />;
   }
 
-  if (formType === "ct") {
+  if (formType === "bt") {
+    return <TalepForm formName={'Barınma İhtiyaç'} formFullListURL={'/'}/>;
+  }
+  else if (formType === "ct") {
     return <TalepForm formName={'Çadır İhtiyaç'} formFullListURL={'/'}/>;
   }
   else if (formType === "gt") {
     return <TalepForm formName={'Gıda İhtiyaç'} formFullListURL={'/'}/>;
   }
   else if (formType === "it") {
-    return <TalepForm formName={'Sağlık İhtiyaç'} formFullListURL={'/'}/>;
+    return <TalepForm formName={'İlaç İhtiyaç'} formFullListURL={'/'}/>;
   }
   else if (formType === "ht") {
     return <TalepForm formName={'Hijyen İhtiyaç'} formFullListURL={'/'}/>;

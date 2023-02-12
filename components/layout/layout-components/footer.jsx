@@ -1,9 +1,13 @@
 import Logo from "../../UI/Logo";
 import Link from "next/link";
+import { useQuery } from "react-query";
 
 const Footer = () => {
 
-  const versionText = "Version - 0.4.5";
+  const {data, error, isLoading, isSuccess} = useQuery("version");
+  const versionText = isSuccess ? data.version : "V0.A23";
+
+
 
   return (
     <footer className="px-4 py-4">
