@@ -4,102 +4,101 @@ import Link from "next/link";
 import { motion as m } from "framer-motion";
 import Alert from "../../components/UI/Alert";
 
+
+const talepFilter = [
+  {
+    name: "TFDefault",
+    src: "/menuIcons/manage.png",
+    alt: "Hepsi",
+    description: "Hepsi",
+    color: "slate-600",
+    hover: "group-hover:border-slate-400",
+    url: "/",
+  },
+  {
+    name: "TFBarinma",
+    src: "/menuIcons/cabin.png",
+    alt: "Barınmaya İhtiyacım Var",
+    description: "Barınma",
+    color: "red-400",
+    hover: "group-hover:border-red-300",
+    url: "/form/bt",
+  },
+  {
+    name: "TFCadir",
+    src: "/menuIcons/camp.png",
+    alt: "Çadıra İhtiyacım Var",
+    description: "Çadır",
+    color: "pink-400",
+    hover: "group-hover:border-pink-300",
+    url: "/form/ct",
+  },
+  {
+    name: "TFYemek",
+    src: "/menuIcons/foods.png",
+    alt: "Gıdaya İhtiyacım Var",
+    description: "Gıda",
+    color: "emerald-400",
+    hover: "group-hover:border-emerald-300",
+    url: "/form/gt",
+  },
+  {
+    name: "TFIlac",
+    src: "/menuIcons/medicine.png",
+    alt: "İlaca İhtiyacım Var",
+    description: "İlaç",
+    color: "teal-400",
+    hover: "group-hover:border-teal-300",
+    url: "/form/it",
+  },
+  {
+    name: "TFHijyen",
+    src: "/menuIcons/amenities.png",
+    alt: "Hijyen Ürünlerine İhtiyacım Var",
+    description: "Hijyen",
+    color: "blue-400",
+    hover: "group-hover:border-blue-300",
+    url: "/form/ht",
+  },
+];
+const labelContainer = {
+  initial: {},
+  hidden: {
+    opacity: 0,
+    scaleY: 0,
+    y: -10,
+    transition: { duration: 0.2 },
+  },
+  open: {
+    opacity: 1,
+    scaleY: 1,
+    y: -2,
+    display: "block",
+    scaleX: 0.95,
+    transition: { duration: 0.5, type: "spring" },
+  },
+};
+const imageContainer = {
+  initial: {},
+  unselected: {
+    y: 0,
+    scale : 1,
+    transition: { duration: 0.3 },
+  },
+  selected: {
+    y: -4,
+    scale : 1.15,
+    transition: { duration: 0.5, type: "spring" },
+  },
+};
+
 const Talep = () => {
+
   const [selected, setSelected] = useState("TFDefault");
   const [createButton, setCreateButton] = useState({
     color: "slate-600",
     url: "/",
   });
-
-  const talepFilter = [
-    {
-      name: "TFDefault",
-      src: "/menuIcons/manage.png",
-      alt: "Hepsi",
-      description: "Hepsi",
-      color: "slate-600",
-      hover: "group-hover:border-slate-400",
-      url: "/form",
-    },
-    {
-      name: "TFBarinma",
-      src: "/menuIcons/cabin.png",
-      alt: "Barınmaya İhtiyacım Var",
-      description: "Barınma",
-      color: "red-400",
-      hover: "group-hover:border-red-300",
-      url: "/form/bt",
-    },
-    {
-      name: "TFCadir",
-      src: "/menuIcons/camp.png",
-      alt: "Çadıra İhtiyacım Var",
-      description: "Çadır",
-      color: "pink-400",
-      hover: "group-hover:border-pink-300",
-      url: "/form/ct",
-    },
-    {
-      name: "TFYemek",
-      src: "/menuIcons/foods.png",
-      alt: "Gıdaya İhtiyacım Var",
-      description: "Gıda",
-      color: "emerald-400",
-      hover: "group-hover:border-emerald-300",
-      url: "/form/gt",
-    },
-    {
-      name: "TFIlac",
-      src: "/menuIcons/medicine.png",
-      alt: "İlaca İhtiyacım Var",
-      description: "İlaç",
-      color: "teal-400",
-      hover: "group-hover:border-teal-300",
-      url: "/form/it",
-    },
-    {
-      name: "TFHijyen",
-      src: "/menuIcons/amenities.png",
-      alt: "Hijyen Ürünlerine İhtiyacım Var",
-      description: "Hijyen",
-      color: "blue-400",
-      hover: "group-hover:border-blue-300",
-      url: "/form/ht",
-    },
-  ];
-
-  const labelContainer = {
-    initial: {},
-    hidden: {
-      opacity: 0,
-      scaleY: 0,
-      y: -10,
-      transition: { duration: 0.2 },
-    },
-    open: {
-      opacity: 1,
-      scaleY: 1,
-      y: -2,
-      display: "block",
-      scaleX: 0.95,
-      transition: { duration: 0.5, type: "spring" },
-    },
-  };
-
-  const imageContainer = {
-    initial: {},
-    unselected: {
-      y: 0,
-      scale : 1,
-      transition: { duration: 0.3 },
-    },
-    selected: {
-      y: -4,
-      scale : 1.15,
-      transition: { duration: 0.5, type: "spring" },
-    },
-  };
-
   const handleFilterForm = (item) => {
     const selectedValue = { color: item.color, url: item.url };
     setCreateButton(selectedValue);
