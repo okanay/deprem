@@ -6,48 +6,65 @@ import Alert from "../../components/UI/Alert";
 
 const Talep = () => {
   const [selected, setSelected] = useState("TFDefault");
+  const [createButton, setCreateButton] = useState({
+    color: "slate-600",
+    url: "/",
+  });
+
   const talepFilter = [
     {
       name: "TFDefault",
       src: "/menuIcons/manage.png",
       alt: "Hepsi",
       description: "Hepsi",
-      color : "border-slate-600 group-hover:border-slate-400",
+      color: "slate-600",
+      hover: "group-hover:border-slate-400",
+      url: "/form",
     },
     {
       name: "TFBarinma",
       src: "/menuIcons/cabin.png",
       alt: "Barınmaya İhtiyacım Var",
       description: "Barınma",
-      color : "border-red-400 group-hover:border-red-300",
+      color: "red-400",
+      hover: "group-hover:border-red-300",
+      url: "/form/bt",
     },
     {
       name: "TFCadir",
       src: "/menuIcons/camp.png",
       alt: "Çadıra İhtiyacım Var",
       description: "Çadır",
-      color : "border-pink-400 group-hover:border-pink-300",
+      color: "pink-400",
+      hover: "group-hover:border-pink-300",
+      url: "/form/ct",
     },
     {
       name: "TFYemek",
       src: "/menuIcons/foods.png",
       alt: "Gıdaya İhtiyacım Var",
       description: "Gıda",
-      color : "border-emerald-400 group-hover:border-emerald-300",
+      color: "emerald-400",
+      hover: "group-hover:border-emerald-300",
+      url: "/form/gt",
     },
     {
       name: "TFIlac",
       src: "/menuIcons/medicine.png",
       alt: "İlaca İhtiyacım Var",
       description: "İlaç",
-      color : "border-teal-400 group-hover:border-teal-300",
+      color: "teal-400",
+      hover: "group-hover:border-teal-300",
+      url: "/form/it",
     },
     {
       name: "TFHijyen",
       src: "/menuIcons/amenities.png",
       alt: "Hijyen Ürünlerine İhtiyacım Var",
       description: "Hijyen",
-      color : "border-blue-400 group-hover:border-blue-300",
+      color: "blue-400",
+      hover: "group-hover:border-blue-300",
+      url: "/form/ht",
     },
   ];
 
@@ -68,14 +85,17 @@ const Talep = () => {
       transition: { duration: 0.5, type: "spring" },
     },
   };
-  const handleFilterForm = (formName) => {
-    setSelected(formName);
+  const handleFilterForm = (item) => {
+    const selectedValue = { color: item.color, url: item.url };
+    setCreateButton(selectedValue);
+
+    setSelected(item.name);
   };
 
   return (
     <div
       className={
-        "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full m-20 my-8 mx-auto px-4 py-4"
+        "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full m-20 my-8 mx-auto px-4 py-8"
       }
     >
       {/*Uyari*/}
@@ -85,7 +105,7 @@ const Talep = () => {
       </Alert>
 
       {/*Baslik*/}
-      <div className="mt-8 flex justify-between">
+      <div className="my-6 flex justify-between items-center text-center">
         <div>
           <h1
             className={
@@ -96,6 +116,13 @@ const Talep = () => {
             <span className={"font-light font-serif"}>Talepleri</span>
           </h1>
         </div>
+
+        <Link
+          href={createButton.url}
+          className={`mb-4 py-2 px-2 rounded-md bg-slate-50 border-[0.01rem] border-gray-400 text-${createButton.color} shadow shadow-red-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-${createButton.color} hover:text-slate-50`}
+        >
+          YENİ-TALEP
+        </Link>
       </div>
 
       {/*  Talep Iconlari olsun ve o iconlara gore filtreleme olsun.. baslayalim..*/}
@@ -109,11 +136,11 @@ const Talep = () => {
             <button
               key={item.name}
               onClick={() => {
-                handleFilterForm(item.name);
+                handleFilterForm(item);
               }}
               className={`w-10 h-10 p-2 border-2 transition duration-300 rounded flex flex-col items-center group ${
                 selected === item.name
-                  ? `${item.color} border-b-[4px]`
+                  ? `border-${item.color} border-b-[4px]`
                   : ""
               } relative`}
             >
@@ -129,7 +156,7 @@ const Talep = () => {
                 initial={"hidden"}
                 animate={selected === item.name ? "open" : "hidden"}
                 htmlFor={item.name}
-                className={`absolute top-10 text-gray-800 font-light border-b-2 pb-0.5 w-[4rem] ${item.color}`}
+                className={`absolute top-10 text-gray-800 font-light border-b-2 pb-0.5 w-[4rem] border-${item.color} ${item.hover}`}
               >
                 {item.description}
               </m.label>
@@ -137,6 +164,13 @@ const Talep = () => {
           );
         })}
       </div>
+
+      {/*  TAILWIND CLASS CREATOR*/}
+      <div
+        className={
+          "text-red-400 text-teal-400 text-pink-400 text-blue-400 hover:bg-slate-600 text-emerald-400 hover:bg-red-400 hover:bg-teal-400 hover:bg-pink-400 hover:bg-blue-400 hover:bg-emerald-400"
+        }
+      ></div>
     </div>
   );
 };

@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/getVersion.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getVersion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/form/[formType].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/form/[formType].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/talep/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talep/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +85,7 @@
       <workItem from="1675799496492" duration="36907000" />
       <workItem from="1675952209564" duration="73865000" />
       <workItem from="1676207298298" duration="3378000" />
-      <workItem from="1676211911419" duration="16691000" />
+      <workItem from="1676211911419" duration="18871000" />
     </task>
     <servers />
   </component>
