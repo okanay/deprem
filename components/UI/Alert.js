@@ -1,10 +1,12 @@
 import React from "react";
 
-const RedAlert = ({title, children}) => {
+const Alert = ({title, children}) => {
+
+
 
   return (
     <div
-      className=" bg-red-100 border-l-4 border-orange-400 text-orange-700 p-4 text-[0.8rem] phone:text-[0.9rem] phoneLG:text-base"
+      className=" bg-orange-100 border-l-4 border-red-400 text-gray-700 p-4 text-[0.8rem] phone:text-[0.9rem] phoneLG:text-base"
       role="alert"
     >
       <p className="font-bold">{title}</p>
@@ -16,4 +18,4 @@ const RedAlert = ({title, children}) => {
   )
 }
 
-export default RedAlert
+export default Alert

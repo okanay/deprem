@@ -2,7 +2,6 @@ import { motion as m } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-//absolute top-[6rem]
 const HamburgerHiddenMenues = ({ hamburger }) => {
 
   const hamburgerMenu = {
