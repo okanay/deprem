@@ -85,10 +85,10 @@ const FormsMenues = ({ hamburger }) => {
       <div className="h-full w-full flex justify-center items-center text-[0.9rem] text-gray-800">
         <nav className={'flex flex-row w-full items-center gap-5 justify-center font-semibold text-[0.6rem] phone:text-[0.71rem] phoneLG:text-[0.8rem]'}>
 
-          <div className="flex flex-row uppercase">
-            <Link href={'/'} className={'px-2  text-gray-600'}>Politika</Link>
-            <Link href={'/'} className={'px-2  text-gray-600'}>Hakkimda</Link>
-            <Link href={'/'} className={'px-2  text-gray-600'}>İletişim</Link>
+          <div className="flex flex-row">
+            <Link href={'/'} className={'px-2  text-gray-600'}>POLİTİKA</Link>
+            <Link href={'/'} className={'px-2  text-gray-600'}>HAKKIMDA</Link>
+            <Link href={'/'} className={'px-2  text-gray-600'}>İLETİŞİM</Link>
           </div>
 
 
