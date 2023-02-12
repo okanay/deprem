@@ -6,25 +6,32 @@ const EmergencyResponse = () => {
 
   const YardimAl = [
     {
-      key: "YA0",
-      url: "/form/enkazTalep",
-      src: "/menuIcons/help.png",
+      key: "YA2",
+      url: "/form/bt",
+      src: "/menuIcons/warm.png",
       alt : "help",
-      description: "Enkaz Formu Oluştur",
+      description: "Çadıra İhtiyacım Var",
     },
     {
       key: "YA1",
-      url: "/form/gidaTalep",
+      url: "/form/gt",
       src: "/menuIcons/foods.png",
       alt : "help",
-      description: "Gıda Formu Oluştur",
+      description: "Gıdaya İhtiyacım Var",
     },
     {
-      key: "YA2",
-      url: "/form/barinmaTalep",
-      src: "/menuIcons/warm.png",
+      key: "YA0",
+      url: "/form/it",
+      src: "/menuIcons/help.png",
       alt : "help",
-      description: "Barınma Formu Oluştur",
+      description: "İlaca İhtiyacım Var",
+    },
+    {
+      key: "YA4",
+      url: "/form/ht",
+      src: "/menuIcons/help.png",
+      alt : "help",
+      description: "Hijyen Ürünlerine İhtiyacım Var",
     },
   ];
 
@@ -35,6 +42,13 @@ const EmergencyResponse = () => {
       src: "/menuIcons/house.png",
       alt : "share-house",
       description: "Konaklama Teklif Et",
+    },
+    {
+      key: "YV0",
+      url: "/",
+      src: "/menuIcons/house.png",
+      alt : "share-house",
+      description: "Arama Kurtarmaya Katılabilirim",
     },
     {
       key: "YV1",
