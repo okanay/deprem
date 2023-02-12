@@ -160,8 +160,16 @@ const Talep = () => {
       </div>
 
       {/*  TAILWIND CLASS CREATOR*/}
-      <div className={"text-red-400 text-teal-400 text-pink-400 text-blue-400 hover:bg-slate-600 text-emerald-400 hover:bg-red-400 hover:bg-teal-400 hover:bg-pink-400 hover:bg-blue-400 hover:bg-emerald-400"}
-      ></div>
+      <div>
+
+        {/* BackGround*/}
+        <div className={'hover:bg-slate-600 hover:bg-red-400 hover:bg-teal-400 hover:bg-pink-400 hover:bg-blue-400 hover:bg-emerald-400'}></div>
+        {/* TEXT */}
+        <div className={'text-red-400 text-teal-400 text-pink-400 text-blue-400 text-emerald-400 text-slate-600'}></div>
+        {/* BORDER*/}
+        <div className={'border-slate-600 border-red-400 border-teal-400 border-pink-400 border-blue-400 border-emerald-400'}></div>
+        <div className={'hover:border-slate-400 hover:border-red-300 hover:border-teal-300 hover:border-pink-300 hover:border-blue-300 hover:border-emerald-300'}></div>
+      </div>
     </div>
   );
 };
