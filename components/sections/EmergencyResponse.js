@@ -85,28 +85,25 @@ const EmergencyResponse = () => {
       <div className={"bg-gray-50/80 pt-5 px-4 pb-8"}>
         <div className={"flex flex-col gap-12"}>
           <div>
-            <div className="flex justify-between">
-              <div>
-                <h1
-                  className={
-                    "text-[1.2rem] font-semibold text-neutral-700 text-start mb-5"
-                  }
-                >
-                  <span className={"text-slate-600/90"}>İhtiyaç </span>
-                  <span className={"font-light font-serif"}>Oluştur</span>
-                </h1>
-              </div>
 
-              <div>
-                <Link
-                  href={"/talep"}
-                  className={
-                    "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-red-400/90 shadow shadow-red-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-red-400/80 hover:text-slate-50"
-                  }
-                >
-                  TAM-LİSTE
-                </Link>
-              </div>
+            <div className={"flex flex-row justify-between items-center"}>
+              <h1
+                className={
+                  "text-[1.2rem] font-semibold text-neutral-700 text-start mb-5"
+                }
+              >
+                <span className={"text-slate-600/90"}>İhtiyaç </span>
+                <span className={"font-light font-serif"}>Oluştur</span>
+              </h1>
+
+              <Link
+                href={"/talep"}
+                className={
+                  "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-blue-400/90 shadow shadow-blue-400/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-red-400/90 hover:text-slate-50"
+                }
+              >
+                TAM-LİSTE
+              </Link>
             </div>
 
             {YardimAl.map((item) => {
@@ -143,28 +140,24 @@ const EmergencyResponse = () => {
             })}
           </div>
           <div>
-            <div className="flex justify-between">
-              <div>
-                <h1
-                  className={
-                    "text-[1.2rem] font-semibold text-neutral-700 text-start mb-5"
-                  }
-                >
-                  <span className={"text-slate-600/90"}>Destek </span>
-                  <span className={"font-light font-serif"}>Oluştur</span>
-                </h1>
-              </div>
+            <div className={"flex flex-row justify-between items-center"}>
+              <h1
+                className={
+                  "text-[1.2rem] font-semibold text-neutral-700 text-start mb-5"
+                }
+              >
+                <span className={"text-slate-600/90"}>Destek </span>
+                <span className={"font-light font-serif"}>Oluştur</span>
+              </h1>
 
-              <div>
-                <Link
-                  href={"/"}
-                  className={
-                    "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-emerald-500/90 shadow shadow-emerald-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-emerald-400/80 hover:text-slate-50"
-                  }
-                >
-                  TAM-LİSTE
-                </Link>
-              </div>
+              <Link
+                href={"/"}
+                className={
+                  "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-blue-400/90 shadow shadow-blue-400/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-emerald-400/90 hover:text-slate-50"
+                }
+              >
+                TAM-LİSTE
+              </Link>
             </div>
 
             {YardimVer.map((item) => {
