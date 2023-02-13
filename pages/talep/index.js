@@ -144,10 +144,12 @@ const Talep = () => {
         <div className={'grid grid-cols-2 grid-flow-row-dense mb-3'}>
           <div></div>
          <div className={'flex flex-row justify-around gap-2 items-center'}>
+
+           {/* KOD INPUT */}
            <div className={"relative mb-1 pb-1"}>
              <input
                className={
-                 "text-sm peer appearance-none focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-8 bg-gray-50 border-b-2 border-slate-500"
+                 "peer appearance-none focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-8 bg-gray-50 border-b-2 border-slate-500"
                }
                type={'text'}
                maxLength={8}
@@ -169,12 +171,15 @@ const Talep = () => {
 
              <label
                htmlFor={'arama'}
-               className={`absolute left-0 -top-4 text-gray-400 peer-placeholder-shown:text-gray-400 text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-1.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
+               className={`absolute left-0 -top-4 text-gray-400 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-[0.6rem] peer-placeholder-shown:phone:text-[0.75rem] peer-placeholder-shown:top-2 peer-placeholder-shown:phone:top-1.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
              >
                # Talep Arama
              </label>
            </div>
-           <div> <Link
+
+           {/* ARA BUTONU */}
+           <div>
+             <Link
              href={createButton.url}
              className={`py-1.5 px-2 rounded-md bg-slate-50 border-[0.01rem] border-gray-200 text-slate-600 shadow shadow-gray-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-slate-600 hover:text-slate-50`}
            >
