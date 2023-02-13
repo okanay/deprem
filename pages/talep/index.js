@@ -117,7 +117,7 @@ const Talep = () => {
       </Alert>
 
       {/* Baslik */}
-      <div className="my-6 flex justify-between items-center text-center">
+      <div className="mt-6 mb-5 flex justify-between items-center text-center">
         <div>
           <h1
             className={
@@ -140,13 +140,11 @@ const Talep = () => {
 
       {/* FILTER */}
       <div>
+
         {/* ID FILTER */}
-        <div className={'grid grid-cols-2 grid-flow-row-dense mb-3'}>
-          <div></div>
-          {/* ID FILTER */}
-          <div className={"flex flex-row justify-between items-center"}>
+        <div className={"flex flex-row justify-center items-center mb-2"}>
             {/* KOD INPUT */}
-            <div className={"relative mb-1 pb-1"}>
+            <div className={"relative mr-2 pb-1"}>
 
               {/* INPUT */}
               <input
@@ -182,18 +180,17 @@ const Talep = () => {
             </div>
 
             {/* ARA BUTONU */}
-            <div>
+            <div className={''}>
               <Link
                 href={"/"}
                 className={
-                  "m-1 p-1 rounded-md bg-slate-50 border border-slate-800/20 text-slate-700/90 uppercase font-bold text-sm transition-colors duration-300 hover:bg-slate-600/90 hover:text-slate-50"
+                  "p-2 rounded-md bg-slate-50 border border-slate-800/20 text-slate-700/90 uppercase font-bold text-sm transition-colors duration-300 hover:bg-slate-600/90 hover:text-slate-50"
                 }
               >
                 Ara
               </Link>
             </div>
           </div>
-        </div>
 
         {/* ICON FILTER */}
         <div className={"flex flex-row justify-center gap-4 bg-gray-50 pb-7 pt-2 rounded-[2px] border-b border-b-gray-300 w-full"}>
@@ -239,10 +236,10 @@ const Talep = () => {
       </div>
 
       {/* IHTIYAC TALEP FORMLARI (MAP EDILEN DIV) */}
-      <div className="flex flex-col gap-10 mt-12 text-[0.5rem] phone:text-[0.55rem] phoneLG:text-[0.7rem]">
+      <div className="flex flex-col gap-10 mt-14 text-[0.5rem] phone:text-[0.55rem] phoneLG:text-[0.7rem]">
 
         {/* 1 ADET TALEP KUTUSU */}
-        <div className={"bg-white text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"}>
+        <div className={"bg-neutral-50 text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"}>
 
           {/* TELEFON NUMARASI - AD - DURUM - ID - TALEP GORSELI */}
           <div className={"absolute -top-[1rem] -right-[0.05rem] w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
@@ -341,7 +338,7 @@ const Talep = () => {
 
           </div>
         </div>
-        <div className={"bg-white text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"}>
+        <div className={"bg-neutral-50 text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"}>
 
           {/* TELEFON NUMARASI - AD - DURUM - ID - TALEP GORSELI */}
           <div className={"absolute -top-[1rem] -right-[0.05rem] w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
@@ -440,7 +437,7 @@ const Talep = () => {
 
           </div>
         </div>
-        <div className={"bg-white text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"}>
+        <div className={"bg-neutral-50 text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"}>
 
           {/* TELEFON NUMARASI - AD - DURUM - ID - TALEP GORSELI */}
           <div className={"absolute -top-[1rem] -right-[0.05rem] w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>

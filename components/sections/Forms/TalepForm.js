@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -15,6 +13,7 @@ import FormTitle from "../../UI/FormTitle";
 import Kvk from "../../UI/KVK";
 import KvkCheckBox from "../../UI/KvkCheckBox";
 import SubmitButton from "../../UI/SubmitButton";
+import { cityData} from "../../../helper/getCityAndStreet";
 
 const TalepForm = ({ formName, formFullListURL }) => {
   const handleSelectedOption = (event) => {
@@ -28,12 +27,39 @@ const TalepForm = ({ formName, formFullListURL }) => {
     talepFormik.values.kvk = state;
     setCheckedOption(state);
   };
+  const handleCityChange = (event) => {
+
+    const value = event.target.value
+    const response = cityData.find(item => { return item.text === value })
+
+    if (response !== undefined)
+    {
+      setStreetNames(response.districts)
+    }
+    else
+    {
+      setStreetNames([{value: 'defaultValue', text: 'defaultText'}])
+    }
+
+    setSelectedCity(value)
+    talepFormik.values.city = value
+    setSelectedStreet("")
+    talepFormik.values.street = ""
+
+  }
+  const handleStreetChange = (event) => {
+    setSelectedStreet(event.target.value)
+    talepFormik.values.street = event.target.value
+  }
 
   const router = useRouter();
 
   const [selectedOption, setSelectedOption] = useState(null);
   const [checkedOption, setCheckedOption] = useState(false);
   const [isFormSucces, setIsFormSucces] = useState(false);
+  const [selectedCity, setSelectedCity] = useState("");
+  const [selectedStreet, setSelectedStreet] = useState("");
+  const [streetNames , setStreetNames] = useState([{value : "defaultValue", text : "defaultText"}]);
 
   const talepSchema = Yup.object({
     name: Yup.string()
@@ -47,24 +73,19 @@ const TalepForm = ({ formName, formFullListURL }) => {
       .required("Lütfen telefon numaranızı girin.")
       .lessThan(10000000000, "Örnek telefon numarası || 532-456-78-90")
       .moreThan(999999999, "Örnek telefon numarası || 532-456-78-90"),
-    address: Yup.string()
-      .required("Lütfen adresinizi girin.")
-      .max(80, "Adresiniz için maksimum karakter sayısı 80'dir"),
+    city: Yup.string()
+      .required("Lütfen bulunduğunuz Şehiri seçin.")
+      .min(2, "Lütfen bulunduğunuz Şehiri seçin."),
+    street: Yup.string()
+      .required("Lütfen bulunduğunuz İlçeyi seçin.")
+      .min(2, "Lütfen bulunduğunuz İlçeyi seçin."),
     addressDes: Yup.string()
       .required("Lütfen adresinizi detaylandırın.")
       .max(80, "Açık adresiniz için maksimum karakter sayısı 80'dir"),
     status: Yup.string().required("Lütfen ifade edecek durumu seçin"),
-    password: Yup.string()
-      .required("Lütfen şifrenizi girin.")
-      .max(6, "Sifreniz minimum 6 haneli olmalidir.")
-      .min(4, "Sifreniz maksimum 4 haneli olmalidir.")
-      .typeError("Şifre rakamlardan oluşmalıdır"),
-    confirmPassword: Yup.string()
-      .required("Lütfen tekrar şifrenizi girin.")
-      .oneOf([Yup.ref("password")], "Tekrar şifreniz ile şifreniz eşleşmiyor."),
-    details: Yup.string().required(
-      "Lütfen talebinizi dikkatli bir şekilde detaylandırın."
-    ) .max(400, "Detaylandırmanız için maksimum karakter sayısı 400'dür"),
+    details: Yup.string()
+      .required("Lütfen talebinizi dikkatli bir şekilde detaylandırın.")
+      .max(400, "Detaylandırmanız için maksimum karakter sayısı 400'dür"),
     kvk: Yup.string().required(
       "KVKK kurallarını okuyup onaylamanız gerekiyor."
     ),
@@ -74,11 +95,10 @@ const TalepForm = ({ formName, formFullListURL }) => {
       name: "",
       email: "",
       phone: "",
-      address: "",
+      city: "",
+      street: "",
       addressDes: "",
       status: "",
-      password: "",
-      confirmPassword: "",
       details: "",
       kvk: "",
     },
@@ -93,7 +113,6 @@ const TalepForm = ({ formName, formFullListURL }) => {
       );
 
       if (error !== null) {
-
         console.log(values);
         talepFormik.setErrors({ error: error.systemMessage });
         // talepFormik.setErrors({ error: error.message });
@@ -104,7 +123,7 @@ const TalepForm = ({ formName, formFullListURL }) => {
     },
   });
 
-  const formElements = [
+  const personelInfoElements = [
     {
       key: "FE0",
       type: "text",
@@ -144,20 +163,8 @@ const TalepForm = ({ formName, formFullListURL }) => {
       formik: talepFormik.values.phone,
       error: talepFormik.errors.phone,
     },
-    {
-      key: "FE4",
-      type: "text",
-      maxLength: "80",
-      minLength: "0",
-      inputMode: "text",
-      id: "formElementsTalepAddress",
-      name: "address",
-      description: "Adres Tarifiniz",
-      src: "/formIcons/address.png",
-      formik: talepFormik.values.address,
-      error: talepFormik.errors.address,
-    },
-    {
+  ];
+  const addressElements = {
       key: "FE5",
       type: "text",
       maxLength: "80",
@@ -169,8 +176,7 @@ const TalepForm = ({ formName, formFullListURL }) => {
       src: "/formIcons/infoAddress.png",
       formik: talepFormik.values.addressDes,
       error: talepFormik.errors.addressDes,
-    },
-  ];
+    }
   const radioInput = [
     {
       key: "FE6",
@@ -194,36 +200,6 @@ const TalepForm = ({ formName, formFullListURL }) => {
       labelColor: "peer-checked:text-red-400",
     },
   ];
-  const passwordInput = [
-    {
-      key: "FE11",
-      type: "password",
-      inputMode: "number",
-      maxLength: 6,
-      minLength: 4,
-      auto: "false",
-      id: "formElementsPassword",
-      name: "password",
-      description: "Sifrenizi Girin",
-      src: "/formIcons/password.png",
-      formik: talepFormik.values.password,
-      error: talepFormik.errors.password,
-    },
-    {
-      key: "FE10",
-      type: "password",
-      maxLength: 6,
-      minLength: 4,
-      inputMode: "number",
-      auto: "false",
-      id: "formElementsConfirmPassword",
-      name: "confirmPassword",
-      description: "Sifrenizi Tekrar Girin",
-      src: "/formIcons/confirmPassword.png",
-      formik: talepFormik.values.confirmPassword,
-      error: talepFormik.errors.confirmPassword,
-    },
-  ];
   const details = {
     key: "FE12",
     rows: 8,
@@ -237,72 +213,83 @@ const TalepForm = ({ formName, formFullListURL }) => {
   };
 
   return (
-    <div
-      className={
-        "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto"
-      }
-    >
+    <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto"}>
       <div className={"flex flex-col justify-between gap-6"}>
-        {/* TALEP PAGE || Dikkat Uyarisi ve Baslik */}
-
+        {/* Dikkat Uyarisi */}
         <RedAlert title={"Lütfen Dikkat!"}>
           Eğer bu yardım talebini daha önce gönderdiysen lütfen tekrar gönderme.
         </RedAlert>
+
+        {/* BAŞLIK */}
         <FormTitle formFullListURL={formFullListURL} formName={formName} />
 
         {/* FORMIK */}
         <form onSubmit={talepFormik.handleSubmit}>
-          {/* FORM SECTION - 1 || Name,Email,Phone,Addresses */}
-          {formElements.map((item) => {
+
+          {/* FORM SECTION - 1 || Name,Email,Phone */}
+          {personelInfoElements.map((item) => {
             return (
               <CostumInput key={item.key} item={item} formik={talepFormik} />
             );
           })}
 
-          {/* FORM SECTION - 2 || Hafif,Orta,Kritik ve Sifre */}
-          <div className="flex flex-row justify-between mt-5 content-center">
-            {/* Doğru durumu secmeye özen gösterin. || State Inputs */}
-            <div className={"flex flex-col"}>
-              <div className={"mb-3 "}>
-                <p
-                  className={`text-[0.7rem] ${
-                    talepFormik.errors.status ? "text-red-500" : "text-gray-400"
-                  }`}
-                >
-                  Doğru durumu secmeye özen gösterin.
-                </p>
+          {/* Dikkatlice Secin Uyarilari - 2 Adet */}
+          <div className={'flex flex-row gap-4 justify-between'}>
+            <p className={`text-start text-[0.7rem] ${talepFormik.errors.status ? "text-red-500" : "text-gray-400"}`}>
+              Yaşadığınız sıkıntının aciliyetini dikkatli bir şekilde seçin.
+            </p>
+            <p className={`text-end ml-8 text-[0.7rem] ${talepFormik.errors.city || talepFormik.errors.status ? "text-red-500" : "text-gray-400"}`}>
+                 Size ulaşacak ekipler için adresinizi dikkatli bir şekilde seçin.
+              </p>
+          </div>
+
+          {/* FORM SECTION - 2 || Hafif,Orta,Kritik ve Şehir ve İlçe' */}
+          <div className="grid grid-cols-3 gap-3 my-4 items-center">
+
+            {/* State Inputs || Hafif,Orta,Kritik */}
+            <div className={'col-span-1'}>
+              <div className={"flex flex-col"}>
+                {radioInput.map((item) => {
+                  return (
+                    <CostumRadioInput
+                      key={item.key}
+                      handleSelectedOption={handleSelectedOption}
+                      item={item}
+                      selectedOption={selectedOption}
+                    />
+                  );
+                })}
               </div>
-              {radioInput.map((item) => {
-                return (
-                  <CostumRadioInput
-                    key={item.key}
-                    handleSelectedOption={handleSelectedOption}
-                    item={item}
-                    selectedOption={selectedOption}
-                  />
-                );
-              })}
             </div>
 
-            {/* Bu formdaki paylaşılan kişisel bilgileri şifreleyin. || Password Inputs */}
-            <div className={"flex flex-col"}>
-              <div className={"mb-3 "}>
-                <p className={"text-[0.7rem] text-gray-400 w-48"}>
-                  Bu formdaki paylaşılan kişisel bilgileri şifreleyin. Sadece
-                  şifre sahibi kişiler formdaki bilgilere ulaşabilir.
-                </p>
+            {/* SELECT INPUT || Şehir ve İlçe */}
+            <div className={'col-span-2 flex flex-col gap-2 items-center justify-between'}>
+
+              {/* Şehir */}
+              <div className="flex w-full">
+                <select value={talepFormik.values.city} onChange={handleCityChange} className={"form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}>
+                  <option selected={selectedCity === ''} value={''}>Şehir</option>
+                  {cityData.map(item => { return (
+                    <option key={item.value + item.text} selected={selectedCity === item.text} value={item.text}>{item.text}</option>
+                  )})}
+                </select>
               </div>
 
-              {passwordInput.map((item) => {
-                return (
-                  <CostumInput
-                    key={item.key}
-                    item={item}
-                    formik={talepFormik}
-                  />
-                );
-              })}
+              {/* İlçe */}
+              <div className="flex w-full">
+                <select disabled={selectedCity === ''} value={talepFormik.values.street} onChange={handleStreetChange} className={"form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}>
+                  <option selected={selectedStreet === ""} value={""}>İlçe</option>
+                  {streetNames.map(item => { return (
+                    <option key={item.value} selected={selectedStreet === item.text} value={item.text}>{item.text}</option>
+                  )})}
+                </select>
+              </div>
             </div>
+          </div>
+
+          {/* ADRES DETAYLANDIRMA*/}
+          <div className={'py-1'}>
+            <CostumInput formik={talepFormik} item={addressElements}/>
           </div>
 
           {/* FORM SECTION - 3 || Detaylandirma TextArea */}
@@ -346,3 +333,4 @@ const TalepForm = ({ formName, formFullListURL }) => {
 };
 
 export default TalepForm;
+
