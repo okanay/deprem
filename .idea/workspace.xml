@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/helper/getCityAndStreet.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/Forms/TalepForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/Forms/TalepForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/getVersion.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getVersion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/CostumInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/CostumInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/talep/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talep/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +87,7 @@
       <workItem from="1676211911419" duration="28911000" />
       <workItem from="1676290343881" duration="4014000" />
       <workItem from="1676294372162" duration="186000" />
-      <workItem from="1676294564786" duration="16436000" />
+      <workItem from="1676294564786" duration="17295000" />
     </task>
     <servers />
   </component>

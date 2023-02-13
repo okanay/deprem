@@ -8,7 +8,7 @@ const CostumInput = ({item, formik}) => {
     <div className={"relative mb-1 pb-[0.7rem]"}>
       <input
         className={
-          "peer appearance-none focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-10 bg-gray-50 border-b-2 border-slate-500"
+          "peer appearance-none focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-10 bg-gray-50 border-[0px] rounded-[0px] border-b-2 border-slate-500"
         }
         type={item.type}
         maxLength={item.maxLength}
