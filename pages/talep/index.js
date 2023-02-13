@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { motion as m } from "framer-motion";
 import Alert from "../../components/UI/Alert";
+import Diveded from "../../components/UI/diveded";
+import CostumInput from "../../components/UI/CostumInput";
 
 const talepFilter = [
   {
@@ -65,7 +67,7 @@ const labelContainer = {
   hidden: {
     opacity: 0,
     scaleY: 0,
-    y: -10,
+    y: 10,
     transition: { duration: 0.2 },
   },
   open: {
@@ -74,7 +76,7 @@ const labelContainer = {
     y: -2,
     display: "block",
     scaleX: 0.95,
-    transition: { duration: 0.5, type: "spring" },
+    transition: { duration: 0.75, type: "spring" },
   },
 };
 const imageContainer = {
@@ -92,6 +94,7 @@ const imageContainer = {
 };
 
 const Talep = () => {
+
   const [selected, setSelected] = useState("TFDefault");
   const [createButton, setCreateButton] = useState({
     color: "slate-600",
@@ -105,13 +108,9 @@ const Talep = () => {
   };
 
   return (
-    <div
-      className={
-        "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full m-20 my-8 mx-auto px-4 py-8"
-      }
-    >
-      {/* Uyari */}
+    <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full m-20 my-8 mx-auto px-4 py-8"}>
 
+      {/* Uyari */}
       <Alert title={"Lütfen Dikkat!"}>
         İnsanlara yardım edebileceğinizden emin olmadan iletişim teklifinde
         bulunmayın.
@@ -140,654 +139,196 @@ const Talep = () => {
       </div>
 
       {/* FILTER */}
-      <div
-        className={
-          "flex flex-row justify-center gap-4 bg-gray-50 w-full pb-7 pt-2 border-b-2 border-gray-800 rounded-[2px]"
-        }
-      >
-        {talepFilter.map((item) => {
-          return (
-            <div
-              className={
-                "relative flex flex-col items-center text-center group"
-              }
-              key={item.name}
-            >
-              <m.div
-                variants={imageContainer}
-                initial={"unselected"}
-                animate={selected === item.name ? "selected" : "unselected"}
-              >
-                <button
-                  onClick={() => {
-                    handleFilterForm(item);
-                  }}
-                  className={`w-10 h-10 p-2 border-2 transition duration-300 rounded group ${
-                    selected === item.name
-                      ? `border-${item.color} border-b-[4px]`
-                      : ""
-                  } `}
-                >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    width={"200"}
-                    height={"200"}
-                  />
-                </button>
-              </m.div>
+      <div>
+        {/* ID FILTER */}
+        <div className={'grid grid-cols-2 grid-flow-row-dense mb-3'}>
+          <div></div>
+         <div className={'flex flex-row justify-around gap-2 items-center'}>
+           <div className={"relative mb-1 pb-1"}>
+             <input
+               className={
+                 "text-sm peer appearance-none focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-8 bg-gray-50 border-b-2 border-slate-500"
+               }
+               type={'text'}
+               maxLength={8}
+               inputMode={'text'}
+               placeholder={'Talep Arayin'}
+               name={'arama'}
+               id={`arama`}
+             />
 
-              <m.label
-                variants={labelContainer}
-                initial={"hidden"}
-                animate={selected === item.name ? "open" : "hidden"}
-                htmlFor={item.name}
-                className={`absolute top-10 text-gray-800 font-light border-b-2 mt-1.5 w-[4rem] border-${item.color} ${item.hover}`}
-              >
-                {item.description}
-              </m.label>
-            </div>
-          );
-        })}
+             <div className={'w-7 h-7 absolute top-0.5 left-0.5 flex flex-col justify-center items-center'}>
+               <Image
+                 src={'/formIcons/research.png'}
+                 width={"200"}
+                 height={"200"}
+                 alt={"Talep Arama"}
+                 className={"w-5 h-5"}
+               />
+             </div>
+
+             <label
+               htmlFor={'arama'}
+               className={`absolute left-0 -top-4 text-gray-400 peer-placeholder-shown:text-gray-400 text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-1.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
+             >
+               # Talep Arama
+             </label>
+           </div>
+           <div> <Link
+             href={createButton.url}
+             className={`py-1.5 px-2 rounded-md bg-slate-50 border-[0.01rem] border-gray-200 text-slate-600 shadow shadow-gray-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-slate-600 hover:text-slate-50`}
+           >
+             Ara
+           </Link></div>
+         </div>
+        </div>
+        {/* ICON FILTER */}
+        <div className={"flex flex-row justify-center gap-4 bg-gray-50 w-full pb-7 pt-2 border-b-2 border-gray-800 rounded-[2px]"}>
+          {talepFilter.map((item) => {
+            return (
+              <div className={"relative flex flex-col items-center text-center group"} key={item.name}>
+                <m.div
+                  variants={imageContainer}
+                  initial={"unselected"}
+                  animate={selected === item.name ? "selected" : "unselected"}
+                >
+                  <button
+                    onClick={() => {handleFilterForm(item);}}
+                    className={`w-10 h-10 p-2 border-2 transition duration-300 rounded group ${
+                      selected === item.name
+                        ? `border-${item.color} border-b-[4px]`
+                        : ""
+                    } `}
+                  >
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      width={"200"}
+                      height={"200"}
+                    />
+                  </button>
+                </m.div>
+
+                <m.label
+                  variants={labelContainer}
+                  initial={"hidden"}
+                  animate={selected === item.name ? "open" : "hidden"}
+                  htmlFor={item.name}
+                  className={`absolute top-10 text-gray-800 font-light border-b-2 mt-1.5 w-[4rem] border-${item.color} ${item.hover}`}
+                >
+                  {item.description}
+                </m.label>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
-      {/* IHTIYAC TALEP FORMLARI */}
-
+      {/* IHTIYAC TALEP FORMLARI (MAP EDILEN DIV) */}
       <div className="flex flex-col gap-10 mt-12 text-[0.5rem] phone:text-[0.55rem] phoneLG:text-[0.7rem]">
 
-        <div className="flex flex-col items center justify between gap-6">
-          <div
-            className={
-              "bg-white text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"
-            }
-          >
-            <div
-              className={
-                "absolute -top-[1rem] right-0 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"
-              }
-            >
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>532 789 54 32</p>
-              </div>
+        {/* 1 ADET TALEP KUTUSU */}
+        <div className={"bg-white text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"}>
 
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>Okan Ay</p>
-              </div>
+          {/* TELEFON NUMARASI - AD - DURUM - ID - TALEP GORSELI */}
+          <div className={"absolute -top-[1rem] -right-[0.05rem] w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
 
-              <div
-                className={
-                  "bg-red-500 px-2 py-1 rounded border border-slate-700/40 text-gray-200"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>Kritik</p>
-              </div>
-
-              <div
-                className={
-                  "bg-sky-500 px-2 py-1 rounded border border-slate-700/40 text-gray-200"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>#O982A</p>
-              </div>
-
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <Image
-                  src={talepFilter[1].src}
-                  alt={talepFilter[0].alt}
-                  width={200}
-                  height={200}
-                  className={"w-4 h-4 mt-0.5"}
-                />
-              </div>
+            {/* TELEFON NUMARASI */}
+            <div className={"bg-gray-100 px-2 py-1 rounded border border-slate-700/40"}>
+              <p className={"p-[0.02rem] mt-0.5"}>532 789 54 32</p>
             </div>
 
-            <div
-              className={
-                "w-full flex flex-row justify-between px-2 text-gray-600/90 items-start mt-[1.1rem] items-start"
-              }
-            >
-              <div className={"flex flex-col items-start"}>
-                <p className={"animate-pulse text-red-400"}>
-                  Yardim Bekleniyor!
-                </p>
-                <p className={""}>Merkez/Kahramanmaraş</p>
-              </div>
-              <div className={"flex flex-col items-end"}>
-                <p className={""}>8s 45dk</p>
-                <Link
-                  href={"/"}
-                  className={"text-blue-500 font-semibold underline"}
-                >
-                  Detaya Git
-                </Link>
-              </div>
+            {/* ISIM SOYISIM */}
+
+            <div className={"bg-gray-100 px-2 py-1 rounded border border-slate-700/40"}>
+              <p className={"p-[0.02rem] mt-0.5"}>Okan Ay</p>
             </div>
 
-            <div
-              className={"ml-2 flex flex-col justify-between items-start "}
-            ></div>
+            {/* DURUM BILGILENDIRMESI */}
 
-            {/* aciklama */}
-            <div
-              className={"flex flex-col mx-4 my-2 h-full bg-gray-100 rounded"}
-            >
-              <p className={"py-1 px-2"}>
-                <span className={"text-semibold text-gray-900"}>ÖZET :</span>{" "}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-                adipisci asperiores atque corporis deleniti dicta dignissimos,
-                dolorum eaque eius hic itaque laudantium odit optio porro quas
-                quibusdam quidem reiciendis tempora.{" "}
+            <div className={"bg-red-300 px-2 py-1 rounded border border-slate-700/40 text-gray-700"}>
+              <p className={"p-[0.02rem] mt-0.5"}>Kritik</p>
+            </div>
+
+            {/* TALEP ID */}
+
+            <div className={"bg-sky-300 px-2 py-1 rounded border border-slate-700/40 text-gray-700"}>
+              <p className={"p-[0.02rem] mt-0.5"}>#O982A</p>
+            </div>
+
+            {/* KATEGORI RESMI */}
+
+            <div className={"bg-gray-100 px-2 py-1 rounded border border-slate-700/40"}>
+              <Image
+                src={talepFilter[1].src}
+                alt={talepFilter[0].alt}
+                width={200}
+                height={200}
+                className={"w-4 h-4 mt-0.5"}
+              />
+            </div>
+
+          </div>
+
+
+          {/* YARDIM BEKLENIYOR - LOKASYON - DAKIKA - DETAYA GIT */}
+          <div className={"w-full flex flex-row justify-between px-2 text-gray-600/90 items-start mt-[1.1rem] items-start"}>
+            {/* YARDIM BEKLENIYOR VE LOKASYON */}
+            <div className={"flex flex-col items-start"}>
+              <p className={"animate-pulse text-red-700"}>
+                Yardim Bekleniyor!
+              </p>
+              <p className={""}>Merkez/Kahramanmaraş</p>
+            </div>
+
+            {/* GECEN SURE VE DETAYA GIT BAGLANTISI*/}
+            <div className={"flex flex-col items-end"}>
+              <p className={""}>8s 45dk</p>
+              <Link
+                href={"/"}
+                className={"text-blue-500 font-semibold underline"}
+              >
+                Detaya Git
+              </Link>
+            </div>
+          </div>
+
+          {/* ACIKLAMA OZETI */}
+          <div className={"flex flex-col mx-4 mt-2 mb-4 h-full bg-gray-100 rounded"}>
+            <p className={"py-1 px-2"}>
+              <span className={"text-semibold text-gray-900"}>ÖZET :</span>{" "}
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+              adipisci asperiores atque corporis deleniti dicta dignissimos,
+              dolorum eaque eius hic itaque laudantium odit optio porro quas
+              quibusdam quidem reiciendis tempora.{" "}
+            </p>
+          </div>
+
+
+          {/* GORUNTULENME - ILETISIM SAYISI */}
+          <div className={"absolute -bottom-[0.75rem] -right-[0.05rem] w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
+            {/* ESNEYEN DIV */}
+            <div className={"bg-gray-100 px-2 py-0.5 rounded border border-slate-700/40 flex flex-row justify-around gap-2"}>
+              {/* GORUNTULENME */}
+              <p className={'flex flex-row justify-between items-center gap-1'}>
+                <Image src={'/formIcons/statistics.png'} alt={'Goruntulenme Sayisi'} width={200} height={200} className={'w-2 h-2'}/>
+                <span className={'pt-[1px]'}>23</span>
+              </p>
+
+              {/* AYIRMA CIZGISI */}
+              <div className={`border-r-[1px] border-r-slate-800/50 w-1 h-[1rem]`}></div>
+
+
+              {/* ILETISIM SAYISI */}
+              <p className={'flex flex-row justify-between items-center gap-1'}>
+                <Image src={'/formIcons/chat.png'} alt={'Iletisim Sayisi'} width={200} height={200} className={'w-2.5 h-2.5'}/>
+                <span className={'pt-[1px]'}>0</span>
               </p>
             </div>
+
           </div>
         </div>
 
-        <div className="flex flex-col items center justify between gap-6">
-          <div
-            className={
-              "bg-white text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"
-            }
-          >
-            <div
-              className={
-                "absolute -top-[1rem] right-0 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"
-              }
-            >
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>533 439 24 12</p>
-              </div>
-
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>Öykü Atak</p>
-              </div>
-
-              <div
-                className={
-                  "bg-emerald-500 px-2 py-1 rounded border border-slate-700/40 text-gray-200"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>Hafif</p>
-              </div>
-
-              <div
-                className={
-                  "bg-sky-500 px-2 py-1 rounded border border-slate-700/40 text-gray-200"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>#OB1C2</p>
-              </div>
-
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <Image
-                  src={talepFilter[5].src}
-                  alt={talepFilter[0].alt}
-                  width={200}
-                  height={200}
-                  className={"w-4 h-4 mt-0.5"}
-                />
-              </div>
-            </div>
-
-            <div
-              className={
-                "w-full flex flex-row justify-between px-2 text-gray-600/90 items-start mt-[1.1rem] items-start"
-              }
-            >
-              <div className={"flex flex-col items-start"}>
-                <p className={"animate-pulse text-red-400"}>
-                  Yardim Bekleniyor!
-                </p>
-                <p className={""}>Merkez/Hatay</p>
-              </div>
-              <div className={"flex flex-col items-end"}>
-                <p className={""}>5s 45dk</p>
-                <Link
-                  href={"/"}
-                  className={"text-blue-500 font-semibold underline"}
-                >
-                  Detaya Git
-                </Link>
-              </div>
-            </div>
-
-            <div
-              className={"ml-2 flex flex-col justify-between items-start "}
-            ></div>
-
-            {/* aciklama */}
-            <div
-              className={"flex flex-col mx-4 my-2 h-full bg-gray-100 rounded"}
-            >
-              <p className={"py-1 px-2"}>
-                <span className={"text-semibold text-gray-900"}>ÖZET :</span>{" "}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                hic iure magni, maxime quae sint ut! Aperiam enim error in, iste
-                laborum nesciunt, odio perspiciatis possimus quaerat quos
-                tenetur vero?{" "}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col items center justify between gap-6">
-          <div
-            className={
-              "bg-white text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"
-            }
-          >
-            <div
-              className={
-                "absolute -top-[1rem] right-0 w-full h-7 flex flex-row gap-2 justify-end text-[0.5rem] items-center"
-              }
-            >
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>542 689 14 72</p>
-              </div>
-
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>Kemal Kılıçdaroğlu</p>
-              </div>
-
-              <div
-                className={
-                  "bg-orange-400 px-2 py-1 rounded border border-slate-700/40 text-gray-200"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>Orta</p>
-              </div>
-
-              <div
-                className={
-                  "bg-sky-500 px-2 py-1 rounded border border-slate-700/40 text-gray-200"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>#O2ZCA</p>
-              </div>
-
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <Image
-                  src={talepFilter[4].src}
-                  alt={talepFilter[0].alt}
-                  width={200}
-                  height={200}
-                  className={"w-4 h-4 mt-0.5"}
-                />
-              </div>
-            </div>
-
-            <div
-              className={
-                "w-full flex flex-row justify-between px-2 text-gray-600/90 items-start mt-[1.1rem] items-start"
-              }
-            >
-              <div className={"flex flex-col items-start"}>
-                <p className={"animate-pulse text-red-400"}>
-                  Yardim Bekleniyor!
-                </p>
-                <p className={""}>Merkez/Kahramanmaraş</p>
-              </div>
-              <div className={"flex flex-col items-end"}>
-                <p className={""}>8s 45dk</p>
-                <Link
-                  href={"/"}
-                  className={"text-blue-500 font-semibold underline"}
-                >
-                  Detaya Git
-                </Link>
-              </div>
-            </div>
-
-            <div
-              className={"ml-2 flex flex-col justify-between items-start"}
-            ></div>
-
-            {/* aciklama */}
-            <div
-              className={"flex flex-col mx-4 my-2 h-full bg-gray-100 rounded"}
-            >
-              <p className={"py-1 px-2"}>
-                <span className={"text-semibold text-gray-900"}>ÖZET :</span>{" "}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Asperiores assumenda aut consequatur cum dicta eius error fugiat
-                laudantium maxime modi nostrum obcaecati odio officia qui,
-                quisquam quod ratione repellat repellendus.{" "}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col items center justify between gap-6">
-          <div
-            className={
-              "bg-white text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"
-            }
-          >
-            <div
-              className={
-                "absolute -top-[1rem] right-0 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"
-              }
-            >
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>532 789 54 32</p>
-              </div>
-
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>Okan Ay</p>
-              </div>
-
-              <div
-                className={
-                  "bg-red-500 px-2 py-1 rounded border border-slate-700/40 text-gray-200"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>Kritik</p>
-              </div>
-
-              <div
-                className={
-                  "bg-sky-500 px-2 py-1 rounded border border-slate-700/40 text-gray-200"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>#O982A</p>
-              </div>
-
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <Image
-                  src={talepFilter[1].src}
-                  alt={talepFilter[0].alt}
-                  width={200}
-                  height={200}
-                  className={"w-4 h-4 mt-0.5"}
-                />
-              </div>
-            </div>
-
-            <div
-              className={
-                "w-full flex flex-row justify-between px-2 text-gray-600/90 items-start mt-[1.1rem] items-start"
-              }
-            >
-              <div className={"flex flex-col items-start"}>
-                <p className={"animate-pulse text-red-400"}>
-                  Yardim Bekleniyor!
-                </p>
-                <p className={""}>Merkez/Kahramanmaraş</p>
-              </div>
-              <div className={"flex flex-col items-end"}>
-                <p className={""}>8s 45dk</p>
-                <Link
-                  href={"/"}
-                  className={"text-blue-500 font-semibold underline"}
-                >
-                  Detaya Git
-                </Link>
-              </div>
-            </div>
-
-            <div
-              className={"ml-2 flex flex-col justify-between items-start "}
-            ></div>
-
-            {/* aciklama */}
-            <div
-              className={"flex flex-col mx-4 my-2 h-full bg-gray-100 rounded"}
-            >
-              <p className={"py-1 px-2"}>
-                <span className={"text-semibold text-gray-900"}>ÖZET :</span>{" "}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-                adipisci asperiores atque corporis deleniti dicta dignissimos,
-                dolorum eaque eius hic itaque laudantium odit optio porro quas
-                quibusdam quidem reiciendis tempora.{" "}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col items center justify between gap-6">
-          <div
-            className={
-              "bg-white text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"
-            }
-          >
-            <div
-              className={
-                "absolute -top-[1rem] right-0 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"
-              }
-            >
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>533 439 24 12</p>
-              </div>
-
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>Öykü Atak</p>
-              </div>
-
-              <div
-                className={
-                  "bg-emerald-500 px-2 py-1 rounded border border-slate-700/40 text-gray-200"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>Hafif</p>
-              </div>
-
-              <div
-                className={
-                  "bg-sky-500 px-2 py-1 rounded border border-slate-700/40 text-gray-200"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>#OB1C2</p>
-              </div>
-
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <Image
-                  src={talepFilter[5].src}
-                  alt={talepFilter[0].alt}
-                  width={200}
-                  height={200}
-                  className={"w-4 h-4 mt-0.5"}
-                />
-              </div>
-            </div>
-
-            <div
-              className={
-                "w-full flex flex-row justify-between px-2 text-gray-600/90 items-start mt-[1.1rem] items-start"
-              }
-            >
-              <div className={"flex flex-col items-start"}>
-                <p className={"animate-pulse text-red-400"}>
-                  Yardim Bekleniyor!
-                </p>
-                <p className={""}>Merkez/Hatay</p>
-              </div>
-              <div className={"flex flex-col items-end"}>
-                <p className={""}>5s 45dk</p>
-                <Link
-                  href={"/"}
-                  className={"text-blue-500 font-semibold underline"}
-                >
-                  Detaya Git
-                </Link>
-              </div>
-            </div>
-
-            <div
-              className={"ml-2 flex flex-col justify-between items-start "}
-            ></div>
-
-            {/* aciklama */}
-            <div
-              className={"flex flex-col mx-4 my-2 h-full bg-gray-100 rounded"}
-            >
-              <p className={"py-1 px-2"}>
-                <span className={"text-semibold text-gray-900"}>ÖZET :</span>{" "}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                hic iure magni, maxime quae sint ut! Aperiam enim error in, iste
-                laborum nesciunt, odio perspiciatis possimus quaerat quos
-                tenetur vero?{" "}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col items center justify between gap-6">
-          <div
-            className={
-              "bg-white text-gray-600/90 pb-0 w-full flex flex-col rounded border border-slate-700/40 drop-shadow-lg shadow-gray-300/10 relative font-semibold relative"
-            }
-          >
-            <div
-              className={
-                "absolute -top-[1rem] right-0 w-full h-7 flex flex-row gap-2 justify-end text-[0.5rem] items-center"
-              }
-            >
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>542 689 14 72</p>
-              </div>
-
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>Kemal Kılıçdaroğlu</p>
-              </div>
-
-              <div
-                className={
-                  "bg-orange-400 px-2 py-1 rounded border border-slate-700/40 text-gray-200"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>Orta</p>
-              </div>
-
-              <div
-                className={
-                  "bg-sky-500 px-2 py-1 rounded border border-slate-700/40 text-gray-200"
-                }
-              >
-                <p className={"p-[0.02rem] mt-0.5"}>#O2ZCA</p>
-              </div>
-
-              <div
-                className={
-                  "bg-gray-100 px-2 py-1 rounded border border-slate-700/40"
-                }
-              >
-                <Image
-                  src={talepFilter[4].src}
-                  alt={talepFilter[0].alt}
-                  width={200}
-                  height={200}
-                  className={"w-4 h-4 mt-0.5"}
-                />
-              </div>
-            </div>
-
-            <div
-              className={
-                "w-full flex flex-row justify-between px-2 text-gray-600/90 items-start mt-[1.1rem] items-start"
-              }
-            >
-              <div className={"flex flex-col items-start"}>
-                <p className={"animate-pulse text-red-400"}>
-                  Yardim Bekleniyor!
-                </p>
-                <p className={""}>Merkez/Kahramanmaraş</p>
-              </div>
-              <div className={"flex flex-col items-end"}>
-                <p className={""}>8s 45dk</p>
-                <Link
-                  href={"/"}
-                  className={"text-blue-500 font-semibold underline"}
-                >
-                  Detaya Git
-                </Link>
-              </div>
-            </div>
-
-            <div
-              className={"ml-2 flex flex-col justify-between items-start"}
-            ></div>
-
-            {/* aciklama */}
-            <div
-              className={"flex flex-col mx-4 my-2 h-full bg-gray-100 rounded"}
-            >
-              <p className={"py-1 px-2"}>
-                <span className={"text-semibold text-gray-900"}>ÖZET :</span>{" "}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Asperiores assumenda aut consequatur cum dicta eius error fugiat
-                laudantium maxime modi nostrum obcaecati odio officia qui,
-                quisquam quod ratione repellat repellendus.{" "}
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/*  TAILWIND CLASS CREATOR */}

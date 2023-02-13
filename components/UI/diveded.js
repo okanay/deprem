@@ -1,7 +1,7 @@
 import React from "react";
 
-const Diveded = () => {
-  return <h1 className={"cursor-default text-4xl mb-2 text-gray-500/80 font-light"}>|</h1>;
+const Diveded = ({px, h}) => {
+  return  <div className={`border-r-[${px}px] border-r-slate-800/50 w-1 h-[${h}rem]`}></div>;
 };
 
 export default Diveded;

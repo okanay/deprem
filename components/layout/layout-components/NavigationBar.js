@@ -19,7 +19,8 @@ const NavigationBar = () => {
       <div className={"flex justify-between items-center"}>
         <Logo />
         <div className={"flex justify-between gap-4 pr-5 items-center"}>
-          <Diveded />
+          {/* AYIRMA CIZGISI */}
+          <div className={`border-r-[1px] border-r-slate-800/50 w-1 h-[2.4rem]`}></div>
           <HamburgerMenuIcon
             hamburgerState={hamburgerState}
             hamburger={hamburger}
