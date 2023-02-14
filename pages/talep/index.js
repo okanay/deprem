@@ -188,12 +188,12 @@ const Talep = () => {
       </div>
 
       {/* IHTIYAC TALEP FORMLARI (MAP EDILEN DIV) */}
-      <div className="flex flex-col gap-10 mt-12 text-[0.5rem] phone:text-[0.55rem] phoneLG:text-[0.7rem]">
+      <div className="flex flex-col gap-12 mt-12 text-[0.5rem] phone:text-[0.55rem] phoneLG:text-[0.7rem]">
 
         {/* 1 ADET TALEP KUTUSU */}
         <div className={"bg-neutral-50 text-gray-800/90 w-full flex flex-col rounded border-b border-t border-slate-200/40 relative font-semibold relative"}>
           {/* TELEFON NUMARASI - AD - DURUM - ID - TALEP GORSELI */}
-          <div className={"absolute -top-[1rem] right-2 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
+          <div className={"absolute -top-[1rem] right-3 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
 
             {/* TELEFON NUMARASI */}
             <div className={"bg-gray-100 px-2 py-1 rounded border border-slate-700/10"}>
@@ -266,7 +266,7 @@ const Talep = () => {
           </div>
 
           {/* GORUNTULENME - ILETISIM SAYISI */}
-          <div className={"absolute -bottom-[0.75rem] right-2 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
+          <div className={"absolute -bottom-[0.75rem] right-3 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
             {/* ESNEYEN DIV */}
             <div className={"bg-gray-100 px-2 py-0.5 rounded border border-slate-700/10 flex flex-row justify-around gap-2"}>
               {/* GORUNTULENME */}
@@ -288,10 +288,11 @@ const Talep = () => {
 
           </div>
         </div>
+
         {/* 1 ADET TALEP KUTUSU */}
         <div className={"bg-neutral-50 text-gray-800/90 w-full flex flex-col rounded border-b border-t border-slate-200/40 relative font-semibold relative"}>
           {/* TELEFON NUMARASI - AD - DURUM - ID - TALEP GORSELI */}
-          <div className={"absolute -top-[1rem] right-2 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
+          <div className={"absolute -top-[1rem] right-3 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
 
             {/* TELEFON NUMARASI */}
             <div className={"bg-gray-100 px-2 py-1 rounded border border-slate-700/10"}>
@@ -364,7 +365,7 @@ const Talep = () => {
           </div>
 
           {/* GORUNTULENME - ILETISIM SAYISI */}
-          <div className={"absolute -bottom-[0.75rem] right-2 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
+          <div className={"absolute -bottom-[0.75rem] right-3 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
             {/* ESNEYEN DIV */}
             <div className={"bg-gray-100 px-2 py-0.5 rounded border border-slate-700/10 flex flex-row justify-around gap-2"}>
               {/* GORUNTULENME */}
@@ -386,10 +387,11 @@ const Talep = () => {
 
           </div>
         </div>
+
         {/* 1 ADET TALEP KUTUSU */}
         <div className={"bg-neutral-50 text-gray-800/90 w-full flex flex-col rounded border-b border-t border-slate-200/40 relative font-semibold relative"}>
           {/* TELEFON NUMARASI - AD - DURUM - ID - TALEP GORSELI */}
-          <div className={"absolute -top-[1rem] right-2 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
+          <div className={"absolute -top-[1rem] right-3 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
 
             {/* TELEFON NUMARASI */}
             <div className={"bg-gray-100 px-2 py-1 rounded border border-slate-700/10"}>
@@ -462,7 +464,7 @@ const Talep = () => {
           </div>
 
           {/* GORUNTULENME - ILETISIM SAYISI */}
-          <div className={"absolute -bottom-[0.75rem] right-2 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
+          <div className={"absolute -bottom-[0.75rem] right-3 w-full flex flex-row gap-2 justify-end text-[0.5rem] items-center"}>
             {/* ESNEYEN DIV */}
             <div className={"bg-gray-100 px-2 py-0.5 rounded border border-slate-700/10 flex flex-row justify-around gap-2"}>
               {/* GORUNTULENME */}
