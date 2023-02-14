@@ -14,9 +14,9 @@ export function getTimeDiffString(timestamp) {
     return `${minutes} dk`;
   } else if (diff < oneDay) {
     const hours = Math.round(diff / oneHour);
-    return `${hours} s`;
+    return `${hours} saat`;
   } else {
     const days = Math.round(diff / oneDay);
-    return `${days} g`;
+    return `${days} gün`;
   }
 }
