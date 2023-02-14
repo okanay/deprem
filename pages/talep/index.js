@@ -1,16 +1,19 @@
+import React, { useEffect, useState } from "react";
+
 import Image from "next/image";
-import React, { useState } from "react";
 import Link from "next/link";
+
 import { motion as m } from "framer-motion";
+import { StartDummyData } from "/helper/DummyData";
+
 import Alert from "../../components/UI/Alert";
-import Diveded from "../../components/UI/diveded";
-import CostumInput from "../../components/UI/CostumInput";
 import TalepItem from "../../components/UI/talepItem";
-import { dummyData } from "/helper/DummyData"
+import { object } from "yup";
 
 const talepFilter = [
   {
     name: "TFDefault",
+    type : "",
     src: "/menuIcons/manage.png",
     alt: "Hepsi",
     description: "Hepsi",
@@ -20,6 +23,7 @@ const talepFilter = [
   },
   {
     name: "TFBarinma",
+    type : "bt",
     src: "/menuIcons/cabin.png",
     alt: "Barınmaya İhtiyacım Var",
     description: "Barınma",
@@ -29,6 +33,7 @@ const talepFilter = [
   },
   {
     name: "TFCadir",
+    type : "ct",
     src: "/menuIcons/camp.png",
     alt: "Çadıra İhtiyacım Var",
     description: "Çadır",
@@ -38,6 +43,7 @@ const talepFilter = [
   },
   {
     name: "TFYemek",
+    type : "gt",
     src: "/menuIcons/foods.png",
     alt: "Gıdaya İhtiyacım Var",
     description: "Gıda",
@@ -47,6 +53,7 @@ const talepFilter = [
   },
   {
     name: "TFIlac",
+    type : "it",
     src: "/menuIcons/medicine.png",
     alt: "İlaca İhtiyacım Var",
     description: "İlaç",
@@ -56,6 +63,7 @@ const talepFilter = [
   },
   {
     name: "TFHijyen",
+    type : "ht",
     src: "/menuIcons/amenities.png",
     alt: "Hijyen Ürünlerine İhtiyacım Var",
     description: "Hijyen",
@@ -97,17 +105,62 @@ const imageContainer = {
 
 const Talep = () => {
 
-  const [selected, setSelected] = useState("TFDefault");
-  const [createButton, setCreateButton] = useState({
-    color: "slate-600",
-    url: "/",
-  });
-  const handleFilterForm = (item) => {
-    const selectedValue = { color: item.color, url: item.url };
-    setCreateButton(selectedValue);
+  const [initialDummyData, setInitialDummyData] = useState(StartDummyData);
+  const [filteredData, setFilteredData] = useState(StartDummyData);
+  const [selected, setSelected] = useState(talepFilter[0]);
+  const [formCount , setFormCount ] = useState(0);
 
-    setSelected(item.name);
-  };
+  // Gelen ilk veriyi filtreleme
+  useEffect( () => {
+
+    let timeFiltered  = filteredData.sort((a, b) => {
+      if (a.time < b.time) {
+        return 1;
+      } else if (a.time > b.time) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+
+    let statesFiltered = timeFiltered.sort((a, b) => {
+      if (a.state > b.state) {
+        return 1;
+      } else if (a.state < b.state) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+
+    var statusFiltered = statesFiltered.sort((a, b) => {
+      if (a.status < b.status) {
+        return 1;
+      } else if (a.status > b.status) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+
+    statesFiltered = statusFiltered.sort((a, b) => {
+      if (a.state > b.state) {
+        return 1;
+      } else if (a.state < b.state) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+
+
+    setFilteredData([...statesFiltered]);
+  }, [])
+
+
+  // Degisiklere gore sonuc sayisini hesaplama.
+  useEffect( () => {setFormCount(Object(filteredData).length)}, [filteredData])
+
 
   return (
     <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full m-20 my-8 mx-auto py-8"}>
@@ -136,8 +189,8 @@ const Talep = () => {
 
               {/* YENI TALEP OLUSTURMA BUTONU*/}
               <Link
-                href={createButton.url}
-                className={`mb-4 py-2 px-2 rounded-md bg-slate-50 border-[0.01rem] border-gray-200 text-${createButton.color} shadow shadow-gray-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-${createButton.color} hover:text-slate-50`}
+                href={selected.url}
+                className={`mb-4 py-2 px-2 rounded-md bg-slate-50 border-[0.01rem] border-gray-200 text-${selected.color} shadow shadow-gray-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-${selected.color} hover:text-slate-50`}
               >
                 YENİ-TALEP
               </Link>
@@ -147,6 +200,11 @@ const Talep = () => {
 
       {/* FILTER */}
       <div>
+
+        <div className={`flex flex-row justify-between mx-[3.15rem] mb-1 rounded text-end items-center`}>
+          <p className={`text-gray-400 text-sm rounded bg-slate-50 border border-gray-200 p-2`}>Sonuç : {formCount}</p>
+        </div>
+
         {/* ICON FILTER */}
         <div className={"flex flex-row justify-center gap-4 bg-gray-50 pb-7 pt-2 rounded-[2px] border-b border-b-gray-300 w-full"}>
           {talepFilter.map((item) => {
@@ -155,12 +213,12 @@ const Talep = () => {
                 <m.div
                   variants={imageContainer}
                   initial={"unselected"}
-                  animate={selected === item.name ? "selected" : "unselected"}
+                  animate={selected.name === item.name ? "selected" : "unselected"}
                 >
                   <button
                     onClick={() => {handleFilterForm(item);}}
                     className={`w-10 h-10 p-2 border-2 transition duration-300 rounded group ${
-                      selected === item.name
+                      selected.name === item.name
                         ? `border-${item.color} border-b-[4px]`
                         : ""
                     } `}
@@ -177,7 +235,7 @@ const Talep = () => {
                 <m.label
                   variants={labelContainer}
                   initial={"hidden"}
-                  animate={selected === item.name ? "open" : "hidden"}
+                  animate={selected.name === item.name ? "open" : "hidden"}
                   htmlFor={item.name}
                   className={`absolute top-10 text-gray-800 font-light border-b-[3px] mt-1.5 w-[4rem] border-${item.color} ${item.hover}`}
                 >
@@ -192,7 +250,7 @@ const Talep = () => {
       {/* IHTIYAC TALEP FORMLARI (MAP EDILEN DIV) */}
       <div className="flex flex-col gap-12 mt-12 text-[0.5rem] phone:text-[0.55rem] phoneLG:text-[0.7rem]">
 
-        {dummyData.map(item => { return (<TalepItem item={item} key={item.id}/>)})}
+        {filteredData.map(item => { return (<TalepItem item={item} key={item.id}/>)})}
 
       </div>
 

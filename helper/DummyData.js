@@ -1,4 +1,4 @@
-export const dummyData = [
+export const StartDummyData = [
   {
     id : "C9124A",
     type: "ht",
@@ -12,7 +12,7 @@ export const dummyData = [
     phone: "532 534 52 18",
     status: 0,
     street: "Nizip",
-    time: "8s 42dk",
+    time: 1676409993042,
     state : 0
   },
   {
@@ -28,7 +28,7 @@ export const dummyData = [
     phone: "544 154 92 21",
     status: 2,
     street: "Ceyhan",
-    time: "1s 42dk",
+    time: 1676409793042,
     state : 1
   },
   {
@@ -44,7 +44,55 @@ export const dummyData = [
     phone: "535 415 2491",
     status: 1,
     street: "Onikişubat",
-    time: "4s 42dk",
+    time: 1676409593042,
     state : 2
+  },
+  {
+    id : "AF1024",
+    type: "ct",
+    addressDes: "1234",
+    city: "Hatay",
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    email: "okanay@gmail.com",
+    kvk: "true",
+    name: "Metin Şerefçam",
+    phone: "544 531 43 18",
+    status: 2,
+    street: "Defne",
+    time: 1676409923042,
+    state : 2
+  },
+  {
+    id : "BC921A",
+    type: "ht",
+    addressDes: "Fransa Paris Merkez Camii",
+    city: "Kilis",
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    email: "ahmetkaya@gmail.com",
+    kvk: "true",
+    name: "Atabey Matuş",
+    phone: "535 416 24 11",
+    status: 1,
+    street: "Polateli",
+    time: 1676408993042,
+    state : 0
+  },
+  {
+    id : "B22CFA",
+    type: "bt",
+    addressDes: "Fransa Paris Merkez Camii",
+    city: "Adıyaman",
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    email: "kemalerdogan@gmail.com",
+    kvk: "true",
+    name: "Mert Aşçı",
+    phone: "535 412 23 91",
+    status: 2,
+    street: "Samsat",
+    time: 1676409863042,
+    state : 1
   },
 ];

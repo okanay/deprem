@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import TalepStatus from "./TalepStatus";
 import { getImageData, imageData } from "../../helper/getImageData";
 import TalepState from "./TalepState";
+import { getTimeDiffString } from "../../helper/getDiffTime";
 
 const TalepItem = ({ item }) => {
 
@@ -12,6 +13,7 @@ const TalepItem = ({ item }) => {
       return image;
     }
   });
+  const time = getTimeDiffString(item.time)
 
   return (
     <div
@@ -92,7 +94,7 @@ const TalepItem = ({ item }) => {
             "flex flex-col items-end bg-gray-100/20 p-2 rounded border border-neutral-400/10"
           }
         >
-          <p className={""}>{item.time}</p>
+          <p className={"text-gray-500/80"}>{time}</p>
           <Link
             href={`/form/${item.id}`}
             className={"text-blue-400 font-semibold"}
