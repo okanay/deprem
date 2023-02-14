@@ -157,9 +157,23 @@ const Talep = () => {
     setFilteredData([...statesFiltered]);
   }, [])
 
-
   // Degisiklere gore sonuc sayisini hesaplama.
   useEffect( () => {setFormCount(Object(filteredData).length)}, [filteredData])
+
+  const handleFilterForm = (item) => {
+
+    setSelected(item)
+
+    if (item.type === '') {
+      setFilteredData([...initialDummyData]);
+    }
+    else
+    {
+      const filtered = initialDummyData.filter((data) => data.type === item.type)
+      setFilteredData([...filtered]);
+    }
+
+  }
 
 
   return (
