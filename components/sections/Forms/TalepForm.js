@@ -15,10 +15,10 @@ import KvkCheckBox from "../../UI/KvkCheckBox";
 import SubmitButton from "../../UI/SubmitButton";
 import { cityData} from "../../../helper/getCityAndStreet";
 
-const TalepForm = ({ formName, formFullListURL }) => {
+const TalepForm = ({ formName, formFullListURL, type }) => {
   const handleSelectedOption = (event) => {
     setSelectedOption(() => {
-      talepFormik.values.status = event.target.value;
+      talepFormik.values.status = parseInt(event.target.value);
       return event.target.value;
     });
   };
@@ -85,13 +85,14 @@ const TalepForm = ({ formName, formFullListURL }) => {
     status: Yup.string().required("Lütfen ifade edecek durumu seçin"),
     details: Yup.string()
       .required("Lütfen talebinizi dikkatli bir şekilde detaylandırın.")
-      .max(400, "Detaylandırmanız için maksimum karakter sayısı 400'dür"),
+      .max(260, "Detaylandırmanız için maksimum karakter sayısı 260'dir"),
     kvk: Yup.string().required(
       "KVKK kurallarını okuyup onaylamanız gerekiyor."
     ),
   });
   const talepFormik = useFormik({
     initialValues: {
+      type : type,
       name: "",
       email: "",
       phone: "",
@@ -222,7 +223,6 @@ const TalepForm = ({ formName, formFullListURL }) => {
 
         {/* BAŞLIK */}
         <FormTitle formFullListURL={formFullListURL} formName={formName} />
-
         {/* FORMIK */}
         <form onSubmit={talepFormik.handleSubmit}>
 
@@ -263,11 +263,11 @@ const TalepForm = ({ formName, formFullListURL }) => {
             </div>
 
             {/* SELECT INPUT || Şehir ve İlçe */}
-            <div className={'col-span-2 flex flex-col gap-2 items-center justify-between'}>
+            <div className={'col-span-2 flex flex-col gap-2 items-center justify-between '}>
 
               {/* Şehir */}
               <div className="flex w-full">
-                <select value={talepFormik.values.city} onChange={handleCityChange} className={"form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}>
+                <select value={talepFormik.values.city} onChange={handleCityChange} className={"form-select appearance-none focus-visible:border-neutral-800 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}>
                   <option selected={selectedCity === ''} value={''}>Şehir</option>
                   {cityData.map(item => { return (
                     <option key={item.value + item.text} selected={selectedCity === item.text} value={item.text}>{item.text}</option>
@@ -277,7 +277,7 @@ const TalepForm = ({ formName, formFullListURL }) => {
 
               {/* İlçe */}
               <div className="flex w-full">
-                <select disabled={selectedCity === ''} value={talepFormik.values.street} onChange={handleStreetChange} className={"form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}>
+                <select disabled={selectedCity === ''} value={talepFormik.values.street} onChange={handleStreetChange} className={"form-select appearance-none focus-visible:border-neutral-800 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}>
                   <option selected={selectedStreet === ""} value={""}>İlçe</option>
                   {streetNames.map(item => { return (
                     <option key={item.value} selected={selectedStreet === item.text} value={item.text}>{item.text}</option>

@@ -1,513 +1,513 @@
 export const cityData = [
   {
     value: 1,
-    text: "ADANA",
+    text: "Adana",
     districts: [
       {
         value: 1757,
-        text: "ALADAĞ",
+        text: "Aladağ",
       },
       {
         value: 1219,
-        text: "CEYHAN",
+        text: "Ceyhan",
       },
       {
         value: 2033,
-        text: "ÇUKUROVA",
+        text: "Çukurova",
       },
       {
         value: 1329,
-        text: "FEKE",
+        text: "Feke",
       },
       {
         value: 1806,
-        text: "İMAMOĞLU",
+        text: "İmamoğlu",
       },
       {
         value: 1437,
-        text: "KARAİSALI",
+        text: "Karaisalı",
       },
       {
         value: 1443,
-        text: "KARATAŞ",
+        text: "Karataş",
       },
       {
         value: 1486,
-        text: "KOZAN",
+        text: "Kozan",
       },
       {
         value: 1580,
-        text: "POZANTI",
+        text: "Pozantı",
       },
       {
         value: 1588,
-        text: "SAİMBEYLİ",
+        text: "Şaimbeyli",
       },
       {
         value: 2032,
-        text: "SARIÇAM",
+        text: "Sarıçam",
       },
       {
         value: 1104,
-        text: "SEYHAN",
+        text: "Seyan",
       },
       {
         value: 1687,
-        text: "TUFANBEYLİ",
+        text: "Tufanbeyli",
       },
       {
         value: 1734,
-        text: "YUMURTALIK",
+        text: "Yumurtalık",
       },
       {
         value: 1748,
-        text: "YÜREĞİR",
+        text: "Yüreğir",
       },
     ],
   },
   {
     value: 2,
-    text: "ADIYAMAN",
+    text: "Adıyaman",
     districts: [
       {
         value: 1182,
-        text: "BESNİ",
+        text: "Besni",
       },
       {
         value: 1246,
-        text: "ÇELİKHAN",
+        text: "Çelikhan",
       },
       {
         value: 1347,
-        text: "GERGER",
+        text: "Gerger",
       },
       {
         value: 1354,
-        text: "GÖLBAŞI",
+        text: "Gölbaşı",
       },
       {
         value: 1425,
-        text: "KAHTA",
+        text: "Kahta",
       },
       {
         value: 1105,
-        text: "MERKEZ",
+        text: "Merkez",
       },
       {
         value: 1592,
-        text: "SAMSAT",
+        text: "Samsat",
       },
       {
         value: 1985,
-        text: "SİNCİK",
+        text: "Sincik",
       },
       {
         value: 1989,
-        text: "TUT",
+        text: "Tut",
       },
     ],
   },
   {
     value: 21,
-    text: "DİYARBAKIR",
+    text: "Diyarbakır",
     districts: [
       {
         value: 2040,
-        text: "BAĞLAR",
+        text: "Bağlar",
       },
       {
         value: 1195,
-        text: "BİSMİL",
+        text: "Bismil",
       },
       {
         value: 1249,
-        text: "ÇERMİK",
+        text: "Çermik",
       },
       {
         value: 1253,
-        text: "ÇINAR",
+        text: "Çınar",
       },
       {
         value: 1263,
-        text: "ÇÜNGÜŞ",
+        text: "Çüngüş",
       },
       {
         value: 1278,
-        text: "DİCLE",
+        text: "Dicle",
       },
       {
         value: 1791,
-        text: "EĞİL",
+        text: "Eğil",
       },
       {
         value: 1315,
-        text: "ERGANİ",
+        text: "Ergani",
       },
       {
         value: 1381,
-        text: "HANİ",
+        text: "Hani",
       },
       {
         value: 1389,
-        text: "HAZRO",
+        text: "Hazro",
       },
       {
         value: 2041,
-        text: "KAYAPINAR",
+        text: "Kayapınar",
       },
       {
         value: 1962,
-        text: "KOCAKÖY",
+        text: "Kocaköy",
       },
       {
         value: 1490,
-        text: "KULP",
+        text: "Kulp",
       },
       {
         value: 1504,
-        text: "LİCE",
+        text: "Lice",
       },
       {
         value: 1624,
-        text: "SİLVAN",
+        text: "Silvan",
       },
       {
         value: 2042,
-        text: "SUR",
+        text: "Sur",
       },
       {
         value: 2043,
-        text: "YENİŞEHİR",
+        text: "Yenişehir",
       },
     ],
   },
   {
     value: 27,
-    text: "GAZİANTEP",
+    text: "Gaziantep",
     districts: [
       {
         value: 1139,
-        text: "ARABAN",
+        text: "Araban",
       },
       {
         value: 1415,
-        text: "İSLAHİYE",
+        text: "İşlahiye",
       },
       {
         value: 1956,
-        text: "KARKAMIŞ",
+        text: "Karkamış",
       },
       {
         value: 1546,
-        text: "NİZİP",
+        text: "Nizip",
       },
       {
         value: 1974,
-        text: "NURDAĞI",
+        text: "Nurdağı",
       },
       {
         value: 1549,
-        text: "OĞUZELİ",
+        text: "Oğuzeli",
       },
       {
         value: 1841,
-        text: "ŞAHİNBEY",
+        text: "Şahinbey",
       },
       {
         value: 1844,
-        text: "ŞEHİTKAMİL",
+        text: "Şehitkamil",
       },
       {
         value: 1720,
-        text: "YAVUZELİ",
+        text: "Yavuzeli",
       },
     ],
   },
   {
     value: 44,
-    text: "MALATYA",
+    text: "Malatya",
     districts: [
       {
         value: 1114,
-        text: "AKÇADAĞ",
+        text: "Akçadağ",
       },
       {
         value: 1143,
-        text: "ARAPGİR",
+        text: "Arapgir",
       },
       {
         value: 1148,
-        text: "ARGUVAN",
+        text: "Arguvan",
       },
       {
         value: 1772,
-        text: "BATTALGAZİ",
+        text: "Battalgazi",
       },
       {
         value: 1265,
-        text: "DARENDE",
+        text: "Darende",
       },
       {
         value: 1286,
-        text: "DOĞANŞEHİR",
+        text: "Doğanşehir",
       },
       {
         value: 1914,
-        text: "DOĞANYOL",
+        text: "Doğanyol",
       },
       {
         value: 1390,
-        text: "HEKİMHAN",
+        text: "Hekimhan",
       },
       {
         value: 1953,
-        text: "KALE",
+        text: "Kale",
       },
       {
         value: 1969,
-        text: "KULUNCAK",
+        text: "Kuluncak",
       },
       {
         value: 1582,
-        text: "PÜTÜRGE",
+        text: "Pütürge",
       },
       {
         value: 1995,
-        text: "YAZIHAN",
+        text: "Yazıhan",
       },
       {
         value: 1729,
-        text: "YEŞİLYURT",
+        text: "Yeşilyurt",
       },
     ],
   },
   {
     value: 46,
-    text: "KAHRAMANMARAŞ",
+    text: "Kahramanmaraş",
     districts: [
       {
         value: 1107,
-        text: "AFŞİN",
+        text: "Afşin",
       },
       {
         value: 1136,
-        text: "ANDIRIN",
+        text: "Andırın",
       },
       {
         value: 1785,
-        text: "ÇAĞLAYANCERİT",
+        text: "Çağlayancerit",
       },
       {
         value: 2084,
-        text: "DULKADİROĞLU",
+        text: "Dulkadiroğlu",
       },
       {
         value: 1919,
-        text: "EKİNÖZÜ",
+        text: "Ekinözü",
       },
       {
         value: 1299,
-        text: "ELBİSTAN",
+        text: "Elbistan",
       },
       {
         value: 1353,
-        text: "GÖKSUN",
+        text: "Göksun",
       },
       {
         value: 1975,
-        text: "NURHAK",
+        text: "Nurhak",
       },
       {
         value: 2085,
-        text: "ONİKİŞUBAT",
+        text: "Onikişubat",
       },
       {
         value: 1570,
-        text: "PAZARCIK",
+        text: "Pazarcık",
       },
       {
         value: 1694,
-        text: "TÜRKOĞLU",
+        text: "Türkoğlu",
       },
     ],
   },
   {
     value: 31,
-    text: "HATAY",
+    text: "Hatay",
     districts: [
       {
         value: 1131,
-        text: "ALTINÖZÜ",
+        text: "Altınözü",
       },
       {
         value: 2080,
-        text: "ANTAKYA",
+        text: "Antakya",
       },
       {
         value: 2081,
-        text: "ARSUZ",
+        text: "Arsuz",
       },
       {
         value: 1887,
-        text: "BELEN",
+        text: "Belen",
       },
       {
         value: 2082,
-        text: "DEFNE",
+        text: "Defne",
       },
       {
         value: 1289,
-        text: "DÖRTYOL",
+        text: "Dörtyol",
       },
       {
         value: 1792,
-        text: "ERZİN",
+        text: "Erzin",
       },
       {
         value: 1382,
-        text: "HASSA",
+        text: "Hassa",
       },
       {
         value: 1413,
-        text: "İSKENDERUN",
+        text: "İskenderun",
       },
       {
         value: 1468,
-        text: "KIRIKHAN",
+        text: "Kırıkhan",
       },
       {
         value: 1970,
-        text: "KUMLU",
+        text: "Kumlu",
       },
       {
         value: 2083,
-        text: "PAYAS",
+        text: "Piyas",
       },
       {
         value: 1585,
-        text: "REYHANLI",
+        text: "Reyhanlı",
       },
       {
         value: 1591,
-        text: "SAMANDAĞ",
+        text: "Samandağ",
       },
       {
         value: 1721,
-        text: "YAYLADAĞI",
+        text: "Yayladağı",
       },
     ],
   },
   {
     value: 79,
-    text: "KİLİS",
+    text: "Kilis",
     districts: [
       {
         value: 2023,
-        text: "ELBEYLİ",
+        text: "Elbeyli",
       },
       {
         value: 1476,
-        text: "MERKEZ",
+        text: "Merkez",
       },
       {
         value: 2024,
-        text: "MUSABEYLİ",
+        text: "Musabeyli",
       },
       {
         value: 2025,
-        text: "POLATELİ",
+        text: "Polateli",
       },
     ],
   },
   {
     value: 63,
-    text: "ŞANLIURFA",
+    text: "Şanlıurfa",
     districts: [
       {
         value: 1115,
-        text: "AKÇAKALE",
+        text: "Akçakale",
       },
       {
         value: 1194,
-        text: "BİRECİK",
+        text: "Birecik",
       },
       {
         value: 1209,
-        text: "BOZOVA",
+        text: "Bozova",
       },
       {
         value: 1220,
-        text: "CEYLANPINAR",
+        text: "Ceylanpınar",
       },
       {
         value: 2091,
-        text: "EYYÜBİYE",
+        text: "Eyyübiye",
       },
       {
         value: 1378,
-        text: "HALFETİ",
+        text: "Halfeti",
       },
       {
         value: 2092,
-        text: "HALİLİYE",
+        text: "Haliliye",
       },
       {
         value: 1800,
-        text: "HARRAN",
+        text: "Harran",
       },
       {
         value: 1393,
-        text: "HİLVAN",
+        text: "Hilvan",
       },
       {
         value: 2093,
-        text: "KARAKÖPRÜ",
+        text: "Karaköprü",
       },
       {
         value: 1630,
-        text: "SİVEREK",
+        text: "Siverek",
       },
       {
         value: 1643,
-        text: "SURUÇ",
+        text: "Suruç",
       },
       {
         value: 1713,
-        text: "VİRANŞEHİR",
+        text: "Viranşehir",
       },
     ],
   },
   {
     value: 80,
-    text: "OSMANİYE",
+    text: "Osmaniye",
     districts: [
       {
         value: 1165,
-        text: "BAHÇE",
+        text: "Bahçe",
       },
       {
         value: 1743,
-        text: "DÜZİÇİ",
+        text: "Düziçi",
       },
       {
         value: 2027,
-        text: "HASANBEYLİ",
+        text: "Hasanbeyli",
       },
       {
         value: 1423,
-        text: "KADİRLİ",
+        text: "Kadirli",
       },
       {
         value: 1560,
-        text: "MERKEZ",
+        text: "Merkez",
       },
       {
         value: 2028,
-        text: "SUMBAS",
+        text: "Sumbaş",
       },
       {
         value: 2029,
-        text: "TOPRAKKALE",
+        text: "Toprakkale",
       },
     ],
   },

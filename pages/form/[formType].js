@@ -11,19 +11,19 @@ const FormType = () => {
   }
 
   if (formType === "bt") {
-    return <TalepForm formName={'Barınma İhtiyaç'} formFullListURL={'/talep'}/>;
+    return <TalepForm formName={'Barınma İhtiyaç'} formFullListURL={'/talep'} type={'bt'}/>;
   }
   else if (formType === "ct") {
-    return <TalepForm formName={'Çadır İhtiyaç'} formFullListURL={'/talep'}/>;
+    return <TalepForm formName={'Çadır İhtiyaç'} formFullListURL={'/talep'} type={'ct'}/>;
   }
   else if (formType === "gt") {
-    return <TalepForm formName={'Gıda İhtiyaç'} formFullListURL={'/talep'}/>;
+    return <TalepForm formName={'Gıda İhtiyaç'} formFullListURL={'/talep'} type={'gt'}/>;
   }
   else if (formType === "it") {
-    return <TalepForm formName={'İlaç İhtiyaç'} formFullListURL={'/talep'}/>;
+    return <TalepForm formName={'İlaç İhtiyaç'} formFullListURL={'/talep'} type={'it'}/>;
   }
   else if (formType === "ht") {
-    return <TalepForm formName={'Hijyen İhtiyaç'} formFullListURL={'/talep'}/>;
+    return <TalepForm formName={'Hijyen İhtiyaç'} formFullListURL={'/talep'} type={'ht'}/>;
   }
   router.push("/form");
   return null;
