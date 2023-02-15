@@ -1,5 +1,4 @@
 import { motion as m } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
@@ -28,7 +27,7 @@ const HamburgerMenuIcon = ({hamburger, hamburgerState}) => {
     >
       <div onClick={hamburgerState}>
         <Image
-          src={"/menuIcons/hamburgermenu.png"}
+          src={"/svg/hamburgerMenu.svg"}
           width={"200"}
           height={"200"}
           className={"w-9 h-9 hover:bg-neutral-50 group"}

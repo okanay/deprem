@@ -14,7 +14,7 @@ const talepFilter = [
   {
     name: "TFDefault",
     type: "",
-    src: "/menuIcons/manage.svg",
+    src: "/svg/manage.svg",
     alt: "Hepsi",
     description: "Hepsi",
     color: "slate-600",
@@ -24,7 +24,7 @@ const talepFilter = [
   {
     name: "TFBarinma",
     type: "bt",
-    src: "/menuIcons/cabin.svg",
+    src: "/svg/cabin.svg",
     alt: "Barınmaya İhtiyacım Var",
     description: "Barınma",
     color: "red-400",
@@ -34,7 +34,7 @@ const talepFilter = [
   {
     name: "TFCadir",
     type: "ct",
-    src: "/menuIcons/camp.svg",
+    src: "/svg/camp.svg",
     alt: "Çadıra İhtiyacım Var",
     description: "Çadır",
     color: "pink-400",
@@ -44,7 +44,7 @@ const talepFilter = [
   {
     name: "TFYemek",
     type: "gt",
-    src: "/menuIcons/foods.svg",
+    src: "/svg/foods.svg",
     alt: "Gıdaya İhtiyacım Var",
     description: "Gıda",
     color: "emerald-400",
@@ -54,7 +54,7 @@ const talepFilter = [
   {
     name: "TFIlac",
     type: "it",
-    src: "/menuIcons/medicine.svg",
+    src: "/svg/medicine.svg",
     alt: "İlaca İhtiyacım Var",
     description: "İlaç",
     color: "teal-400",
@@ -64,7 +64,7 @@ const talepFilter = [
   {
     name: "TFHijyen",
     type: "ht",
-    src: "/menuIcons/amenities.svg",
+    src: "/svg/amenities.svg",
     alt: "Hijyen Ürünlerine İhtiyacım Var",
     description: "Hijyen",
     color: "blue-400",
@@ -222,6 +222,7 @@ const Talep = () => {
   return (
     <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full m-20 my-8 mx-auto py-8"}
     >
+
           {/* UYARI - BASLIK  */}
           <div className={"px-4"}>
             {/* Uyari */}

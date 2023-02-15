@@ -5,31 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/public/formIcons/address.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/formIcons/chat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/formIcons/confirmPassword.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/formIcons/details.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/formIcons/email.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/formIcons/infoAddress.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/formIcons/password.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/formIcons/phone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/formIcons/profile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/formIcons/research.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/formIcons/search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/formIcons/statistics.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/amenities.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/bus-driver.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/cabin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/camp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/construction-worker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/foods.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/footprints.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/hamburgermenu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/house.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/manage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/medicine.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menuIcons/translator.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UI/svgIconsLib.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/address.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/amenities.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/busDriver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/cabin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/camp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/chat.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/confirmPassword.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/constructionWorker.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/details.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/dkyxgy1bi8ele67vdhl.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/email.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/foods.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/footprints.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/hamburgerMenu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/house.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/infoAddress.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/manage.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/medicine.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/password.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/phone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/profile.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/research.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/statistics.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/translator.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/HamburgerMenuIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/HamburgerMenuIcon.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/ContactMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/ContactMe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Forms/TalepForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/Forms/TalepForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/getImageData.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getImageData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talep/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talep/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/bus-driver.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/menuIcons/busDriver.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/construction-worker.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/menuIcons/constructionWorker.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/hamburgermenu.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/menuIcons/hamburgerMenu.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,11 +93,11 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/menuIcons" />
+      <recent name="$PROJECT_DIR$/public/svg" />
       <recent name="$PROJECT_DIR$/public/formIcons" />
+      <recent name="$PROJECT_DIR$/public/menuIcons" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/pages/form" />
-      <recent name="$PROJECT_DIR$/components/layout/layout-components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -111,7 +122,7 @@
       <workItem from="1676294372162" duration="186000" />
       <workItem from="1676294564786" duration="18254000" />
       <workItem from="1676393758679" duration="19320000" />
-      <workItem from="1676481340646" duration="8973000" />
+      <workItem from="1676481340646" duration="13311000" />
     </task>
     <servers />
   </component>

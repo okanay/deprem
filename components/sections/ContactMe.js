@@ -29,7 +29,7 @@ const ContactMe = () => {
             name="name"
           />
           <Image
-            src={"/formIcons/profile.svg"}
+            src={"/svg/profile.svg"}
             width={"200"}
             height={"200"}
             alt={"hash"}
@@ -56,7 +56,7 @@ const ContactMe = () => {
             name="email"
           />
           <Image
-            src={"/formIcons/email.svg"}
+            src={"/svg/email.svg"}
             width={"200"}
             height={"200"}
             alt={"hash"}
@@ -84,7 +84,7 @@ const ContactMe = () => {
               name="message"
             />
           <Image
-            src={"/formIcons/details.svg"}
+            src={"/svg/details.svg"}
             width={"200"}
             height={"200"}
             alt={"hash"}
