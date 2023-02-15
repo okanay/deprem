@@ -12,7 +12,7 @@ export const StartDummyData = [
     phone: "532 534 52 18",
     status: 0,
     street: "Nizip",
-    time: 1676409993042,
+    time: 1676585386548,
     state : 0
   },
   {
@@ -28,7 +28,7 @@ export const StartDummyData = [
     phone: "544 154 92 21",
     status: 2,
     street: "Ceyhan",
-    time: 1676409793042,
+    time: 1676479386548,
     state : 1
   },
   {
@@ -44,7 +44,7 @@ export const StartDummyData = [
     phone: "535 415 2491",
     status: 1,
     street: "Onikişubat",
-    time: 1676409593042,
+    time: 1676481386548,
     state : 2
   },
   {
@@ -60,7 +60,7 @@ export const StartDummyData = [
     phone: "544 531 43 18",
     status: 2,
     street: "Defne",
-    time: 1676409923042,
+    time: 1676483386548,
     state : 2
   },
   {
@@ -76,7 +76,7 @@ export const StartDummyData = [
     phone: "535 416 24 11",
     status: 1,
     street: "Polateli",
-    time: 1676408993042,
+    time: 1676487386548,
     state : 0
   },
   {
@@ -92,7 +92,7 @@ export const StartDummyData = [
     phone: "535 412 23 91",
     status: 2,
     street: "Samsat",
-    time: 1676409863042,
+    time: 1676488386548,
     state : 1
   },
 ];

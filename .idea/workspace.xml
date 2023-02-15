@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Logo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Logo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/Forms/TalepForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/Forms/TalepForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/getVersion.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getVersion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/getversion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/DummyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/DummyData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/talep/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talep/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +88,8 @@
       <workItem from="1676290343881" duration="4014000" />
       <workItem from="1676294372162" duration="186000" />
       <workItem from="1676294564786" duration="18254000" />
-      <workItem from="1676393758679" duration="19177000" />
+      <workItem from="1676393758679" duration="19320000" />
+      <workItem from="1676481340646" duration="6812000" />
     </task>
     <servers />
   </component>
@@ -112,7 +110,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/helper/DummyData.js</url>
           <line>1</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
