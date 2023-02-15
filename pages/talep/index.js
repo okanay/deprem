@@ -213,10 +213,23 @@ const Talep = () => {
       </div>
 
       {/* FILTER */}
-      <div>
+      <div className={'flex flex-col justify-start gap-4'}>
 
-        <div className={`flex flex-row justify-between mx-[3.15rem] mb-1 rounded text-end items-center`}>
-          <p className={`text-gray-400 text-sm rounded bg-slate-50 border border-gray-200 p-2`}>Sonuç : {formCount}</p>
+        <div className={'flex flex-row gap-2 justify-center px-4'}>
+          <div className={'flex flex-col items-center justify-center'}>
+            <button className={`text-gray-400 text-sm rounded bg-slate-50 border border-gray-200 p-1.5`}> 24 saat
+            </button>
+          </div>
+          <div className={'flex flex-col items-center justify-center'}>
+            <button className={`text-gray-400 text-sm rounded bg-slate-50 border border-gray-200 p-1.5`}> 12 saat
+            </button>
+          </div>
+          <div className={'flex flex-col items-center justify-center'}>
+            <button className={`text-gray-400 text-sm rounded bg-slate-50 border border-gray-200 p-1.5`}> 4 saat
+            </button>
+          </div>
+
+          <p className={`text-gray-400 text-sm rounded bg-slate-50 border border-gray-200 p-1.5`}>Sonuç : {formCount}</p>
         </div>
 
         {/* ICON FILTER */}

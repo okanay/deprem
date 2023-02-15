@@ -263,7 +263,7 @@ const TalepForm = ({ formName, formFullListURL, type }) => {
             </div>
 
             {/* SELECT INPUT || Şehir ve İlçe */}
-            <div className={'col-span-2 flex flex-col gap-2 items-center justify-between '}>
+            <div className={'col-span-2 flex flex-col gap-2 items-center justify-between  '}>
 
               {/* Şehir */}
               <div className="flex w-full">
@@ -277,7 +277,7 @@ const TalepForm = ({ formName, formFullListURL, type }) => {
 
               {/* İlçe */}
               <div className="flex w-full">
-                <select disabled={selectedCity === ''} value={talepFormik.values.street} onChange={handleStreetChange} className={"form-select appearance-none focus-visible:border-neutral-800 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}>
+                <select disabled={selectedCity === ''} value={talepFormik.values.street} onChange={handleStreetChange} className={"form-select disabled:bg-gray-200/80 appearance-none focus-visible:border-neutral-800 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}>
                   <option selected={selectedStreet === ""} value={""}>İlçe</option>
                   {streetNames.map(item => { return (
                     <option key={item.value} selected={selectedStreet === item.text} value={item.text}>{item.text}</option>
