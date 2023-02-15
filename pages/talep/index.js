@@ -14,7 +14,7 @@ const talepFilter = [
   {
     name: "TFDefault",
     type: "",
-    src: "/menuIcons/manage.png",
+    src: "/menuIcons/manage.svg",
     alt: "Hepsi",
     description: "Hepsi",
     color: "slate-600",
@@ -24,7 +24,7 @@ const talepFilter = [
   {
     name: "TFBarinma",
     type: "bt",
-    src: "/menuIcons/cabin.png",
+    src: "/menuIcons/cabin.svg",
     alt: "Barınmaya İhtiyacım Var",
     description: "Barınma",
     color: "red-400",
@@ -34,7 +34,7 @@ const talepFilter = [
   {
     name: "TFCadir",
     type: "ct",
-    src: "/menuIcons/camp.png",
+    src: "/menuIcons/camp.svg",
     alt: "Çadıra İhtiyacım Var",
     description: "Çadır",
     color: "pink-400",
@@ -44,7 +44,7 @@ const talepFilter = [
   {
     name: "TFYemek",
     type: "gt",
-    src: "/menuIcons/foods.png",
+    src: "/menuIcons/foods.svg",
     alt: "Gıdaya İhtiyacım Var",
     description: "Gıda",
     color: "emerald-400",
@@ -54,7 +54,7 @@ const talepFilter = [
   {
     name: "TFIlac",
     type: "it",
-    src: "/menuIcons/medicine.png",
+    src: "/menuIcons/medicine.svg",
     alt: "İlaca İhtiyacım Var",
     description: "İlaç",
     color: "teal-400",
@@ -64,7 +64,7 @@ const talepFilter = [
   {
     name: "TFHijyen",
     type: "ht",
-    src: "/menuIcons/amenities.png",
+    src: "/menuIcons/amenities.svg",
     alt: "Hijyen Ürünlerine İhtiyacım Var",
     description: "Hijyen",
     color: "blue-400",
