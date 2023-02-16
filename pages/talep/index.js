@@ -8,7 +8,6 @@ import { StartDummyData } from "/helper/DummyData";
 
 import Alert from "../../components/UI/Alert";
 import TalepItem from "../../components/UI/talepItem";
-import { data } from "autoprefixer";
 
 const talepFilter = [
   {
@@ -105,104 +104,36 @@ const imageContainer = {
 
 const Talep = () => {
 
-
   const [initialDummyData, setInitialDummyData] = useState(StartDummyData);
   const [filteredData, setFilteredData] = useState(StartDummyData);
-  const [iconFilter, setIconFilter] = useState(talepFilter[0]);
+  const [iconFilter, setIconFilter] = useState({prev : talepFilter[0], current : talepFilter[0]});
   const [timeFilter, setTimeFilter] = useState("");
   const [formCount, setFormCount] = useState(0);
-
-  // Gelen ilk veriyi filtreleme
-  useEffect(() => {
-    let timeFiltered = filteredData.sort((a, b) => {
-      if (a.time < b.time) {
-        return 1;
-      } else if (a.time > b.time) {
-        return -1;
-      } else {
-        return 0;
-      }
-    });
-
-    let statesFiltered = timeFiltered.sort((a, b) => {
-      if (a.state > b.state) {
-        return 1;
-      } else if (a.state < b.state) {
-        return -1;
-      } else {
-        return 0;
-      }
-    });
-
-    var statusFiltered = statesFiltered.sort((a, b) => {
-      if (a.status < b.status) {
-        return 1;
-      } else if (a.status > b.status) {
-        return -1;
-      } else {
-        return 0;
-      }
-    });
-
-    statesFiltered = statusFiltered.sort((a, b) => {
-      if (a.state > b.state) {
-        return 1;
-      } else if (a.state < b.state) {
-        return -1;
-      } else {
-        return 0;
-      }
-    });
-
-    setFilteredData([...statesFiltered]);
-  }, []);
+  const [currentPage, setCurrentPage] = useState(1)
+  const [pageData, setPageData] = useState({min: 1, max : 0});
 
   // timeFilter \ iconFilter
   useEffect(() => {
-    filterData(iconFilter);
-  }, [timeFilter, iconFilter]);
 
-  // formCount
-  useEffect(() => {
-    setFormCount(Object(filteredData).length);
-  }, [filteredData]);
+    filterData();
 
-  const filterData = (item) => {
-    let filtered = initialDummyData;
+  }, [timeFilter, iconFilter, currentPage]);
+  // pageData
+  useEffect( () => {
 
-    if (item.type !== "") {
-      filtered = filtered.filter((data) => data.type === item.type);
-    }
+    setPageData({min: 1, max: Math.ceil((formCount / (currentPage * 5)))})
 
-    if (timeFilter !== "") {
-      let targetTime = null;
-      const currentTime = new Date().getTime();
-      const fourHours = 1000 * 60 * 60 * 4;
-      const halfDay = 1000 * 60 * 60 * 12;
-      const oneDay = 1000 * 60 * 60 * 24;
+  }, [formCount])
 
-      if (timeFilter === "24") {
-        targetTime = oneDay;
-      } else if (timeFilter === "12") {
-        targetTime = halfDay;
-      } else if (timeFilter === "4") {
-        targetTime = fourHours;
-      }
-
-      filtered = filtered.filter((data) => {
-
-        // console.log(data.time);
-        // console.log(currentTime);
-        // console.log(Math.abs((currentTime - data.time)) < targetTime);
-
-        return Math.abs((currentTime - data.time)) < targetTime
-      });
-    }
-
-    setFilteredData([...filtered]);
-  };
   const handleIconFilterButton = (item) => {
-    setIconFilter(item);
+
+    const value = { prev : iconFilter.current, current : item}
+    setIconFilter(value);
+
+    if (iconFilter.prev.type !== iconFilter.current.type)
+    {
+      setCurrentPage(1)
+    }
 
     if (item.type === "") {
       setTimeFilter("");
@@ -217,10 +148,110 @@ const Talep = () => {
 
     setTimeFilter(value);
   };
+  const handlePageFilterButton = (value) => {
 
+    setCurrentPage(currentPage + value)
+  }
+  const filterData = () => {
 
-  return (
-    <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full m-20 my-8 mx-auto py-8"}
+    let filtered = initialDummyData;
+    setFormCount(Object(filtered).length)
+
+    filtered = timeFiltered(filtered);
+    filtered = statesFiltered(filtered);
+
+    filtered = timeSelectedFiltered(filtered);
+    filtered = typeSelectedFiltered(filtered);
+    filtered = pageSelectedFiltered(filtered);
+
+    setFilteredData([...filtered]);
+  };
+  const pageSelectedFiltered = (filtered) => {
+
+    const min = currentPage === 1 ? `${(currentPage - 1) * 5}` : `${((currentPage - 1) * 5)}`
+    const max = currentPage === 1 ? `${currentPage * 5}` : `${((currentPage) * 5) + 1}`
+
+    return filtered.slice(min, max)
+
+  }
+  const typeSelectedFiltered = (filtered) => {
+
+    if (iconFilter.current.type !== "")
+    {
+      const data = filtered.filter((data) => data.type === iconFilter.current.type);
+      setFormCount(Object(data).length)
+      return data
+    }
+
+    return filtered
+
+  }
+  const timeSelectedFiltered = (filtered) => {
+
+    if (timeFilter === "")
+    {
+      return filtered;
+    }
+    else
+    {
+
+      let currentTime = new Date().getTime();
+      let targetTime = 0;
+      let fourHours = 1000 * 60 * 60 * 4;
+      let halfDay = 1000 * 60 * 60 * 12;
+      let oneDay = 1000 * 60 * 60 * 24;
+
+      if (timeFilter === "24") {
+        targetTime = oneDay;
+      } else if (timeFilter === "12") {
+        targetTime = halfDay;
+      } else if (timeFilter === "4") {
+        targetTime = fourHours;
+      }
+
+      const data = filtered.filter((data) => Math.abs(currentTime - data.time) < targetTime);
+      setFormCount(Object(data).length)
+      return data
+    }
+  }
+  const timeFiltered = (filtered) => {
+
+    return filtered.sort((a, b) => {
+      if (a.time < b.time) {
+        return 1;
+      } else if (a.time > b.time) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+  }
+  const statesFiltered = (filtered) => {
+    return filtered.sort((a, b) => {
+      if (a.state > b.state) {
+        return 1;
+      } else if (a.state < b.state) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+  }
+  const statusFiltered = (filtered) => {
+
+    return filtered.sort((a, b) => {
+      if (a.status < b.status) {
+        return 1;
+      } else if (a.status > b.status) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+
+  }
+
+  return (  <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full m-20 my-8 mx-auto py-8"}
     >
 
           {/* UYARI - BASLIK  */}
@@ -246,8 +277,8 @@ const Talep = () => {
 
               {/* YENI TALEP OLUSTURMA BUTONU*/}
               <Link
-                href={iconFilter.url}
-                className={`mb-4 py-2 px-2 rounded-md bg-slate-50 border-[0.01rem] border-gray-200 text-${iconFilter.color} shadow shadow-gray-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-${iconFilter.color} hover:text-slate-50`}
+                href={iconFilter.current.url}
+                className={`mb-4 py-2 px-2 rounded-md bg-slate-50 border-[0.01rem] border-gray-200 text-${iconFilter.current.color} shadow shadow-gray-300/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-${iconFilter.current.color} hover:text-slate-50`}
               >
                 YENİ-TALEP
               </Link>
@@ -338,7 +369,7 @@ const Talep = () => {
                       variants={imageContainer}
                       initial={"unselected"}
                       animate={
-                        iconFilter.name === item.name ? "selected" : "unselected"
+                        iconFilter.current.name === item.name ? "selected" : "unselected"
                       }
                     >
                       <button
@@ -346,7 +377,7 @@ const Talep = () => {
                           handleIconFilterButton(item);
                         }}
                         className={`w-10 h-10 p-2 border-2 transition duration-300 rounded group ${
-                          iconFilter.name === item.name
+                          iconFilter.current.name === item.name
                             ? `border-${item.color} border-b-[4px]`
                             : ""
                         } `}
@@ -365,7 +396,7 @@ const Talep = () => {
                     <m.label
                       variants={labelContainer}
                       initial={"hidden"}
-                      animate={iconFilter.name === item.name ? "open" : "hidden"}
+                      animate={iconFilter.current.name === item.name ? "open" : "hidden"}
                       htmlFor={item.name}
                       className={`absolute top-10 text-gray-800 font-light border-b-[3px] mt-1.5 w-[4rem] border-${item.color} ${item.hover}`}
                     >
@@ -377,30 +408,18 @@ const Talep = () => {
             </div>
           </div>
 
-          {/* IHTIYAC TALEP FORMLARI (MAP EDILEN DIV) */}
-          <div className="flex flex-col gap-12 mt-12 text-[0.5rem] phone:text-[0.55rem] phoneLG:text-[0.7rem]">
-            {filteredData.map((item) => {
-              return <TalepItem item={item} key={item.id} />;
-            })}
-          </div>
-
           {/* SAYFA DEGISTIR*/}
-          <div className="flex flex-col justify-between items-center mt-11 gap-4">
-            <div
-              className={
-                "border-b border-b-gray-300 drop-shadow shadow-gray-100 w-full h-0.5 rounded-md"
-              }
-            />
+          <div className="flex flex-col justify-between items-center mt-6 gap-4">
 
-            <div
-              className={
-                "flex flex-row justify-between items-center text-xs w-full text-gray-600 px-4"
-              }
-            >
+            {/* SAYFA DEGISTIR */}
+            <div className={"flex flex-row justify-between items-center text-xs w-full text-gray-600 px-4"}>
+
               {/*  SOL TARAF */}
               <button
+                disabled={pageData.min === currentPage}
+                onClick={() => {handlePageFilterButton(-1)} }
                 className={
-                  "flex flex-row justify-between items-center hover:text-gray-400"
+                  "flex flex-row justify-between items-center hover:text-gray-400 disabled:text-gray-400"
                 }
               >
                 <svg
@@ -419,25 +438,78 @@ const Talep = () => {
                 <span className={"mt-0.5"}>Önceki</span>
               </button>
 
-              {/* SAYFA SAYISI*/}
-              <div
+              {/*  SAG TARAF */}
+              <button
+                disabled={pageData.max === currentPage}
+                onClick={() => {handlePageFilterButton(+1)}}
                 className={
-                  "flex flex-row justify-between items-center gap-4 text-[0.8rem] font-semibold"
+                  "flex flex-row justify-between items-center hover:text-gray-400 disabled:text-gray-400"
                 }
               >
-                <button className="hover:text-gray-400 text-blue-400">1</button>
-                <button className="hover:text-gray-400">2</button>
-                <button className="hover:text-gray-400">3</button>
-                <p>...</p>
-                <button className="hover:text-gray-400">8</button>
-                <button className="hover:text-gray-400">9</button>
-                <button className="hover:text-gray-400">10</button>
-              </div>
+                <span className={"mt-0.5"}>Sonraki</span>
+                <svg
+                  aria-hidden="true"
+                  className="w-5 h-5 ml-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* IHTIYAC TALEP FORMLARI (MAP EDILEN DIV) */}
+          <div className="flex flex-col gap-12 mt-10 text-[0.5rem] phone:text-[0.55rem] phoneLG:text-[0.7rem]">
+            {filteredData.map((item) => {
+              return <TalepItem item={item} key={item.id} />;
+            })}
+          </div>
+
+          {/* SAYFA DEGISTIR*/}
+          <div className="flex flex-col justify-between items-center mt-11 gap-4">
+
+            {/* CIZGI / HR*/}
+            <div className={"border-b border-b-gray-300 drop-shadow shadow-gray-100 w-full h-0.5 rounded-md"}/>
+
+            {/* SAYFA DEGISTIR */}
+            <div className={"flex flex-row justify-between items-center text-xs w-full text-gray-600 px-4"}>
+
+              {/*  SOL TARAF */}
+              <button
+                disabled={pageData.min === currentPage}
+                onClick={() => {handlePageFilterButton(-1)} }
+                className={
+                  "flex flex-row justify-between items-center hover:text-gray-400 disabled:text-gray-400"
+                }
+              >
+                <svg
+                  aria-hidden="true"
+                  className="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+                <span className={"mt-0.5"}>Önceki</span>
+              </button>
 
               {/*  SAG TARAF */}
               <button
+                disabled={pageData.max === currentPage}
+                onClick={() => {handlePageFilterButton(+1)}}
                 className={
-                  "flex flex-row justify-between items-center hover:text-gray-400"
+                  "flex flex-row justify-between items-center hover:text-gray-400 disabled:text-gray-400"
                 }
               >
                 <span className={"mt-0.5"}>Sonraki</span>
