@@ -27,6 +27,8 @@ const HamburgerMenuIcon = ({hamburger, hamburgerState}) => {
     >
       <div onClick={hamburgerState}>
         <Image
+          priority={true}
+          loading={'eager'}
           src={"/svg/hamburgerMenu.svg"}
           width={"200"}
           height={"200"}

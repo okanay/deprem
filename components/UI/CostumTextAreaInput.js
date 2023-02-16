@@ -17,6 +17,8 @@ const CostumTextAreaInput = ({details, formik, }) => {
               value={details.formik}
             />
       <Image
+        priority={true}
+        loading={'eager'}
         src={details.src}
         width={"200"}
         height={"200"}

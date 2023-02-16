@@ -22,6 +22,9 @@ const CostumInput = ({item, formik}) => {
       />
 
       <Image
+        priority={true}
+        loading={'eager'}
+
         src={item.src}
         width={"200"}
         height={"200"}

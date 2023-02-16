@@ -352,6 +352,8 @@ const Talep = () => {
                         } `}
                       >
                         <Image
+                          loading={'eager'}
+                          priority={true}
                           src={item.src}
                           alt={item.alt}
                           width={"200"}

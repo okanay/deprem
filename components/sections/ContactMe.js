@@ -29,6 +29,8 @@ const ContactMe = () => {
             name="name"
           />
           <Image
+            priority={true}
+            loading={'eager'}
             src={"/svg/profile.svg"}
             width={"200"}
             height={"200"}
@@ -56,6 +58,9 @@ const ContactMe = () => {
             name="email"
           />
           <Image
+            priority={true}
+            loading={'eager'}
+
             src={"/svg/email.svg"}
             width={"200"}
             height={"200"}
@@ -84,6 +89,8 @@ const ContactMe = () => {
               name="message"
             />
           <Image
+            priority={true}
+            loading={'eager'}
             src={"/svg/details.svg"}
             width={"200"}
             height={"200"}

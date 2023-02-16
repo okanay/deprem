@@ -61,6 +61,8 @@ const TalepItem = ({ item }) => {
           className={"bg-gray-100 px-2 py-1 rounded border border-slate-700/10"}
         >
           <Image
+            priority={true}
+            loading={'eager'}
             src={image[0].src}
             alt={image[0].alt}
             width={200}
@@ -130,7 +132,10 @@ const TalepItem = ({ item }) => {
           {/* GORUNTULENME */}
           <p className={"flex flex-row justify-between items-center gap-1"}>
             <Image
-              src={"/formIcons/statistics.png"}
+              loading={'eager'}
+
+              priority={true}
+              src={"/svg/statistics.svg"}
               alt={"Goruntulenme Sayisi"}
               width={200}
               height={200}
@@ -147,7 +152,10 @@ const TalepItem = ({ item }) => {
           {/* ILETISIM SAYISI */}
           <p className={"flex flex-row justify-between items-center gap-1"}>
             <Image
-              src={"/formIcons/chat.png"}
+              loading={'eager'}
+
+              priority={true}
+              src={"/svg/chat.svg"}
               alt={"Iletisim Sayisi"}
               width={200}
               height={200}
