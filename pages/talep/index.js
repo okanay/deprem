@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
+import { Link as Scroll } from "react-scroll";
 
 import { motion as m } from "framer-motion";
 import { StartDummyData } from "/helper/DummyData";
@@ -105,44 +106,40 @@ const imageContainer = {
 };
 
 const Talep = () => {
-
   const [initialDummyData, setInitialDummyData] = useState(StartDummyData);
   const [filteredData, setFilteredData] = useState(StartDummyData);
-  const [iconFilter, setIconFilter] = useState({prev : talepFilter[0], current : talepFilter[0]});
+  const [iconFilter, setIconFilter] = useState({
+    prev: talepFilter[0],
+    current: talepFilter[0],
+  });
   const [timeFilter, setTimeFilter] = useState("");
-  const [searchParamFilter, setSearchParamFilter] = useState('')
+  const [searchParamFilter, setSearchParamFilter] = useState("");
   const [formCount, setFormCount] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1)
-  const [pageData, setPageData] = useState({min: 1, max : 0});
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageData, setPageData] = useState({ min: 1, max: 0 });
 
   // timeFilter \ iconFilter
   useEffect(() => {
-
     filterData();
-
   }, [timeFilter, iconFilter, currentPage]);
   // pageData
-  useEffect( () => {
+  useEffect(() => {
+    setPageData({
+      min: 1,
+      max: formCount !== 0 ? Math.ceil(formCount / (currentPage * 5)) : 1,
+    });
+  }, [formCount]);
 
-    setPageData({min: 1, max: formCount !== 0 ? Math.ceil((formCount / (currentPage * 5))) : 1})
-
-  }, [formCount])
-
-  useEffect( () => {
-
-    setSearchParamFilter('')
-
-  }, [filteredData])
-
+  useEffect(() => {
+    setSearchParamFilter("");
+  }, [filteredData]);
 
   const handleIconFilterButton = (item) => {
-
-    if (iconFilter.current.type !== item.type)
-    {
-      setCurrentPage(1)
+    if (iconFilter.current.type !== item.type) {
+      setCurrentPage(1);
     }
 
-    const value = { prev : iconFilter.current, current : item}
+    const value = { prev: iconFilter.current, current: item };
     setIconFilter(value);
 
     if (item.type === "") {
@@ -151,12 +148,9 @@ const Talep = () => {
     }
   };
   const handleTimeFilterButton = (value) => {
-
-    if (timeFilter !== value)
-    {
-      setCurrentPage(1)
+    if (timeFilter !== value) {
+      setCurrentPage(1);
     }
-
 
     if (timeFilter === value) {
       setTimeFilter("");
@@ -166,58 +160,46 @@ const Talep = () => {
     setTimeFilter(value);
   };
   const handlePageFilterButton = (value) => {
+    let newValue = currentPage + value;
 
-    let newValue = currentPage + value
-
-    if (newValue > pageData.max)
-      {
-        newValue = pageData.max
-      }
-    else if(newValue < pageData.min)
-      {
-        newValue = pageData.min
-      }
-
-    setCurrentPage(newValue)
-  }
-  const handleSearchButton = () => {
-
-    const searchedData = initialDummyData.filter(data => {
-
-      if (data.phone === searchParamFilter){
-        return data
-      }
-      else if (data.name === searchParamFilter)
-      {
-        return data
-      }
-      else if (data.id === searchParamFilter)
-      {
-        return data
-      }
-    })
-
-    const count = Object(searchedData).length
-    if (count === 0) {
-      setSearchParamFilter('')
-      return
+    if (newValue > pageData.max) {
+      newValue = pageData.max;
+    } else if (newValue < pageData.min) {
+      newValue = pageData.min;
     }
 
-    const newSelectedValue = {prev : talepFilter[0], current : talepFilter[0]}
-    setIconFilter(newSelectedValue)
+    setCurrentPage(newValue);
+  };
+  const handleSearchButton = () => {
+    const searchedData = initialDummyData.filter((data) => {
+      if (data.phone === searchParamFilter) {
+        return data;
+      } else if (data.name === searchParamFilter) {
+        return data;
+      } else if (data.id === searchParamFilter) {
+        return data;
+      }
+    });
 
-    setFormCount(count)
-    setCurrentPage(1)
-    setTimeFilter('')
-    setFilteredData([...searchedData])
-  }
+    const count = Object(searchedData).length;
+    if (count === 0) {
+      setSearchParamFilter("");
+      return;
+    }
 
+    const newSelectedValue = { prev: talepFilter[0], current: talepFilter[0] };
+    setIconFilter(newSelectedValue);
+
+    setFormCount(count);
+    setCurrentPage(1);
+    setTimeFilter("");
+    setFilteredData([...searchedData]);
+  };
 
   const filterData = () => {
-
-    if (searchParamFilter !== '') return
+    if (searchParamFilter !== "") return;
     let filtered = initialDummyData;
-    setFormCount(Object(filtered).length)
+    setFormCount(Object(filtered).length);
 
     filtered = timeFiltered(filtered);
     filtered = statesFiltered(filtered);
@@ -229,34 +211,31 @@ const Talep = () => {
     setFilteredData([...filtered]);
   };
   const pageSelectedFiltered = (filtered) => {
+    const min =
+      currentPage === 1
+        ? `${(currentPage - 1) * 5}`
+        : `${(currentPage - 1) * 5}`;
+    const max =
+      currentPage === 1 ? `${currentPage * 5}` : `${currentPage * 5 + 1}`;
 
-    const min = currentPage === 1 ? `${(currentPage - 1) * 5}` : `${((currentPage - 1) * 5)}`
-    const max = currentPage === 1 ? `${currentPage * 5}` : `${((currentPage) * 5) + 1}`
-
-    return filtered.slice(min, max)
-
-  }
+    window.scrollTo(0, 300);
+    return filtered.slice(min, max);
+  };
   const typeSelectedFiltered = (filtered) => {
-
-    if (iconFilter.current.type !== "")
-    {
-      const data = filtered.filter((data) => data.type === iconFilter.current.type);
-      setFormCount(Object(data).length)
-      return data
+    if (iconFilter.current.type !== "") {
+      const data = filtered.filter(
+        (data) => data.type === iconFilter.current.type
+      );
+      setFormCount(Object(data).length);
+      return data;
     }
 
-    return filtered
-
-  }
+    return filtered;
+  };
   const timeSelectedFiltered = (filtered) => {
-
-    if (timeFilter === "")
-    {
+    if (timeFilter === "") {
       return filtered;
-    }
-    else
-    {
-
+    } else {
       let currentTime = new Date().getTime();
       let targetTime = 0;
       let fourHours = 1000 * 60 * 60 * 4;
@@ -271,13 +250,14 @@ const Talep = () => {
         targetTime = fourHours;
       }
 
-      const data = filtered.filter((data) => Math.abs(currentTime - data.time) < targetTime);
-      setFormCount(Object(data).length)
-      return data
+      const data = filtered.filter(
+        (data) => Math.abs(currentTime - data.time) < targetTime
+      );
+      setFormCount(Object(data).length);
+      return data;
     }
-  }
+  };
   const timeFiltered = (filtered) => {
-
     return filtered.sort((a, b) => {
       if (a.time < b.time) {
         return 1;
@@ -287,7 +267,7 @@ const Talep = () => {
         return 0;
       }
     });
-  }
+  };
   const statesFiltered = (filtered) => {
     return filtered.sort((a, b) => {
       if (a.state > b.state) {
@@ -298,9 +278,8 @@ const Talep = () => {
         return 0;
       }
     });
-  }
+  };
   const statusFiltered = (filtered) => {
-
     return filtered.sort((a, b) => {
       if (a.status < b.status) {
         return 1;
@@ -310,10 +289,7 @@ const Talep = () => {
         return 0;
       }
     });
-
-  }
-
-
+  };
 
   return (
     <div
@@ -354,11 +330,12 @@ const Talep = () => {
 
       {/* FILTER */}
       <div className={"flex flex-col justify-center items-center gap-4"}>
-
         {/* Arama Kutusu */}
 
-        <div className={"w-full flex flex-row justify-center gap-2"}>
-
+        <div
+          id={"filter"}
+          className={"w-full flex flex-row justify-center gap-2"}
+        >
           <CostumInputNotFormik
             type={"text"}
             name={"search"}
@@ -369,12 +346,12 @@ const Talep = () => {
             inputMode={"text"}
             description={"Talep Arayin"}
             handleChange={(e) => {
-              setSearchParamFilter(e.target.value)
+              setSearchParamFilter(e.target.value);
             }}
             value={searchParamFilter}
           />
 
-        {/*  ARA BUTONU */}
+          {/*  ARA BUTONU */}
 
           <button
             onClick={handleSearchButton}
@@ -384,9 +361,12 @@ const Talep = () => {
           </button>
         </div>
 
-
         {/* 24 - 12 - 4 Saat \\ Sonuc Sayisi */}
-        <div className={"flex flex-row gap-2 justify-center px-4 text-xs phone:text-xs phoneLG:text-sm"}>
+        <div
+          className={
+            "flex flex-row gap-2 justify-center px-4 text-xs phone:text-xs phoneLG:text-sm"
+          }
+        >
           {/* 24 Saat */}
           <div className={"flex flex-col items-center justify-center"}>
             <button
@@ -539,56 +519,80 @@ const Talep = () => {
           }
         >
           {/*  SOL TARAF */}
-          <button
-            disabled={pageData.min === currentPage}
-            onClick={() => {
-              handlePageFilterButton(-1);
-            }}
-            className={
-              "flex flex-row justify-between items-center hover:text-gray-900 disabled:text-gray-300"
-            }
+          <Scroll
+            activeClass="active"
+            to="filter"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={250}
           >
-            <svg
-              aria-hidden="true"
-              className="w-5 h-5 mr-2"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              disabled={pageData.min === currentPage}
+              onClick={() => {
+                handlePageFilterButton(-1);
+              }}
+              className={
+                "flex flex-row justify-between items-center hover:text-gray-900 disabled:text-gray-300"
+              }
             >
-              <path
-                fillRule="evenodd"
-                d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-            <span className={"mt-0.5"}>Önceki</span>
-          </button>
+              <svg
+                aria-hidden="true"
+                className="w-5 h-5 mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span className={"mt-0.5"}>Önceki</span>
+            </button>
+          </Scroll>
 
           {/*  SAG TARAF */}
-          <button
-            disabled={pageData.max === currentPage}
-            onClick={() => {
-              handlePageFilterButton(+1);
-            }}
-            className={
-              "flex flex-row justify-between items-center hover:text-gray-900 disabled:text-gray-400"
-            }
+          <Scroll
+            activeClass="active"
+            to="filter"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={250}
           >
-            <span className={"mt-0.5"}>Sonraki</span>
-            <svg
-              aria-hidden="true"
-              className="w-5 h-5 ml-2"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              activeClass="active"
+              to="filter"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={350}
+              disabled={pageData.max === currentPage}
+              onClick={() => {
+                handlePageFilterButton(+1);
+              }}
+              className={
+                "flex flex-row justify-between items-center hover:text-gray-900 disabled:text-gray-400"
+              }
             >
-              <path
-                fillRule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-          </button>
+              <span className={"mt-0.5"}>Sonraki</span>
+              <svg
+                aria-hidden="true"
+                className="w-5 h-5 ml-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </Scroll>
         </div>
       </div>
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 const ContactMe = () => {
   return (
     <div
+      id={"contact-me"}
       className={
         "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto text-center"
       }
