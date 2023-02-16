@@ -141,6 +141,13 @@ const Talep = () => {
     }
   };
   const handleTimeFilterButton = (value) => {
+
+    if (timeFilter !== value)
+    {
+      setCurrentPage(1)
+    }
+
+
     if (timeFilter === value) {
       setTimeFilter("");
       return;
