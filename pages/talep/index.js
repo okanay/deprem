@@ -7,125 +7,127 @@ import { motion as m } from "framer-motion";
 import Alert from "../../components/UI/Alert";
 import TalepItem from "../../components/UI/talepItem";
 import CustomInputNotFormik from "../../components/UI/CustomInputNotFormik";
-import { StartDummyData } from "/helper/DummyData";
 import ScrollComponent from "../../components/UI/ScrollComponent";
+
+import { StartDummyData } from "/helper/DummyData";
+const talepFilter = [
+  {
+    name: "TFDefault",
+    type: "",
+    src: "/svg/manage.svg",
+    alt: "Hepsi",
+    description: "Hepsi",
+    color: "slate-600",
+    hover: "group-hover:border-slate-400",
+    url: "/",
+  },
+  {
+    name: "TFBarinma",
+    type: "bt",
+    src: "/svg/cabin.svg",
+    alt: "Barınmaya İhtiyacım Var",
+    description: "Barınma",
+    color: "red-400",
+    hover: "group-hover:border-red-300",
+    url: "/form/bt",
+  },
+  {
+    name: "TFCadir",
+    type: "ct",
+    src: "/svg/camp.svg",
+    alt: "Çadıra İhtiyacım Var",
+    description: "Çadır",
+    color: "pink-400",
+    hover: "group-hover:border-pink-300",
+    url: "/form/ct",
+  },
+  {
+    name: "TFYemek",
+    type: "gt",
+    src: "/svg/foods.svg",
+    alt: "Gıdaya İhtiyacım Var",
+    description: "Gıda",
+    color: "emerald-400",
+    hover: "group-hover:border-emerald-300",
+    url: "/form/gt",
+  },
+  {
+    name: "TFIlac",
+    type: "it",
+    src: "/svg/medicine.svg",
+    alt: "İlaca İhtiyacım Var",
+    description: "İlaç",
+    color: "teal-400",
+    hover: "group-hover:border-teal-300",
+    url: "/form/it",
+  },
+  {
+    name: "TFHijyen",
+    type: "ht",
+    src: "/svg/amenities.svg",
+    alt: "Hijyen Ürünlerine İhtiyacım Var",
+    description: "Hijyen",
+    color: "blue-400",
+    hover: "group-hover:border-blue-300",
+    url: "/form/ht",
+  },
+];
+const labelContainer = {
+  initial: {},
+  hidden: {
+    opacity: 0,
+    scaleY: 0,
+    y: 10,
+    transition: { duration: 0.2 },
+  },
+  open: {
+    opacity: 1,
+    scaleY: 1,
+    y: -3,
+    display: "block",
+    scaleX: 0.95,
+    transition: { duration: 0.75, type: "spring" },
+  },
+};
+const imageContainer = {
+  initial: {},
+  unselected: {
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.3 },
+  },
+  selected: {
+    y: -4,
+    scale: 1.15,
+    transition: { duration: 0.5, type: "spring" },
+  },
+};
+const searchAnimation = {
+  shake: {
+    x: [-2, 2, -2, 2, -2, 2,0],
+    transition: {
+      duration: 0.5,
+    },
+  },
+  initial : {
+    x : 0,
+    scale : 1,
+    transition: {
+      duration: 0.25,
+    },
+  }
+
+};
 const Talep = () => {
 
-  const talepFilter = [
-    {
-      name: "TFDefault",
-      type: "",
-      src: "/svg/manage.svg",
-      alt: "Hepsi",
-      description: "Hepsi",
-      color: "slate-600",
-      hover: "group-hover:border-slate-400",
-      url: "/",
-    },
-    {
-      name: "TFBarinma",
-      type: "bt",
-      src: "/svg/cabin.svg",
-      alt: "Barınmaya İhtiyacım Var",
-      description: "Barınma",
-      color: "red-400",
-      hover: "group-hover:border-red-300",
-      url: "/form/bt",
-    },
-    {
-      name: "TFCadir",
-      type: "ct",
-      src: "/svg/camp.svg",
-      alt: "Çadıra İhtiyacım Var",
-      description: "Çadır",
-      color: "pink-400",
-      hover: "group-hover:border-pink-300",
-      url: "/form/ct",
-    },
-    {
-      name: "TFYemek",
-      type: "gt",
-      src: "/svg/foods.svg",
-      alt: "Gıdaya İhtiyacım Var",
-      description: "Gıda",
-      color: "emerald-400",
-      hover: "group-hover:border-emerald-300",
-      url: "/form/gt",
-    },
-    {
-      name: "TFIlac",
-      type: "it",
-      src: "/svg/medicine.svg",
-      alt: "İlaca İhtiyacım Var",
-      description: "İlaç",
-      color: "teal-400",
-      hover: "group-hover:border-teal-300",
-      url: "/form/it",
-    },
-    {
-      name: "TFHijyen",
-      type: "ht",
-      src: "/svg/amenities.svg",
-      alt: "Hijyen Ürünlerine İhtiyacım Var",
-      description: "Hijyen",
-      color: "blue-400",
-      hover: "group-hover:border-blue-300",
-      url: "/form/ht",
-    },
-  ];
-  const labelContainer = {
-    initial: {},
-    hidden: {
-      opacity: 0,
-      scaleY: 0,
-      y: 10,
-      transition: { duration: 0.2 },
-    },
-    open: {
-      opacity: 1,
-      scaleY: 1,
-      y: -3,
-      display: "block",
-      scaleX: 0.95,
-      transition: { duration: 0.75, type: "spring" },
-    },
-  };
-  const imageContainer = {
-    initial: {},
-    unselected: {
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.3 },
-    },
-    selected: {
-      y: -4,
-      scale: 1.15,
-      transition: { duration: 0.5, type: "spring" },
-    },
-  };
-  const searchAnimation = {
-    shake: {
-      x: [-2, 2, -2, 2, -2, 2,0],
-      transition: {
-        duration: 0.5,
-      },
-    },
-    initial : {
-      x : 0,
-      scale : 1,
-      transition: {
-        duration: 0.25,
-      },
-    }
-
-  };
+  /// ------------------------------ USE_STATES ------------------------------ ///
 
   const [initialDummyData, setInitialDummyData] = useState(StartDummyData);
   const [filteredData, setFilteredData] = useState(StartDummyData);
   const [iconFilter, setIconFilter] = useState({
-    prev: talepFilter[0],
-    current: talepFilter[0],
-  });
+          prev: talepFilter[0],
+          current: talepFilter[0],
+        });
   const [timeFilter, setTimeFilter] = useState("");
   const [searchParamFilter, setSearchParamFilter] = useState("");
   const [formCount, setFormCount] = useState(0);
@@ -133,21 +135,36 @@ const Talep = () => {
   const [pageData, setPageData] = useState({ min: 1, max: 0 });
   const [searchButtonVariants , setSearchButtonVariants] = useState('initial')
 
-  // timeFilter \ iconFilter
-  useEffect(() => {
+  /// ------------------------------ USE_EFFECTS ------------------------------ ///
+
+  /// *************** TimeFilter, IconFilter,CurrentPage set olursa tetikler yeniden FILTRELEME Yapar *************** ///
+  useEffect(() =>
+    {
+
     filterData();
-  }, [timeFilter, iconFilter, currentPage]);
-  // pageData
-  useEffect(() => {
-    setPageData({
-      min: 1,
-      max: formCount !== 0 ? Math.ceil(formCount / (currentPage * 5)) : 1,
-    });
-  }, [formCount]);
-  // Arama kutusunun input degerini sifirlar.
-  useEffect(() => {
-    setSearchParamFilter("");
-  }, [filteredData]);
+
+    }, [timeFilter, iconFilter, currentPage]);
+
+  /// *************** Bulunan Toplam Sonucu Ogrenir *************** ///
+  useEffect(() =>
+    {
+
+      setPageData({
+        min: 1,
+        max: formCount !== 0 ? Math.ceil(formCount / (currentPage * 5)) : 1,
+      });
+
+    }, [formCount]);
+
+  /// *************** Arama kutusunun input degerini sifirlar. *************** ///
+  useEffect(() =>
+    {
+
+      setSearchParamFilter("");
+
+      }, [filteredData]);
+
+  /// ------------------------------ HANDLE FUNCTIONS ------------------------------ ///
   const handleIconFilterButton = (item) => {
     if (iconFilter.current.type !== item.type) {
       setCurrentPage(1);
@@ -223,6 +240,8 @@ const Talep = () => {
     setTimeout(() => {
       setSearchButtonVariants(""); }, 2000);
   }
+
+  /// ------------------------------ FILTERED FUNCTIONS - Limitler Kisitlamalar ------------------------------ ///
   const pageSelectedFiltered = (filtered) => {
     const min =
       currentPage === 1
@@ -291,6 +310,17 @@ const Talep = () => {
       }
     });
   };
+  const statusFiltered = (filtered) => {
+    return filtered.sort((a, b) => {
+      if (a.status < b.status) {
+        return 1;
+      } else if (a.status > b.status) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+  };
   const filterData = () => {
     if (searchParamFilter !== "") return;
     let filtered = initialDummyData;
@@ -304,17 +334,6 @@ const Talep = () => {
     filtered = pageSelectedFiltered(filtered);
 
     setFilteredData([...filtered]);
-  };
-  const statusFiltered = (filtered) => {
-    return filtered.sort((a, b) => {
-      if (a.status < b.status) {
-        return 1;
-      } else if (a.status > b.status) {
-        return -1;
-      } else {
-        return 0;
-      }
-    });
   };
 
   return (
@@ -542,7 +561,7 @@ const Talep = () => {
 
 
                 {/*  SOL TARAF */}
-                <ScrollComponent where={"filter"} enable={pageData.min !== currentPage}>
+                <ScrollComponent where={"filter"} enable={(pageData.min + 1) !== (currentPage + 1)}>
                   <button
                     disabled={pageData.min === currentPage}
                     onClick={() => {
@@ -568,7 +587,7 @@ const Talep = () => {
                 </ScrollComponent>
 
                 {/*  SAG TARAF */}
-                <ScrollComponent where={"filter"} enable={pageData.max !== currentPage}>
+                <ScrollComponent where={"filter"} enable={(pageData.max + 1) !== (currentPage + 1)}>
                   <button
                     disabled={pageData.max === currentPage}
                     onClick={() => {
