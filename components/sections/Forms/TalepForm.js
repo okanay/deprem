@@ -159,7 +159,7 @@ const TalepForm = ({ formName, formFullListURL, type }) => {
       inputMode: "tel",
       id: "formElementsTalepPhone",
       name: "phone",
-      description: "Telefon Numaranız",
+      description: "Telefon (5XX XXX XX XX)",
       src: "/svg/phone.svg",
       formik: talepFormik.values.phone,
       error: talepFormik.errors.phone,

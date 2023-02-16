@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/UI/CostumInputNotFormik.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Forms/TalepForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/Forms/TalepForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/getVersion.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getVersion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/talep/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talep/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +92,7 @@
       <workItem from="1676294564786" duration="18254000" />
       <workItem from="1676393758679" duration="19320000" />
       <workItem from="1676481340646" duration="22974000" />
-      <workItem from="1676565120496" duration="1186000" />
+      <workItem from="1676565120496" duration="4982000" />
     </task>
     <servers />
   </component>
