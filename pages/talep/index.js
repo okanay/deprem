@@ -121,7 +121,7 @@ const Talep = () => {
   // pageData
   useEffect( () => {
 
-    setPageData({min: 1, max: Math.ceil((formCount / (currentPage * 5)))})
+    setPageData({min: 1, max: formCount !== 0 ? Math.ceil((formCount / (currentPage * 5))) : 1})
 
   }, [formCount])
 
@@ -409,60 +409,62 @@ const Talep = () => {
           </div>
 
           {/* SAYFA DEGISTIR*/}
-          <div className="flex flex-col justify-between items-center mt-6 gap-4">
+      {formCount > 5 && (
+        <div className="flex flex-col justify-between items-center mt-6 gap-4">
 
-            {/* SAYFA DEGISTIR */}
-            <div className={"flex flex-row justify-between items-center text-xs w-full text-gray-600 px-4"}>
+          {/* SAYFA DEGISTIR */}
+          <div className={"flex flex-row justify-between items-center text-xs w-full text-gray-600 px-4"}>
 
-              {/*  SOL TARAF */}
-              <button
-                disabled={pageData.min === currentPage}
-                onClick={() => {handlePageFilterButton(-1)} }
-                className={
-                  "flex flex-row justify-between items-center hover:text-gray-400 disabled:text-gray-400"
-                }
+            {/*  SOL TARAF */}
+            <button
+              disabled={pageData.min === currentPage}
+              onClick={() => {handlePageFilterButton(-1)} }
+              className={
+                "flex flex-row justify-between items-center hover:text-gray-400 disabled:text-gray-400"
+              }
+            >
+              <svg
+                aria-hidden="true"
+                className="w-5 h-5 mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  aria-hidden="true"
-                  className="w-5 h-5 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-                <span className={"mt-0.5"}>Önceki</span>
-              </button>
+                <path
+                  fillRule="evenodd"
+                  d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span className={"mt-0.5"}>Önceki</span>
+            </button>
 
-              {/*  SAG TARAF */}
-              <button
-                disabled={pageData.max === currentPage}
-                onClick={() => {handlePageFilterButton(+1)}}
-                className={
-                  "flex flex-row justify-between items-center hover:text-gray-400 disabled:text-gray-400"
-                }
+            {/*  SAG TARAF */}
+            <button
+              disabled={pageData.max === currentPage}
+              onClick={() => {handlePageFilterButton(+1)}}
+              className={
+                "flex flex-row justify-between items-center hover:text-gray-400 disabled:text-gray-400"
+              }
+            >
+              <span className={"mt-0.5"}>Sonraki</span>
+              <svg
+                aria-hidden="true"
+                className="w-5 h-5 ml-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <span className={"mt-0.5"}>Sonraki</span>
-                <svg
-                  aria-hidden="true"
-                  className="w-5 h-5 ml-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-            </div>
+                <path
+                  fillRule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
           </div>
+        </div>
+      )}
 
           {/* IHTIYAC TALEP FORMLARI (MAP EDILEN DIV) */}
           <div className="flex flex-col gap-12 mt-10 text-[0.5rem] phone:text-[0.55rem] phoneLG:text-[0.7rem]">
@@ -472,6 +474,7 @@ const Talep = () => {
           </div>
 
           {/* SAYFA DEGISTIR*/}
+      {formCount > 5 && (
           <div className="flex flex-col justify-between items-center mt-11 gap-4">
 
             {/* CIZGI / HR*/}
@@ -529,6 +532,7 @@ const Talep = () => {
               </button>
             </div>
           </div>
+      )}
 
           {/*  TAILWIND CLASS CREATOR */}
           <div>
