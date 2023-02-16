@@ -7,6 +7,7 @@
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/UI/ScrollComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/ScrollComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/DummyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/DummyData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/talep/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talep/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +91,7 @@
       <workItem from="1676294564786" duration="18254000" />
       <workItem from="1676393758679" duration="19320000" />
       <workItem from="1676481340646" duration="22974000" />
-      <workItem from="1676565120496" duration="12084000" />
+      <workItem from="1676565120496" duration="14680000" />
     </task>
     <servers />
   </component>

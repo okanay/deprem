@@ -289,4 +289,37 @@ export const StartDummyData = [
     time: 1676488386548,
     state : 1
   },
+
+  {
+    id : "B4921A",
+    type: "ht",
+    addressDes: "Fransa Paris Merkez Camii",
+    city: "Kilis",
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    email: "ahmetkaya@gmail.com",
+    kvk: "true",
+    name: "Atabey Matuş",
+    phone: "535 416 24 11",
+    status: 1,
+    street: "Polateli",
+    time: 1676487386548,
+    state : 0
+  },
+  {
+    id : "B42CFA",
+    type: "bt",
+    addressDes: "Fransa Paris Merkez Camii",
+    city: "Adıyaman",
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    email: "kemalerdogan@gmail.com",
+    kvk: "true",
+    name: "Mert Aşçı",
+    phone: "535 412 23 91",
+    status: 2,
+    street: "Samsat",
+    time: 1676488386548,
+    state : 1
+  },
 ];

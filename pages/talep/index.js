@@ -156,7 +156,7 @@ const Talep = () => {
 
     }, [formCount]);
 
-  /// *************** Arama kutusunun input degerini sifirlar. *************** ///
+  /// *************** Arama basarili olursa arama input kutusuna yazilan ifadeyi sifirlar. *************** ///
   useEffect(() =>
     {
 
@@ -193,9 +193,12 @@ const Talep = () => {
   const handlePageFilterButton = (value) => {
     let newValue = currentPage + value;
 
-    if (newValue > pageData.max) {
+    if (newValue > pageData.max)
+    {
       newValue = pageData.max;
-    } else if (newValue < pageData.min) {
+    }
+    else if (newValue < pageData.min)
+    {
       newValue = pageData.min;
     }
 
@@ -561,7 +564,8 @@ const Talep = () => {
 
 
                 {/*  SOL TARAF */}
-                <ScrollComponent where={"filter"} enable={(pageData.min + 1) !== (currentPage + 1)}>
+                <ScrollComponent disabled={pageData.min === currentPage} where={'filter'}>
+
                   <button
                     disabled={pageData.min === currentPage}
                     onClick={() => {
@@ -586,8 +590,9 @@ const Talep = () => {
                   </button>
                 </ScrollComponent>
 
+
                 {/*  SAG TARAF */}
-                <ScrollComponent where={"filter"} enable={(pageData.max + 1) !== (currentPage + 1)}>
+                <ScrollComponent disabled={pageData.max === currentPage} where={'filter'}>
                   <button
                     disabled={pageData.max === currentPage}
                     onClick={() => {
