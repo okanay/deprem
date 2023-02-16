@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className={""}>
+      <div className={"scroll-smooth"}>
         <Layout>
           <Component {...pageProps} />
         </Layout>

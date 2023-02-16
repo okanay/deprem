@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-const CostumInputNotFormik = ({type, maxLength,minLength,inputMode, description, name, id, handleChange, src,value}) => {
+const CustomInputNotFormik = ({type, maxLength,minLength,inputMode, description, name, id, handleChange, src,value}) => {
 
     return (
       <div className={"relative"}>
@@ -40,4 +40,4 @@ const CostumInputNotFormik = ({type, maxLength,minLength,inputMode, description,
   )
 }
 
-export default CostumInputNotFormik
+export default CustomInputNotFormik
