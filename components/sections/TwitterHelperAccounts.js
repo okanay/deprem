@@ -1,34 +1,39 @@
 import Carousel from "framer-motion-carousel";
 import Link from "next/link";
-import Diveded from "../UI/diveded";
+import { useState } from "react";
+
+const TwitterAccounts = [
+  {
+    key: "TA0",
+    profilePhoto: "TwitterAccounts/teyfiksikret.jpg",
+    profileUrl: "/",
+    sendMessageUrl: "/",
+    name: "Teyfik Sikret",
+    follower: "305.619",
+  },
+  {
+    key: "TA1",
+    profilePhoto: "TwitterAccounts/player2.jpg",
+    profileUrl: "/",
+    sendMessageUrl: "/",
+    name: "Player 2",
+    follower: "50.439",
+  },
+  {
+    key: "TA2",
+    profilePhoto: "TwitterAccounts/sunguralpesat.jpg",
+    profileUrl: "/",
+    sendMessageUrl: "/",
+    name: "Sunguralp Esat",
+    follower: "53.821",
+  },
+];
 
 const TwitterHelperAccounts = () => {
-  const TwitterAccounts = [
-    {
-      key: "TA0",
-      profilePhoto: "TwitterAccounts/teyfiksikret.jpg",
-      profileUrl: "/",
-      sendMessageUrl: "/",
-      name: "Teyfik Sikret",
-      follower: "305.619",
-    },
-    {
-      key: "TA1",
-      profilePhoto: "TwitterAccounts/player2.jpg",
-      profileUrl: "/",
-      sendMessageUrl: "/",
-      name: "Player 2",
-      follower: "50.439",
-    },
-    {
-      key: "TA2",
-      profilePhoto: "TwitterAccounts/sunguralpesat.jpg",
-      profileUrl: "/",
-      sendMessageUrl: "/",
-      name: "Sunguralp Esat",
-      follower: "53.821",
-    },
-  ];
+
+  const [show, setShow] = useState(false)
+  const handleAllAccounts = () => {setShow(!show)}
+
 
   return (
     <div
@@ -36,21 +41,68 @@ const TwitterHelperAccounts = () => {
         "max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto text-center pt-4"
       }
     >
+
       <div className={"flex flex-row justify-between items-center px-4"}>
         <h1
           className={"text-lg font-semibold text-neutral-700 text-start my-5"}
         >
           <span className={"text-slate-50 bg-blue-400/90 p-2 rounded-lg"}>Twitter</span> <span className={'font-serif font-light'}>Hesapları</span>
         </h1>
-        <Link
-          href={"/"}
+        <button
+          onClick={handleAllAccounts}
           className={
             "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-blue-400/90 shadow shadow-blue-400/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-blue-400/90 hover:text-slate-50"
           }
         >
-          TAM-LİSTE
-        </Link>
+          {`${!show ? "TAM-LİSTE" : "KAPAT"}`}
+        </button>
       </div>
+
+      {/* GIZLENMIS FULL LISTE */}
+      {show && (
+        <div className={'absolute z-20 bg-slate-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto pt-4'}>
+          <div className={'h-full flex flex-col'}>
+
+            <div className="relative overflow-x-auto shadow-sm sm:rounded-lg">
+              <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 table-auto">
+                <thead className="text-xs text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                  <th scope="col" className="px-6 py-3">
+                    KULLANICI ADI
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    TAKİPÇİ SAYISI
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    BAĞLANTI
+                  </th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {TwitterAccounts.map((item, index) => { return (
+                <tr
+                  key={`${item.key} TL${index}`}
+                  className="h-16 bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                  <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {item.name}
+                  </th>
+                  <td className="px-6 py-4">
+                    {item.follower}
+                  </td>
+                  <Link href={item.profileUrl} className="inline-flex bg-neutral-50 border border-gray-600/20 rounded text-neutral-700 mt-3 p-1.5 transition duration-150 hover:bg-neutral-700 hover:text-gray-50/90">
+                    <td>Mesaj Gönder</td>
+                  </Link>
+                </tr>
+
+                )})}
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      )}
 
       <Carousel interval={8000} renderDots={() => {}}>
         {TwitterAccounts.map((item) => {
