@@ -111,7 +111,7 @@ const EmergencyResponse = () => {
                 <div
                   key={item.key}
                   className={
-                    "mx-3 py-4 rounded-2xl shadow-md shadow-pink-900/10 mb-3"
+                    "mx-3 py-4 rounded-lg shadow-md shadow-neutral-600/10 mb-3"
                   }
                 >
                   <Link
@@ -130,7 +130,7 @@ const EmergencyResponse = () => {
                           "w-6 h-6 duration-300 group-hover:animate-pulse inline mr-4"
                         }
                       />
-                      <span className={"duration-500 group-hover:text-red-700"}>
+                      <span className={"duration-500 group-hover:text-red-500"}>
                         {item.description}
                       </span>
                     </span>
@@ -165,7 +165,7 @@ const EmergencyResponse = () => {
                 <div
                   key={item.key}
                   className={
-                    "mx-3 py-4 rounded-2xl shadow-md shadow-sky-900/10 mb-3"
+                    "mx-3 py-4 rounded-lg shadow-md shadow-neutral-600/10 mb-3"
                   }
                 >
                   <Link
@@ -184,7 +184,7 @@ const EmergencyResponse = () => {
                           "w-6 h-6 duration-300 group-hover:animate-pulse inline mr-4"
                         }
                       />
-                      <span className={"duration-500 group-hover:text-sky-700"}>
+                      <span className={"duration-500 group-hover:text-emerald-400/90"}>
                         {item.description}
                       </span>
                     </span>

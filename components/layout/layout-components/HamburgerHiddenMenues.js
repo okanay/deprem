@@ -54,7 +54,7 @@ const HamburgerHiddenMenues = ({ hamburger }) => {
             <Link
               href={"/"}
               className={
-                "px-2 py-2 mr-1 rounded-[2.5px] border border-l-[4px] border-l-red-300 bg-slate-50/90"
+                "px-2 py-2 mr-1 rounded-[2.5px] border border-slate-400/20 bg-slate-50/90"
               }
             >
               Giriş Yap
@@ -62,7 +62,7 @@ const HamburgerHiddenMenues = ({ hamburger }) => {
             <Link
               href={"/"}
               className={
-                "px-2 py-2 mr-1 rounded-[2.5px] border border-l-[4px] border-l-sky-300 bg-slate-50/90"
+                "px-2 py-2 mr-1 rounded-[2.5px] text-white border border-slate-50/20 bg-blue-500/80"
               }
             >
               Kayıt Ol
