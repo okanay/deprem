@@ -1,24 +1,23 @@
 import Image from "next/image";
 import React from "react";
 
-const CostumTextAreaInput = ({details, formik, }) => {
-
-  return  (
+const CostumTextAreaInput = ({ details, formik }) => {
+  return (
     <div className={"relative py-2"}>
-            <textarea
-              className={
-                "peer focus:outline-none transition duration-300 focus:border-gray-800 placeholder:text-transparent w-full px-9 py-1 h-30 bg-gray-50 border-2 border-slate-500"
-              }
-              rows={details.rows}
-              maxLength={details.maxLength}
-              placeholder={details.description}
-              name={details.name}
-              onChange={formik.handleChange}
-              value={details.formik}
-            />
+      <textarea
+        className={
+          "peer focus:outline-none transition duration-300 focus:border-gray-800 placeholder:text-transparent w-full px-9 py-1 h-44 bg-gray-50 border-b-2 border-slate-500"
+        }
+        rows={details.rows}
+        maxLength={details.maxLength}
+        placeholder={details.description}
+        name={details.name}
+        onChange={formik.handleChange}
+        value={details.formik}
+      />
       <Image
         priority={true}
-        loading={'eager'}
+        loading={"eager"}
         src={details.src}
         width={"200"}
         height={"200"}
@@ -39,7 +38,7 @@ const CostumTextAreaInput = ({details, formik, }) => {
         {details.description}
       </label>
     </div>
-  )
-}
+  );
+};
 
-export default CostumTextAreaInput
+export default CostumTextAreaInput;

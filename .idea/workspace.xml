@@ -5,9 +5,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UI/Destek/DestekItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UI/Destek/KonaklamaDetay.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/destek/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/deadline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/people.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Elements/Alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/CostumInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Inputs/CostumInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/CostumRadioInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Inputs/CostumRadioInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/CostumTextAreaInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Inputs/CostumTextAreaInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/CustomInputNotFormik.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Inputs/CustomInputNotFormik.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/FormTitle.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Re-Useables/FormTitle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/HamburgerMenuIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Re-Useables/HamburgerMenuIcon.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/KVK.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Re-Useables/KVK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/KvkCheckBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Re-Useables/KvkCheckBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Logo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Re-Useables/Logo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/RedAlert.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Re-Useables/RedAlert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/ScrollComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Re-Useables/ScrollComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/SubmitButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Re-Useables/SubmitButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/TalepState.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Talep/TalepState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/TalepStatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Talep/TalepStatus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/diveded.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/svgIconsLib.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/talepItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Talep/TalepItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/layout-components/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout-components/NavigationBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/layout-components/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout-components/footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Forms/KonaklamaTeklif.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Forms/Loading.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Forms/NakliyeTeklif.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Forms/OperasyonTeklif.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/Forms/TalepForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Talep/TalepForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/TwitterHelperAccounts.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/TwitterHelperAccounts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/form/[formType].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/form/[formType].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talep/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talep/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formIcons/address.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formIcons/chat.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formIcons/confirmPassword.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formIcons/details.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formIcons/email.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formIcons/infoAddress.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formIcons/password.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formIcons/phone.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formIcons/profile.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formIcons/research.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formIcons/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formIcons/statistics.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/amenities.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/busDriver.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/cabin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/camp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/constructionWorker.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/foods.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/footprints.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/hamburgerMenu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/house.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/manage.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/medicine.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menuIcons/translator.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,36 +94,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.16.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/okan/Desktop/project-cv-02/public&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/okan/Desktop/project-cv-02/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "16.16.0",
+    "javascript.nodejs.core.library.typings.version": "16.18.11",
+    "last_opened_file_path": "/Users/okan/Desktop/project-cv-02/components/UI/Destek",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/Users/okan/Desktop/project-cv-02/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/UI/Destek" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/svg" />
-      <recent name="$PROJECT_DIR$/public/formIcons" />
-      <recent name="$PROJECT_DIR$/public/menuIcons" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/pages/form" />
+      <recent name="$PROJECT_DIR$/components/UI/Talep" />
+      <recent name="$PROJECT_DIR$/components/UI/Re-Useables" />
+      <recent name="$PROJECT_DIR$/components/UI/Elements" />
+      <recent name="$PROJECT_DIR$/components/UI/Inputs" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -90,7 +150,7 @@
       <workItem from="1676294564786" duration="18254000" />
       <workItem from="1676393758679" duration="19320000" />
       <workItem from="1676481340646" duration="22974000" />
-      <workItem from="1676565120496" duration="19395000" />
+      <workItem from="1676565120496" duration="33322000" />
     </task>
     <servers />
   </component>

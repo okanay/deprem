@@ -1,9 +1,8 @@
 
 import React, { useState } from "react";
 import HamburgerHiddenMenues from "./HamburgerHiddenMenues";
-import Diveded from "../../UI/diveded";
-import Logo from "../../UI/Logo";
-import HamburgerMenuIcon from "../../UI/HamburgerMenuIcon";
+import Logo from "../../UI/Re-Useables/Logo";
+import HamburgerMenuIcon from "../../UI/Re-Useables/HamburgerMenuIcon";
 
 const NavigationBar = () => {
   // React Hooks = React Hooks Functions

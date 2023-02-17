@@ -1,4 +1,4 @@
-import Logo from "../../UI/Logo";
+import Logo from "../../UI/Re-Useables/Logo";
 import Link from "next/link";
 import { useQuery } from "react-query";
 import { getVersion } from "/helper/getVersion";

@@ -30,10 +30,10 @@ const TwitterAccounts = [
 ];
 
 const TwitterHelperAccounts = () => {
-
-  const [show, setShow] = useState(false)
-  const handleAllAccounts = () => {setShow(!show)}
-
+  const [show, setShow] = useState(false);
+  const handleAllAccounts = () => {
+    setShow(!show);
+  };
 
   return (
     <div
@@ -41,12 +41,14 @@ const TwitterHelperAccounts = () => {
         "max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto text-center pt-4"
       }
     >
-
       <div className={"flex flex-row justify-between items-center px-4"}>
         <h1
           className={"text-lg font-semibold text-neutral-700 text-start my-5"}
         >
-          <span className={"text-slate-50 bg-blue-400/90 p-2 rounded-lg"}>Twitter</span> <span className={'font-serif font-light'}>Hesapları</span>
+          <span className={"text-slate-50 bg-blue-400/90 p-2 rounded-lg"}>
+            Twitter
+          </span>{" "}
+          <span className={"font-serif font-light"}>Hesapları</span>
         </h1>
         <button
           onClick={handleAllAccounts}
@@ -60,46 +62,55 @@ const TwitterHelperAccounts = () => {
 
       {/* GIZLENMIS FULL LISTE */}
       {show && (
-        <div className={'absolute z-20 bg-slate-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto pt-4'}>
-          <div className={'h-full flex flex-col'}>
-
+        <div
+          className={
+            "absolute z-20 bg-slate-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto pt-4"
+          }
+        >
+          <div className={"h-full flex flex-col"}>
             <div className="relative overflow-x-auto shadow-sm sm:rounded-lg">
               <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 table-auto">
                 <thead className="text-xs text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" className="px-6 py-3">
-                    KULLANICI ADI
-                  </th>
-                  <th scope="col" className="px-6 py-3">
-                    TAKİPÇİ SAYISI
-                  </th>
-                  <th scope="col" className="px-6 py-3">
-                    BAĞLANTI
-                  </th>
-                </tr>
+                  <tr>
+                    <th scope="col" className="px-6 py-3">
+                      KULLANICI ADI
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      TAKİPÇİ SAYISI
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      BAĞLANTI
+                    </th>
+                  </tr>
                 </thead>
                 <tbody>
-
-                {TwitterAccounts.map((item, index) => { return (
-                <tr
-                  key={`${item.key} TL${index}`}
-                  className="h-16 bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {item.name}
-                  </th>
-                  <td className="px-6 py-4">
-                    {item.follower}
-                  </td>
-                  <Link href={item.profileUrl} className="inline-flex bg-neutral-50 border border-gray-600/20 rounded text-neutral-700 mt-3 p-1.5 transition duration-150 hover:bg-neutral-700 hover:text-gray-50/90">
-                    <td>Mesaj Gönder</td>
-                  </Link>
-                </tr>
-
-                )})}
+                  {TwitterAccounts.map((item, index) => {
+                    return (
+                      <tr
+                        key={`${item.key} TL${index}`}
+                        className="h-16 bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                      >
+                        <th
+                          scope="row"
+                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                        >
+                          {item.name}
+                        </th>
+                        <td className="px-6 py-4">{item.follower}</td>
+                        <div className={'w-fit h-16 flex flex-col justify-center'}>
+                          <Link
+                            href={item.profileUrl}
+                            className="bg-neutral-50 border border-gray-600/20 rounded text-neutral-700 py-2 px-2 transition duration-150 hover:bg-neutral-700 hover:text-gray-50/90"
+                          >
+                            <td>Mesaj Gönder</td>
+                          </Link>
+                        </div>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
-
           </div>
         </div>
       )}

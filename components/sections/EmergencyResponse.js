@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import FormTitle from "../UI/FormTitle";
+import FormTitle from "../UI/Re-Useables/FormTitle";
 
 const EmergencyResponse = () => {
   const YardimAl = [
@@ -43,35 +43,35 @@ const EmergencyResponse = () => {
   const YardimVer = [
     {
       key: "YV0",
-      url: "/",
+      url: "/form/kd",
       src: "/svg/house.svg",
       alt: "Konaklama Teklif Et",
       description: "Konaklama Teklif Et",
     },
     {
       key: "YV1",
-      url: "/",
+      url: "/form/akd",
       src: "/svg/footprints.svg",
       alt: "Arama Kurtarmaya Katilabilirim",
       description: "Arama Kurtarmaya Katılabilirim",
     },
     {
       key: "YV2",
-      url: "/",
+      url: "/form/obd",
       src: "/svg/constructionWorker.svg",
       alt: "Operasyonlarda Bulunabilirim",
       description: "Operasyonlarda Bulunabilirim",
     },
     {
       key: "YV3",
-      url: "/",
+      url: "/form/ntd",
       src: "/svg/busDriver.svg",
       alt: "Nakliye ve Taşıma Yapabilirim",
       description: "Nakliye ve Taşıma Yapabilirim",
     },
     {
       key: "YV4",
-      url: "/",
+      url: "/form/cd",
       src: "/svg/translator.svg",
       alt: "Çevirmenlik Yapabilirim",
       description: "Çevirmenlik Yapabilirim",

@@ -5,14 +5,14 @@ import { useFormik } from "formik";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import fetchPostData from "../../costumHooks/fetchPostData";
-import CostumInput from "../../UI/CostumInput";
-import CostumRadioInput from "../../UI/CostumRadioInput";
-import CostumTextAreaInput from "../../UI/CostumTextAreaInput";
-import RedAlert from "../../UI/RedAlert";
-import FormTitle from "../../UI/FormTitle";
-import Kvk from "../../UI/KVK";
-import KvkCheckBox from "../../UI/KvkCheckBox";
-import SubmitButton from "../../UI/SubmitButton";
+import CostumInput from "../Inputs/CostumInput";
+import CostumRadioInput from "../Inputs/CostumRadioInput";
+import CostumTextAreaInput from "../Inputs/CostumTextAreaInput";
+import RedAlert from "../Re-Useables/RedAlert";
+import FormTitle from "../Re-Useables/FormTitle";
+import Kvk from "../Re-Useables/KVK";
+import KvkCheckBox from "../Re-Useables/KvkCheckBox";
+import SubmitButton from "../Re-Useables/SubmitButton";
 import { cityData} from "../../../helper/getCityAndStreet";
 
 const TalepForm = ({ formName, formFullListURL, type }) => {

@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion as m } from "framer-motion";
 
-import Alert from "../../components/UI/Alert";
-import TalepItem from "../../components/UI/talepItem";
-import CustomInputNotFormik from "../../components/UI/CustomInputNotFormik";
-import ScrollComponent from "../../components/UI/ScrollComponent";
+import Alert from "../../components/UI/Elements/Alert";
+import TalepItem from "../../components/UI/Talep/TalepItem";
+import CustomInputNotFormik from "../../components/UI/Inputs/CustomInputNotFormik";
+import ScrollComponent from "../../components/UI/Re-Useables/ScrollComponent";
 
 import { StartDummyData } from "/helper/DummyData";
 const talepFilter = [
