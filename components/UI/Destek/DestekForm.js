@@ -193,23 +193,3 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
 export default DestekForm;
 
 
-/*
-      const extendedControl =  () =>
-      {
-        extendedForm.map( (item, index) => {
-
-          if(item.value === "")
-          {
-            setErrors(prev => {
-              const updatedErrors = [...prev];
-              updatedErrors[index].error = true;
-              return updatedErrors;
-            })
-          }
-
-          destekFormik.setErrors({ error: item.errorMessage })
-        })
-      }
-
-      await extendedControl();
-* */

@@ -6,7 +6,7 @@ const CustomTextAreaInput = ({ details, formik }) => {
     <div className={"relative py-2"}>
       <textarea
         className={
-          "peer focus:outline-none transition duration-300 focus:border-gray-800 placeholder:text-transparent w-full px-9 py-1 h-44 bg-gray-50 border-[0px] rounded-[0px] border-b-2 border-slate-500"
+          "peer appearance-none focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-28 bg-gray-50 border-[0px] rounded-[0px] border-b-2 border-slate-500"
         }
         rows={details.rows}
         maxLength={details.maxLength}

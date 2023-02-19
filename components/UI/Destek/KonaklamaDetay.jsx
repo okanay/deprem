@@ -74,8 +74,8 @@ const KonaklamaDetay = ({ destekFormik, destekSchema, setValidationSchema}) => {
 
   return (
     <div className={"flex flex-col py-0.5 text-sm"}>
-      <div className={"flex flex-col gap-4 items-center"}>
-        <div className={"flex flex-row gap-4"}>
+      <div className={"flex flex-col gap-4 items-start"}>
+        <div className={"flex flex-row"}>
           <p
             className={`text-start text-[0.7rem] ${
               destekFormik.errors.kacGun ? "text-red-500" : "text-gray-400"
@@ -85,7 +85,7 @@ const KonaklamaDetay = ({ destekFormik, destekSchema, setValidationSchema}) => {
           </p>
 
           <p
-            className={`text-start text-[0.7rem] ${
+            className={`text-end text-[0.7rem] ${
               destekFormik.errors.kacKisi ? "text-red-500" : "text-gray-400"
             } text-start`}
           >
