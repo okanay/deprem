@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const CostumInput = ({item, formik}) => {
+const CustomInput = ({item, formik}) => {
 
 
   return (
@@ -49,4 +49,4 @@ const CostumInput = ({item, formik}) => {
 
 }
 
-export default CostumInput
+export default CustomInput

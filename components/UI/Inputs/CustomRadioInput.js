@@ -1,6 +1,6 @@
 import React from "react";
 
-const CostumRadioInput  = ({item, handleSelectedOption, selectedOption}) => {
+const CustomRadioInput  = ({item, handleSelectedOption, selectedOption}) => {
 
   return (
 
@@ -25,4 +25,4 @@ const CostumRadioInput  = ({item, handleSelectedOption, selectedOption}) => {
   )
 }
 
-export default CostumRadioInput
+export default CustomRadioInput

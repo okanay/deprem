@@ -4,8 +4,8 @@ import { useFormik } from "formik";
 import React, { Fragment, useState } from "react";
 import { useRouter } from "next/router";
 import fetchPostData from "../../costumHooks/fetchPostData";
-import CostumInput from "../Inputs/CostumInput";
-import CostumTextAreaInput from "../Inputs/CostumTextAreaInput";
+import CustomInput from "../Inputs/CustomInput";
+import CustomTextAreaInput from "../Inputs/CustomTextAreaInput";
 import RedAlert from "../Re-Useables/RedAlert";
 import FormTitle from "../Re-Useables/FormTitle";
 import Kvk from "../Re-Useables/KVK";
@@ -14,13 +14,15 @@ import SubmitButton from "../Re-Useables/SubmitButton";
 import KonaklamaDetay from "./KonaklamaDetay";
 
 const DestekForm = ({ formName, formFullListURL, type }) => {
+
   const router = useRouter();
-  const [checkedOption, setCheckedOption] = useState(false);
   const handleKVKChecked = (event) => {
     const state = event.target.checked ? "true" : undefined;
     destekFormik.values.kvk = state;
     setCheckedOption(state);
   };
+  const [checkedOption, setCheckedOption] = useState(false);
+  const [validationSchema, setValidationSchema] = useState(Yup.object({}));
 
   const destekSchema = Yup.object({
     name: Yup.string()
@@ -34,12 +36,6 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
       .required("Lütfen telefon numaranızı girin.")
       .lessThan(10000000000, "Örnek telefon numarası || 532-456-78-90")
       .moreThan(999999999, "Örnek telefon numarası || 532-456-78-90"),
-    informationOne: Yup.string()
-      .required("Lütfen bilgilendirme formunu doldurun.")
-      .max(40, "Detaylandırmanız için maksimum karakter sayısı 40'dir"),
-    informationTwo: Yup.string()
-      .required("Lütfen bilgilendirme formunu doldurun.")
-      .max(40, "Detaylandırmanız için maksimum karakter sayısı 40'dir"),
     details: Yup.string()
       .required("Lütfen talebinizi dikkatli bir şekilde detaylandırın.")
       .max(260, "Detaylandırmanız için maksimum karakter sayısı 260'dir"),
@@ -53,25 +49,24 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
       name: "",
       email: "",
       phone: "",
-      informationOne: "",
-      informationTwo: "",
-      informationThree: "",
-      informationFour: "",
       details: "",
       kvk: "",
     },
     validateOnChange: false, // this one
     validateOnBlur: false,
-    validationSchema: destekSchema,
+    validationSchema : validationSchema,
 
     onSubmit: async (values, actions) => {
+
+
+      console.log(values);
+
       const [error, result] = await fetchPostData(
         "http://localhost:8888/deprem/talep.php",
         values
       );
 
       if (error !== null) {
-        console.log(values);
         destekFormik.setErrors({ error: error.systemMessage });
         // talepFormik.setErrors({ error: error.message });
         actions.setSubmitting(false);
@@ -88,7 +83,7 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
       maxLength: "40",
       minLength: "0",
       inputMode: "text",
-      id: "formElementsTalepName",
+      id: "formElementsDestekName",
       name: "name",
       description: "Adınız",
       src: "/svg/profile.svg",
@@ -101,7 +96,7 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
       maxLength: "40",
       minLength: "0",
       inputMode: "email",
-      id: "formElementsTalepEmail",
+      id: "formElementsDestekEmail",
       name: "email",
       description: "Email Adresiniz",
       src: "/svg/email.svg",
@@ -114,7 +109,7 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
       maxLength: "40",
       minLength: "0",
       inputMode: "tel",
-      id: "formElementsTalepPhone",
+      id: "formElementsDestekPhone",
       name: "phone",
       description: "Telefon (5XX XXX XX XX)",
       src: "/svg/phone.svg",
@@ -126,7 +121,7 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
     key: "FE12",
     rows: 8,
     maxLength: 400,
-    id: "formElementsDetails",
+    id: "formElementsDestekDetails",
     name: "details",
     description: "Lütfen yapabileceginiz yardimi detaylandırın.",
     src: "/svg/details.svg",
@@ -134,12 +129,7 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
     error: destekFormik.errors.details,
   };
 
-  return (
-    <div
-      className={
-        "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto"
-      }
-    >
+  return (<div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto"}>
       <div className={"flex flex-col justify-between gap-6"}>
         {/* Dikkat Uyarisi */}
         <RedAlert title={"Lütfen Dikkat!"}>
@@ -153,15 +143,15 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
           {/* FORM SECTION - 1 || Name,Email,Phone */}
           {information.map((item) => {
             return (
-              <CostumInput key={item.key} item={item} formik={destekFormik} />
+              <CustomInput key={item.key} item={item} formik={destekFormik} />
             );
           })}
 
           {/* Konaklama Formu */}
-          {router.query.formType === "kd" && (<KonaklamaDetay destekFormik={destekFormik} />)}
+          {router.query.formType === "kd" && (<KonaklamaDetay destekFormik={destekFormik} destekSchema={destekSchema} setValidationSchema={setValidationSchema}/>)}
 
           {/* FORM SECTION - 3 || Detaylandirma TextArea */}
-          <CostumTextAreaInput formik={destekFormik} details={details} />
+          <CustomTextAreaInput formik={destekFormik} details={details}/>
 
           {/* FORM SECTION - 4 || KVK Component */}
           <Kvk />
@@ -201,3 +191,25 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
 };
 
 export default DestekForm;
+
+
+/*
+      const extendedControl =  () =>
+      {
+        extendedForm.map( (item, index) => {
+
+          if(item.value === "")
+          {
+            setErrors(prev => {
+              const updatedErrors = [...prev];
+              updatedErrors[index].error = true;
+              return updatedErrors;
+            })
+          }
+
+          destekFormik.setErrors({ error: item.errorMessage })
+        })
+      }
+
+      await extendedControl();
+* */

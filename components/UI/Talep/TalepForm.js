@@ -5,9 +5,9 @@ import { useFormik } from "formik";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import fetchPostData from "../../costumHooks/fetchPostData";
-import CostumInput from "../Inputs/CostumInput";
-import CostumRadioInput from "../Inputs/CostumRadioInput";
-import CostumTextAreaInput from "../Inputs/CostumTextAreaInput";
+import CustomInput from "../Inputs/CustomInput";
+import CustomRadioInput from "../Inputs/CustomRadioInput";
+import CustomTextAreaInput from "../Inputs/CustomTextAreaInput";
 import RedAlert from "../Re-Useables/RedAlert";
 import FormTitle from "../Re-Useables/FormTitle";
 import Kvk from "../Re-Useables/KVK";
@@ -229,7 +229,7 @@ const TalepForm = ({ formName, formFullListURL, type }) => {
           {/* FORM SECTION - 1 || Name,Email,Phone */}
           {personelInfoElements.map((item) => {
             return (
-              <CostumInput key={item.key} item={item} formik={talepFormik} />
+              <CustomInput key={item.key} item={item} formik={talepFormik} />
             );
           })}
 
@@ -251,7 +251,7 @@ const TalepForm = ({ formName, formFullListURL, type }) => {
               <div className={"flex flex-col"}>
                 {radioInput.map((item) => {
                   return (
-                    <CostumRadioInput
+                    <CustomRadioInput
                       key={item.key}
                       handleSelectedOption={handleSelectedOption}
                       item={item}
@@ -289,11 +289,11 @@ const TalepForm = ({ formName, formFullListURL, type }) => {
 
           {/* ADRES DETAYLANDIRMA*/}
           <div className={'py-1'}>
-            <CostumInput formik={talepFormik} item={addressElements}/>
+            <CustomInput formik={talepFormik} item={addressElements}/>
           </div>
 
           {/* FORM SECTION - 3 || Detaylandirma TextArea */}
-          <CostumTextAreaInput formik={talepFormik} details={details} />
+          <CustomTextAreaInput formik={talepFormik} details={details} />
 
           {/* FORM SECTION - 4 || KVK Component */}
           <Kvk />
