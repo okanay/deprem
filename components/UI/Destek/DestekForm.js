@@ -12,6 +12,7 @@ import Kvk from "../Re-Useables/KVK";
 import KvkCheckBox from "../Re-Useables/KvkCheckBox";
 import SubmitButton from "../Re-Useables/SubmitButton";
 import KonaklamaDetay from "./KonaklamaDetay";
+import OperasyonDetay from "./OperasyonDetay";
 
 const destekSchema = Yup.object({
   name: Yup.string()
@@ -150,6 +151,9 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
 
           {/* Konaklama Formu */}
           {router.query.formType === "kd" && (<KonaklamaDetay destekFormik={destekFormik} destekSchema={destekSchema} setValidationSchema={setValidationSchema}/>)}
+
+          {/* Operasyon Formu */}
+          {router.query.formType === "obd" && (<OperasyonDetay destekFormik={destekFormik} destekSchema={destekSchema} setValidationSchema={setValidationSchema}/>)}
 
           {/* FORM SECTION - 3 || Detaylandirma TextArea */}
           <CustomTextAreaInput formik={destekFormik} details={details}/>
