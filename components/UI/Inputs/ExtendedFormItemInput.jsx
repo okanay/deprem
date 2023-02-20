@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
 
-const CustomInputNoFormik = ({item, setUniqueInputs, uniqueInput, name,value}) => {
+const ExtendedFormItemInput = ({item, setUniqueInputs, uniqueInput, name,value}) => {
 
   const handleChange = (e) =>
   {
-    setUniqueInputs({ kacKisi : name === "kacKisi" ? e.target.value : uniqueInput.kacKisi, kacGun : name === "kacGun" ? e.target.value : uniqueInput.kacGun});
+    setUniqueInputs({ info1 : name === "info1" ? e.target.value : uniqueInput.info1, info2 : name === "info2" ? e.target.value : uniqueInput.info2});
   }
 
 
@@ -13,7 +13,7 @@ const CustomInputNoFormik = ({item, setUniqueInputs, uniqueInput, name,value}) =
     <div className={"relative mb-1 pb-[0.7rem]"}>
       <input
         className={
-          "peer appearance-none focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-10 bg-gray-50 border-[0px] rounded-[0px] border-b-2 border-slate-500"
+          " peer appearance-none focus:outline-none transition duration-300 focus:border-slate-800 placeholder:text-transparent w-full px-9 h-10 bg-gray-50 border-[0px] rounded-[0px] border-b-2 border-slate-500"
         }
         type={item.type}
         maxLength={item.maxLength}
@@ -53,4 +53,4 @@ const CustomInputNoFormik = ({item, setUniqueInputs, uniqueInput, name,value}) =
 
 }
 
-export default CustomInputNoFormik
+export default ExtendedFormItemInput

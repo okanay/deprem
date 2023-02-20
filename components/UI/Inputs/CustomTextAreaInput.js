@@ -22,18 +22,18 @@ const CustomTextAreaInput = ({ details, formik }) => {
         width={"200"}
         height={"200"}
         alt={details.name}
-        className={"absolute top-4 left-2 w-5 h-5"}
+        className={"absolute top-2.5 left-2 w-5 h-5"}
       />
 
       <label
         htmlFor={details.name}
-        className={`absolute left-0 -top-2.5 ${
+        className={`absolute left-0 -top-3.5 ${
           details.error ? "text-red-400" : "text-gray-400"
         } ${
           details.error
             ? "peer-placeholder-shown:text-red-400"
             : "peer-placeholder-shown:text-gray-400"
-        } text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-4 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
+        } text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
       >
         {details.description}
       </label>

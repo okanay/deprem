@@ -1,55 +1,55 @@
 import * as Yup from "yup";
 import React, { useEffect, useState } from "react";
-import CustomInputNoFormik from "../Inputs/CustomInputNoFormik";
+import ExtendedFormItemInput from "../Inputs/ExtendedFormItemInput";
 
 const KonaklamaDetay = ({ destekFormik, destekSchema, setValidationSchema}) => {
 
   const [uniqueInputs, setUniqueInputs] = useState({
-    kacGun: "",
-    kacKisi: "",
+    info1: "4",
+    info2: "Süresiz",
   });
   const konaklamaSchema = Yup.object({
-    kacKisi: Yup.number().required("Kisi sayisi alanı zorunludur"),
-    kacGun: Yup.number().required("Gun sayisi alanı zorunludur"),
+    info1: Yup.number().required("Kişi sayısı alanı zorunludur").lessThan(100, "Kişi sayısı için maksimum karakter 2'dir."),
+    info2: Yup.string().required("Gün sayısı alanı zorunludur").max(10, "Gün sayısı için maksimum karakter 10'dur."),
   });
   const konaklamaData = [
-    {
-      key: "KD_Key02",
-      description:
-        "Lütfen misafirlerinizi kaç gün ağırlayabileceğinizi belirtin.",
-      name: "Gün Sayısı",
-      input: {
-        key: "KD_1",
-        type: "text",
-        maxLength: "40",
-        minLength: "0",
-        inputMode: "text",
-        id: "kacGun",
-        name: "kacGun",
-        description: "Gün Sayısı",
-        src: "/svg/deadline.svg",
-        alt: "süre",
-        formik: destekFormik.values.kacGun,
-        error: destekFormik.errors.kacGun,
-      },
-    },
     {
       key: "KD_Key01",
       description: "Lütfen konaklayabileceğiniz kişi sayısını belirtin.",
       name: "Kişi Sayısı",
       input: {
-        key: "KD_0",
-        type: "text",
-        maxLength: "40",
+        key: "KD_1",
+        type: "number",
+        maxLength: "2",
         minLength: "0",
-        inputMode: "text",
-        id: "kacKisi",
-        name: "kacKisi",
+        inputMode: "number",
+        id: "info1",
+        name: "info1",
         description: "Kişi Sayısı",
         src: "/svg/people.svg",
         alt: "kisi sayisi",
-        formik: destekFormik.values.kacKisi,
-        error: destekFormik.errors.kacKisi,
+        formik: destekFormik.values.info1,
+        error: destekFormik.errors.info1,
+      },
+    },
+    {
+      key: "KD_Key02",
+      description:
+        "Lütfen misafirlerinizi kaç gün ağırlayabileceğinizi belirtin.",
+      name: "Ağırlama",
+      input: {
+        key: "KD_2",
+        type: "text",
+        maxLength: "10",
+        minLength: "0",
+        inputMode: "text",
+        id: "info2",
+        name: "info2",
+        description: "Ağırlama Süresi",
+        src: "/svg/deadline.svg",
+        alt: "süre",
+        formik: destekFormik.values.info2,
+        error: destekFormik.errors.info2,
       },
     },
   ];
@@ -73,42 +73,45 @@ const KonaklamaDetay = ({ destekFormik, destekSchema, setValidationSchema}) => {
   }, [uniqueInputs]);
 
   return (
-    <div className={"flex flex-col py-0.5 text-sm"}>
-      <div className={"flex flex-col gap-4 items-start"}>
+    <div className={"flex flex-col py-0.5 text-sm my-2"}>
+      <div className={"flex flex-col items-start gap-4"}>
         <div className={"flex flex-row"}>
+
           <p
             className={`text-start text-[0.7rem] ${
-              destekFormik.errors.kacGun ? "text-red-500" : "text-gray-400"
+              destekFormik.errors.info1 ? "text-red-500" : "text-gray-400"
             } text-start`}
           >
             {konaklamaData[0].description}
           </p>
 
           <p
-            className={`text-end text-[0.7rem] ${
-              destekFormik.errors.kacKisi ? "text-red-500" : "text-gray-400"
+            className={`text-start text-[0.7rem] ml-9 ${
+              destekFormik.errors.info2 ? "text-red-500" : "text-gray-400"
             } text-start`}
           >
             {konaklamaData[1].description}
           </p>
         </div>
+        <div className={"flex flex-row gap-2"}>
 
-        <div className={"flex flex-row gap-4"}>
-          <CustomInputNoFormik
+          <ExtendedFormItemInput
             item={konaklamaData[0].input}
             uniqueInput={uniqueInputs}
             setUniqueInputs={setUniqueInputs}
-            name={'kacGun'}
-            value={uniqueInputs.kacGun}
+            name={'info1'}
+            value={uniqueInputs.info1}
 
           />
-          <CustomInputNoFormik
+
+          <ExtendedFormItemInput
             item={konaklamaData[1].input}
             uniqueInput={uniqueInputs}
             setUniqueInputs={setUniqueInputs}
-            name={'kacKisi'}
-            value={uniqueInputs.kacKisi}
+            name={'info2'}
+            value={uniqueInputs.info2}
           />
+
         </div>
       </div>
     </div>
