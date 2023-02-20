@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Destek/KonaklamaDetay.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/KonaklamaDetay.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Inputs/CustomInputNoFormik.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Inputs/ExtendedFormItemInput.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Inputs/CustomTextAreaInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Inputs/CustomTextAreaInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/getVersion.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getVersion.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,7 @@
       <workItem from="1676294564786" duration="18254000" />
       <workItem from="1676393758679" duration="19320000" />
       <workItem from="1676481340646" duration="22974000" />
-      <workItem from="1676565120496" duration="51924000" />
+      <workItem from="1676565120496" duration="52755000" />
     </task>
     <servers />
   </component>
@@ -114,12 +113,6 @@
           <url>file://$PROJECT_DIR$/helper/DummyData.js</url>
           <line>1</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/components/UI/Destek/DestekForm.js</url>
-          <line>34</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

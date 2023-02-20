@@ -13,6 +13,26 @@ import KvkCheckBox from "../Re-Useables/KvkCheckBox";
 import SubmitButton from "../Re-Useables/SubmitButton";
 import KonaklamaDetay from "./KonaklamaDetay";
 
+const destekSchema = Yup.object({
+  name: Yup.string()
+    .required("Lütfen adınızı girin.")
+    .max(40, "Adınız için maksimum karakter sayısı 40'dır"),
+  email: Yup.string()
+    .email("Girdiğiniz email adresi geçersiz.")
+    .required("Lütfen aktif kullandığınız bir email adresi girin.")
+    .max(40, "Email adresiniz için maksimum karakter sayısı 40'dır"),
+  phone: Yup.number()
+    .required("Lütfen telefon numaranızı girin.")
+    .lessThan(10000000000, "Örnek telefon numarası || 532-456-78-90")
+    .moreThan(999999999, "Örnek telefon numarası || 532-456-78-90"),
+  details: Yup.string()
+    .required("Lütfen talebinizi dikkatli bir şekilde detaylandırın.")
+    .max(260, "Detaylandırmanız için maksimum karakter sayısı 260'dir"),
+  kvk: Yup.string().required(
+    "KVKK kurallarını okuyup onaylamanız gerekiyor."
+  ),
+});
+
 const DestekForm = ({ formName, formFullListURL, type }) => {
 
   const router = useRouter();
@@ -22,27 +42,8 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
     setCheckedOption(state);
   };
   const [checkedOption, setCheckedOption] = useState(false);
-  const [validationSchema, setValidationSchema] = useState(Yup.object({}));
+  const [validationSchema, setValidationSchema] = useState(destekSchema);
 
-  const destekSchema = Yup.object({
-    name: Yup.string()
-      .required("Lütfen adınızı girin.")
-      .max(40, "Adınız için maksimum karakter sayısı 40'dır"),
-    email: Yup.string()
-      .email("Girdiğiniz email adresi geçersiz.")
-      .required("Lütfen aktif kullandığınız bir email adresi girin.")
-      .max(40, "Email adresiniz için maksimum karakter sayısı 40'dır"),
-    phone: Yup.number()
-      .required("Lütfen telefon numaranızı girin.")
-      .lessThan(10000000000, "Örnek telefon numarası || 532-456-78-90")
-      .moreThan(999999999, "Örnek telefon numarası || 532-456-78-90"),
-    details: Yup.string()
-      .required("Lütfen talebinizi dikkatli bir şekilde detaylandırın.")
-      .max(260, "Detaylandırmanız için maksimum karakter sayısı 260'dir"),
-    kvk: Yup.string().required(
-      "KVKK kurallarını okuyup onaylamanız gerekiyor."
-    ),
-  });
   const destekFormik = useFormik({
     initialValues: {
       type: type,
