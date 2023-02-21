@@ -34,7 +34,7 @@ const CustomInput = ({item, formik}) => {
 
       <label
         htmlFor={item.name}
-        className={`absolute left-0 -top-3.5 ${
+        className={`absolute left-1 -top-3 ${
           item.error ? "text-red-400" : "text-gray-400"
         } ${
           item.error

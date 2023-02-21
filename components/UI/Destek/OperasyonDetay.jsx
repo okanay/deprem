@@ -123,7 +123,7 @@ const OperasyonDetay = ({ destekFormik, destekSchema, setValidationSchema, }) =>
           {/* Görev */}
           <div>
             <select
-              className={"form-select appearance-none focus-visible:border-neutral-800 block w-28 px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}
+              className={`text-gray-700 form-select appearance-none focus-visible:border-neutral-800 block w-32 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
               onChange={handleInfo1Change}
               value={selectedInfo1.value}
             >
@@ -138,7 +138,7 @@ const OperasyonDetay = ({ destekFormik, destekSchema, setValidationSchema, }) =>
           <div>
             <select
               disabled={selectedInfo1.value === ''}
-              className={"form-select appearance-none focus-visible:border-neutral-800 block w-28 px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}
+              className={`text-gray-700 form-select disabled:bg-gray-200/80 appearance-none focus-visible:border-neutral-800 block w-32 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
               onChange={handleInfo2Change}
               value={selectedInfo2.value}
             >

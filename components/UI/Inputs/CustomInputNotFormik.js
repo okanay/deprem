@@ -20,10 +20,10 @@ const CustomInputNotFormik = ({type, maxLength,minLength,inputMode, description,
         />
 
         <Image
+          src={src}
           priority={true}
           loading={'eager'}
 
-          src={src}
           width={"200"}
           height={"200"}
           alt={name}
@@ -32,7 +32,7 @@ const CustomInputNotFormik = ({type, maxLength,minLength,inputMode, description,
 
         <label
           htmlFor={name}
-          className={`absolute left-0 -top-3.5 text-gray-400 peer-placeholder-shown:text-gray-400 text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
+          className={`absolute left-1 -top-3 text-gray-400 peer-placeholder-shown:text-gray-400 text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
         >
           {description}
         </label>

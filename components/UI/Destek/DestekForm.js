@@ -13,6 +13,7 @@ import KvkCheckBox from "../Re-Useables/KvkCheckBox";
 import SubmitButton from "../Re-Useables/SubmitButton";
 import KonaklamaDetay from "./KonaklamaDetay";
 import OperasyonDetay from "./OperasyonDetay";
+import NakliyeDestek from "./NakliyeDestek";
 
 const destekSchema = Yup.object({
   name: Yup.string()
@@ -132,7 +133,7 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
   };
 
   return (<div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto"}>
-      <div className={"flex flex-col justify-between gap-6"}>
+      <div className={"flex flex-col justify-between gap-7"}>
         {/* Dikkat Uyarisi */}
         <RedAlert title={"Lütfen Dikkat!"}>
           Eğer bu yardım talebini daha önce gönderdiysen lütfen tekrar gönderme.
@@ -155,6 +156,9 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
           {/* Operasyon Formu */}
           {router.query.formType === "obd" && (<OperasyonDetay destekFormik={destekFormik} destekSchema={destekSchema} setValidationSchema={setValidationSchema}/>)}
 
+          {/* Nakliye Formu */}
+          {router.query.formType === "ntd" && (<NakliyeDestek destekFormik={destekFormik} destekSchema={destekSchema} setValidationSchema={setValidationSchema}/>)}
+
           {/* FORM SECTION - 3 || Detaylandirma TextArea */}
           <CustomTextAreaInput formik={destekFormik} details={details}/>
 
@@ -166,7 +170,7 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
             {Object.values(destekFormik.errors).length > 0 && (
               <h1
                 className={
-                  "text-red-500 bg-red-200 border-l-2 border-orange-400 text-center text-sm text-semibold rounded py-2 px-1 mb-4 mx-4"
+                  "text-red-500 bg-red-200 border-l-[3px] border-orange-400 text-center text-sm text-semibold py-2 px-1 mb-4 mx-4"
                 }
               >
                 <span className={"text-gray-600  font-semibold"}>

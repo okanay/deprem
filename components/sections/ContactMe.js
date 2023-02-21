@@ -30,22 +30,20 @@ const ContactMe = () => {
             name="name"
           />
           <Image
+            src={"/svg/profile.svg"}
             priority={true}
             loading={'eager'}
-            src={"/svg/profile.svg"}
             width={"200"}
             height={"200"}
-            alt={"hash"}
-            className={"absolute top-3.5 left-2 w-5 h-5"}
+            alt={'name'}
+            className={"absolute top-4 left-2 w-5 h-5"}
           />
 
           <label
-            htmlFor={"name"}
-            className={
-              "absolute left-0 -top-1 text-gray-400 text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-3.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none"
-            }
+            htmlFor={'name'}
+            className={`absolute left-1 -top-1 text-gray-400 peer-placeholder-shown:text-gray-400 text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-4 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
           >
-           Adınızı Girin
+            Adınız
           </label>
         </div>
 
@@ -59,23 +57,20 @@ const ContactMe = () => {
             name="email"
           />
           <Image
+            src={"/svg/email.svg"}
             priority={true}
             loading={'eager'}
-
-            src={"/svg/email.svg"}
             width={"200"}
             height={"200"}
-            alt={"hash"}
-            className={"absolute top-3.5 left-2 w-5 h-5"}
+            alt={'email'}
+            className={"absolute top-4 left-2 w-5 h-5"}
           />
 
           <label
-            htmlFor={"email"}
-            className={
-              "absolute left-0 -top-1 text-gray-400 text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-3.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none"
-            }
+            htmlFor={'email'}
+            className={`absolute left-1 -top-1 text-gray-400 peer-placeholder-shown:text-gray-400 text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-4 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
           >
-            Email Adresinizi Girin
+            Email Adresiniz
           </label>
         </div>
 
@@ -90,22 +85,20 @@ const ContactMe = () => {
               name="message"
             />
           <Image
+            src={"/svg/details.svg"}
             priority={true}
             loading={'eager'}
-            src={"/svg/details.svg"}
             width={"200"}
             height={"200"}
-            alt={"hash"}
-            className={"absolute top-4 left-2 w-5 h-5"}
+            alt={'details'}
+            className={"absolute top-2.5 left-2 w-5 h-5"}
           />
 
           <label
-            htmlFor={"message"}
-            className={
-              "absolute left-0 -top-2.5 text-gray-400 text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-4 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none"
-            }
+            htmlFor={'message'}
+            className={`absolute left-1 -top-3 text-gray-400 peer-placeholder-shown:text-gray-400 text-[0.7rem] peer-placeholder-shown:text-[0.85rem] peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 transition-all duration-300 pointer-events-none`}
           >
-            Düşüncelerinizi Yazın
+            Düşüncelerinizi belirtin.
           </label>
         </div>
         <div className={'text-[0.7rem] text-gray-400 pb-2 text-start'}>

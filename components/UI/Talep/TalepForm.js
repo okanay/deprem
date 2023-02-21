@@ -304,7 +304,7 @@ const TalepForm = ({ formName, formFullListURL, type }) => {
             {Object.values(talepFormik.errors).length > 0 && (
               <h1
                 className={
-                  "text-red-500 bg-red-200 border-l-2 border-orange-400 text-center text-sm text-semibold rounded py-2 px-1 mb-4 mx-4"
+                  "text-red-500 bg-red-200 border-l-[3px] border-orange-400 text-center text-sm text-semibold py-2 px-1 mb-4 mx-4"
                 }
               >
                 <span className={"text-gray-600  font-semibold"}>
