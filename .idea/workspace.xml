@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/UI/Destek/OperasyonDetay.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Talep/TalepForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Talep/TalepForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +91,8 @@
       <workItem from="1676393758679" duration="19320000" />
       <workItem from="1676481340646" duration="22974000" />
       <workItem from="1676565120496" duration="52775000" />
-      <workItem from="1676915080173" duration="8245000" />
+      <workItem from="1676915080173" duration="9489000" />
+      <workItem from="1676993910557" duration="160000" />
     </task>
     <servers />
   </component>

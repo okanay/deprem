@@ -86,10 +86,10 @@ const EmergencyResponse = () => {
         <div className={"flex flex-col gap-12"}>
           <div>
 
-            <div className={"flex flex-row justify-between items-center"}>
+            <div className={"flex flex-row justify-between items-center mb-3"}>
               <h1
                 className={
-                  "text-[1.2rem] font-semibold text-neutral-700 text-start mb-5"
+                  "text-[1.2rem] font-semibold text-neutral-700 text-start"
                 }
               >
                 <span className={"text-slate-600/90"}>İhtiyaç </span>
@@ -140,10 +140,10 @@ const EmergencyResponse = () => {
             })}
           </div>
           <div>
-            <div className={"flex flex-row justify-between items-center"}>
+            <div className={"flex flex-row justify-between items-center mb-3"}>
               <h1
                 className={
-                  "text-[1.2rem] font-semibold text-neutral-700 text-start mb-5"
+                  "text-[1.2rem] font-semibold text-neutral-700 text-start"
                 }
               >
                 <span className={"text-slate-600/90"}>Destek </span>
