@@ -14,6 +14,7 @@ import SubmitButton from "../Re-Useables/SubmitButton";
 import KonaklamaDetay from "./KonaklamaDetay";
 import OperasyonDetay from "./OperasyonDetay";
 import NakliyeDestek from "./NakliyeDestek";
+import CevirmenDestek from "./CevirmenDestek";
 
 const destekSchema = Yup.object({
   name: Yup.string()
@@ -158,6 +159,9 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
 
           {/* Nakliye Formu */}
           {router.query.formType === "ntd" && (<NakliyeDestek destekFormik={destekFormik} destekSchema={destekSchema} setValidationSchema={setValidationSchema}/>)}
+
+          {/* Cevirmenlik Formu */}
+          {router.query.formType === "cd" && (<CevirmenDestek destekFormik={destekFormik} destekSchema={destekSchema} setValidationSchema={setValidationSchema}/>)}
 
           {/* FORM SECTION - 3 || Detaylandirma TextArea */}
           <CustomTextAreaInput formik={destekFormik} details={details}/>
