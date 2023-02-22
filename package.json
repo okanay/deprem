@@ -22,6 +22,7 @@
     "react-scroll": "^1.8.9",
     "react-simple-typewriter": "^5.0.1",
     "redux": "^4.2.1",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "yup": "^1.0.0"
   },
   "devDependencies": {
