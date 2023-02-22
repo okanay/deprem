@@ -108,9 +108,8 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
   return (
     <div className={"flex flex-col text-sm mt-2 mb-4"}>
       <div className={"flex flex-col justify-between items-start gap-4"}>
-
         <div className="flex flex-row justify-start items-start gap-2">
-          {/* Kalkis */}
+          {/* Kalkış Noktası */}
           <div>
             <select
               className={`text-gray-700 form-select appearance-none focus-visible:border-neutral-800 block w-32 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
@@ -133,9 +132,8 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
             Lütfen hangi şehirden kalkış yapabileceğinizi belirtin.
           </p>
         </div>
-
         <div className="flex flex-row justify-start items-start gap-2">
-          {/* Lokasyon */}
+          {/* Varış Noktası */}
           <div>
             <select
               disabled={selectedInfo1.value === ''}
@@ -143,7 +141,7 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
               onChange={handleInfo2Change}
               value={selectedInfo2.value}
             >
-              <option defaultValue={''}>Lokasyon</option>
+              <option defaultValue={''}>Varış</option>
               {Info2Data.map((item, index) => { return (
                 <option key={item.name + "Info2"} value={item.name}>{item.name}</option>
               )})}
@@ -159,7 +157,6 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
             Lütfen hangi şehir için nakliye veya taşıma yapabileceğinizi belirtin.
           </p>
         </div>
-
         <div className="flex flex-row justify-start items-start gap-2">
           {/*Nakliye Tipi*/}
           <div>
