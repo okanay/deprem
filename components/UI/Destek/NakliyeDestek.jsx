@@ -1,10 +1,10 @@
 import * as Yup from "yup";
 import React, { useEffect, useState } from "react";
 import ExtendedFormItemInput from "../Inputs/ExtendedFormItemInput";
-import { cityData } from "../../../helper/getCityAndStreet";
+import { emergencyCity, TurkeyCity } from "../../../helper/getCityAndStreet";
 
-const Info1Data = cityData
-const Info2Data = cityData
+const Info1Data = TurkeyCity
+const Info2Data = TurkeyCity
 const Info3Data = [
   {
     key: "I2_DATA_1",
@@ -12,7 +12,11 @@ const Info3Data = [
   },
   {
     key: "I2_DATA_2",
-    value: "Gönüllü Personel"
+    value: "Gönüllü İnsan"
+  },
+  {
+    key: "I2_DATA_3",
+    value: "Depremzede İnsan"
   },
 ];
 const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => {
@@ -58,11 +62,11 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
   const handleInfo1Change = (event) => {
 
     const value = event.target.value;
-    const response = Info1Data.find((item) => {return item.text === value;});
+    const response = Info1Data.find((item) => {return item.name === value;});
 
     if (response !== undefined)
     {
-      setSelectedInfo1({ key: "I1_DATA_0", value: response.text })
+      setSelectedInfo1({ key: "I1_DATA_0", value: response.name })
     }
     else
     {
@@ -74,11 +78,11 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
   const handleInfo2Change = (event) => {
 
     const value = event.target.value;
-    const response = Info2Data.find((item) => {return item.text === value;});
+    const response = Info2Data.find((item) => {return item.name === value;});
 
     if (response !== undefined)
     {
-      setSelectedInfo2({ key: "I2_DATA_0", value: response.text })
+      setSelectedInfo2({ key: "I2_DATA_0", value: response.name })
     }
     else
     {
@@ -115,7 +119,7 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
             >
               <option defaultValue={''}>Kalkış</option>
               {Info1Data.map((item, index) => { return (
-                <option key={item.value + index} value={item.text}>{item.text}</option>
+                <option key={item.name + "Info1"} value={item.name}>{item.name}</option>
               )})}
             </select>
           </div>
@@ -141,7 +145,7 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
             >
               <option defaultValue={''}>Lokasyon</option>
               {Info2Data.map((item, index) => { return (
-                <option key={item.value + index} value={item.text}>{item.text}</option>
+                <option key={item.name + "Info2"} value={item.name}>{item.name}</option>
               )})}
             </select>
           </div>

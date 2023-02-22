@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 import React, { useEffect, useState } from "react";
 import ExtendedFormItemInput from "../Inputs/ExtendedFormItemInput";
-import { cityData } from "../../../helper/getCityAndStreet";
+import { emergencyCity } from "../../../helper/getCityAndStreet";
 
 const Info1Data = [
   {

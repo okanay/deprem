@@ -13,7 +13,7 @@ import FormTitle from "../Re-Useables/FormTitle";
 import Kvk from "../Re-Useables/KVK";
 import KvkCheckBox from "../Re-Useables/KvkCheckBox";
 import SubmitButton from "../Re-Useables/SubmitButton";
-import { cityData} from "../../../helper/getCityAndStreet";
+import { emergencyCity} from "../../../helper/getCityAndStreet";
 
 const TalepForm = ({ formName, formFullListURL, type }) => {
   const handleSelectedOption = (event) => {
@@ -30,7 +30,7 @@ const TalepForm = ({ formName, formFullListURL, type }) => {
   const handleCityChange = (event) => {
 
     const value = event.target.value
-    const response = cityData.find(item => { return item.text === value })
+    const response = emergencyCity.find(item => { return item.text === value })
 
     if (response !== undefined)
     {
@@ -269,7 +269,7 @@ const TalepForm = ({ formName, formFullListURL, type }) => {
               <div className="flex w-full">
                 <select value={talepFormik.values.city} onChange={handleCityChange} className={"form-select appearance-none focus-visible:border-neutral-800 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}>
                   <option defaultValue={''}>Şehir</option>
-                  {cityData.map(item => { return (
+                  {emergencyCity.map(item => { return (
                     <option key={item.value + item.text} value={item.text}>{item.text}</option>
                   )})}
                 </select>
