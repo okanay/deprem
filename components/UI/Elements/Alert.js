@@ -6,7 +6,7 @@ const Alert = ({title, children}) => {
 
   return (
     <div
-      className=" bg-orange-100 border-l-4 border-red-400 text-gray-700 p-4 text-[0.8rem] phone:text-[0.9rem] phoneLG:text-base"
+      className=" bg-blue-100 border-l-4 border-blue-400 text-blue-900 p-4 text-[0.8rem] phone:text-[0.9rem] phoneLG:text-base"
       role="alert"
     >
       <p className="font-bold">{title}</p>

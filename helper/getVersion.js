@@ -1,3 +1,3 @@
 export const getVersion = () => {
-  return "V0.B10.34";
+  return "V0.B10.44";
 };

@@ -408,7 +408,7 @@ const Talep = () => {
                 </m.button>
               </div>
 
-              {/* 24 - 12 - 4 Saat \\ Sonuc Sayisi */}
+              {/* 24 - 12 - 4 Saat \\ Sonuc Sayisi \\ Güncelle*/}
               <div
                 className={
                   "flex flex-row gap-2 justify-center px-4 text-xs phone:text-xs phoneLG:text-sm"
@@ -474,7 +474,7 @@ const Talep = () => {
                     onClick={() => {
                       window.location.reload(false);
                     }}
-                    className={`text-gray-100 border-gray-200 bg-blue-400 rounded bg-slate-50 border  p-1.5`}
+                    className={`text-gray-400 border-gray-200 bg-slate-50 transition duration-300 hover:bg-slate-100 rounded bg-slate-50 border  p-1.5`}
                   >
                     {" "}
                     Güncelle
