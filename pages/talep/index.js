@@ -9,7 +9,7 @@ import TalepItem from "../../components/UI/Talep/TalepItem";
 import CustomInputNotFormik from "../../components/UI/Inputs/CustomInputNotFormik";
 import ScrollComponent from "../../components/UI/Re-Useables/ScrollComponent";
 
-import { StartDummyData } from "/helper/DummyData";
+import { StartDummyDataTalep } from "/helper/DummyData";
 const talepFilter = [
   {
     name: "TFDefault",
@@ -122,8 +122,8 @@ const Talep = () => {
 
   /// ------------------------------ USE_STATES ------------------------------ ///
 
-  const [initialDummyData, setInitialDummyData] = useState(StartDummyData);
-  const [filteredData, setFilteredData] = useState(StartDummyData);
+  const [initialDummyData, setInitialDummyData] = useState(StartDummyDataTalep);
+  const [filteredData, setFilteredData] = useState(StartDummyDataTalep);
   const [iconFilter, setIconFilter] = useState({
           prev: talepFilter[0],
           current: talepFilter[0],
@@ -485,7 +485,7 @@ const Talep = () => {
               {/* ICON FILTER */}
               <div
                 className={
-                  "flex flex-row justify-center gap-4 bg-gray-50 pb-7 pt-2 rounded-[2px] border-b border-b-gray-300 w-full"
+                  "flex flex-row justify-center gap-4 bg-gray-50 pb-8 pt-2 rounded-[2px] border-b border-b-gray-300 w-full"
                 }
               >
                 {talepFilter.map((item) => {
@@ -533,7 +533,7 @@ const Talep = () => {
                           iconFilter.current.name === item.name ? "open" : "hidden"
                         }
                         htmlFor={item.name}
-                        className={`absolute top-10 text-gray-800 font-light border-b-[3px] mt-1.5 w-[4rem] border-${item.color} ${item.hover}`}
+                        className={`absolute top-11 text-gray-800 font-light border-b-[3px] mt-1.5 w-[4rem] border-${item.color} ${item.hover}`}
                       >
                         {item.description}
                       </m.label>

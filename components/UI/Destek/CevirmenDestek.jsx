@@ -23,7 +23,7 @@ const CevirmenDestek = ({
   const [selectedInfo1, setSelectedInfo1] = useState("");
   const [selectedInfo2, setSelectedInfo2] = useState("");
   const [selectedInfo3, setSelectedInfo3] = useState("");
-  const [hiddenMenu, setHiddenMenu] = useState(false);
+  const [hiddenMenu, setHiddenMenu] = useState(true);
   const [prevIndex, setPrevIndex] = useState(0);
 
 

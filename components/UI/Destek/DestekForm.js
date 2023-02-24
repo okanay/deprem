@@ -15,6 +15,7 @@ import KonaklamaDetay from "./KonaklamaDetay";
 import OperasyonDetay from "./OperasyonDetay";
 import NakliyeDestek from "./NakliyeDestek";
 import CevirmenDestek from "./CevirmenDestek";
+import AramaKurtarma from "./AramaKurtarma";
 
 const destekSchema = Yup.object({
   name: Yup.string()
@@ -153,6 +154,9 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
 
           {/* Konaklama Formu */}
           {router.query.formType === "kd" && (<KonaklamaDetay destekFormik={destekFormik} destekSchema={destekSchema} setValidationSchema={setValidationSchema}/>)}
+
+          {/* Arama Kurtarma Formu */}
+          {router.query.formType === "akd" && (<AramaKurtarma destekFormik={destekFormik} destekSchema={destekSchema} setValidationSchema={setValidationSchema}/>)}
 
           {/* Operasyon Formu */}
           {router.query.formType === "obd" && (<OperasyonDetay destekFormik={destekFormik} destekSchema={destekSchema} setValidationSchema={setValidationSchema}/>)}

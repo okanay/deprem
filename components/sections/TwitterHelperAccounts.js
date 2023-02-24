@@ -96,11 +96,11 @@ const TwitterHelperAccounts = () => {
                         >
                           {item.name}
                         </th>
-                        <td className="px-6 py-4">{item.follower}</td>
-                        <div className={'w-fit h-16 flex flex-col justify-center'}>
+                        <td className="px-4 py-4">{item.follower}</td>
+                        <div className={'w-fit h-16 flex flex-col justify-center text-xs'}>
                           <Link
                             href={item.profileUrl}
-                            className="bg-neutral-50 border border-gray-600/20 rounded text-neutral-700 py-2 px-2 transition duration-150 hover:bg-neutral-700 hover:text-gray-50/90"
+                            className="bg-neutral-50 border border-gray-600/20 rounded text-neutral-700 py-2 px-3 transition duration-150 hover:bg-neutral-700 hover:text-gray-50/90"
                           >
                             <td>Mesaj Gönder</td>
                           </Link>

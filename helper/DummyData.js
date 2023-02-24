@@ -1,4 +1,4 @@
-export const StartDummyData = [
+export const StartDummyDataTalep = [
   {
     id : "C1124A",
     type: "ht",
@@ -321,5 +321,41 @@ export const StartDummyData = [
     street: "Samsat",
     time: 1676488386548,
     state : 1
+  },
+];
+
+export const StartDummyDataDestek = [
+  {
+    id : "C1124A",
+    type: "kd",
+    name: "Okan Ay",
+    email: "okanay@gmail.com",
+    phone: "532 534 52 18",
+    state : 0,
+    status: 0,
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    time: 1676585386548,
+    kvk: "true",
+    info1: "4 Kişi",
+    info2: "Süresiz",
+    info3: "",
+  },
+
+  {
+    id : "C1B25B",
+    type: "cd",
+    name: "Mert Ay",
+    email: "okanay@gmail.com",
+    phone: "532 534 52 18",
+    state : 0,
+    status: 0,
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    time: 1676785386548,
+    kvk: "true",
+    info1: "İngilizce",
+    info2: "Fransızca",
+    info3: "Almanca",
   },
 ];

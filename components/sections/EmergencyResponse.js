@@ -151,7 +151,7 @@ const EmergencyResponse = () => {
               </h1>
 
               <Link
-                href={"/"}
+                href={"/destek"}
                 className={
                   "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-blue-400/90 shadow shadow-blue-400/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-emerald-400/90 hover:text-slate-50"
                 }
