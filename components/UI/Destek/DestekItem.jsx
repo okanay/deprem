@@ -14,6 +14,61 @@ const DestekItem = ({ item }) => {
     }
   });
   const time = getTimeDiffString(item.time)
+  function determineCaseSuffix(cityName) {
+    const lastLetter = cityName.charAt(cityName.length - 1);
+    const previousLetter = cityName.charAt(cityName.length - 2);
+
+    if (["ç", "f", "h", "k", "p", "s", "ş", "t"].includes(lastLetter))
+    {
+      if (["a", "ı", "o", "u"].includes(previousLetter))
+      {
+        return "'tan";
+      }
+      else if (["e", "i", "ö", "ü"].includes(previousLetter))
+      {
+        return "'ten";
+      }
+    }
+    else if (["e", "i"].includes(lastLetter))
+    {
+      return "'den";
+    }
+    else
+    {
+      return "'dan";
+    }
+  }
+  function determineToSuffix(cityName) {
+    const lastLetter = cityName.charAt(cityName.length - 1);
+
+    if (["a", "ı", "o", "u","e", "i", "ö", "ü"].includes(lastLetter))
+    {
+      if (["a", "ı", "o", "u"].includes(lastLetter))
+      {
+        return "'ya";
+      }
+      else if (["e", "i", "ö", "ü"].includes(lastLetter))
+      {
+        return "'ye";
+      }
+    }
+    else if (["ç", "f", "h", "k", "p", "s", "ş", "t"].includes(lastLetter))
+    {
+      return "'e";
+    }
+    else
+    {
+      return "'a";
+    }
+  }
+
+  let info1 = item.info1;
+  let info2 = item.info2;
+  let info3 = item.info3;
+
+    info2 = item.type === "ntd" ? item.info2 + determineToSuffix(item.info2) : item.info2
+    info3 = item.type === "ntd" ? item.info3 + determineCaseSuffix(item.info3) : item.info3
+
 
   return (
     <div
@@ -29,29 +84,29 @@ const DestekItem = ({ item }) => {
       >
 
         {/* Information 3 */}
-        {item.info3 !== "" &&
+        {info3 !== "" &&
           <div
             className={"bg-gray-100 px-2 py-1 rounded border border-slate-700/10"}
           >
-            <p className={"p-[0.02rem] mt-0.5"}>{item.info3}</p>
+            <p className={"p-[0.02rem] mt-0.5"}>{info3}</p>
           </div>
         }
 
         {/* Information 2 */}
-        {item.info2 !== "" &&
+        {info2 !== "" &&
           <div
             className={"bg-gray-100 px-2 py-1 rounded border border-slate-700/10"}
           >
-            <p className={"p-[0.02rem] mt-0.5"}>{item.info2}</p>
+            <p className={"p-[0.02rem] mt-0.5"}>{info2}</p>
           </div>
         }
 
         {/* Information 1 */}
-        {item.info1 !== "" &&
+        {info1 !== "" &&
           <div
             className={"bg-gray-100 px-2 py-1 rounded border border-slate-700/10"}
           >
-            <p className={"p-[0.02rem] mt-0.5"}>{item.info1}</p>
+            <p className={"p-[0.02rem] mt-0.5"}>{info1}</p>
           </div>
         }
 

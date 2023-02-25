@@ -55,7 +55,7 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
   }, [uniqueInputs]);
   useEffect(() => {
 
-    setUniqueInputs({info1 : selectedInfo1.value, info2 : selectedInfo2.value, info3 : selectedInfo3.value});
+    setUniqueInputs({info1 : selectedInfo3.value, info2 : selectedInfo2.value, info3 : selectedInfo1.value});
 
   }, [selectedInfo1, selectedInfo2, selectedInfo3]);
 

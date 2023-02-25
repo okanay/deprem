@@ -326,7 +326,7 @@ export const StartDummyDataTalep = [
 
 export const StartDummyDataDestek = [
   {
-    id : "C1124A",
+    id : "KD1000",
     type: "kd",
     name: "Okan Ay",
     email: "okanay@gmail.com",
@@ -343,7 +343,7 @@ export const StartDummyDataDestek = [
   },
 
   {
-    id : "C1B25B",
+    id : "CD1000",
     type: "cd",
     name: "Mert Ay",
     email: "okanay@gmail.com",
@@ -357,5 +357,39 @@ export const StartDummyDataDestek = [
     info1: "İngilizce",
     info2: "Fransızca",
     info3: "Almanca",
+  },
+
+  {
+    id : "OBD100",
+    type: "obd",
+    name: "Atabey Matus",
+    email: "okanay@gmail.com",
+    phone: "532 534 52 18",
+    state : 1,
+    status: 0,
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    time: 1676785386548,
+    kvk: "true",
+    info1: "Çadır Kurabilirim",
+    info2: "Profesyönel",
+    info3: "",
+  },
+
+  {
+    id : "NTD100",
+    type: "ntd",
+    name: "Atabey Matus",
+    email: "okanay@gmail.com",
+    phone: "532 534 52 18",
+    state : 2,
+    status: 0,
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    time: 1676785386548,
+    kvk: "true",
+    info1: "Depremzede İnsan",
+    info2: "Edirne",
+    info3: "Lüleburgaz",
   },
 ];

@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/UI/Destek/AramaKurtarma.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UI/Destek/DestekItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UI/Destek/DestekState.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Destek/CevirmenDestek.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/CevirmenDestek.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Destek/DestekItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/TwitterHelperAccounts.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/TwitterHelperAccounts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Destek/DestekItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/DestekItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper/DummyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/DummyData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/getImageData.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getImageData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/getVersion.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getVersion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/destek/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/destek/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/talep/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talep/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +95,7 @@
       <workItem from="1676915080173" duration="9489000" />
       <workItem from="1676993910557" duration="6253000" />
       <workItem from="1677091877731" duration="18484000" />
-      <workItem from="1677262757110" duration="5405000" />
+      <workItem from="1677262757110" duration="10300000" />
     </task>
     <servers />
   </component>
