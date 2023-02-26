@@ -98,7 +98,7 @@ const TalepItem = ({ item }) => {
         >
           <p className={"text-gray-500/80"}>{time}</p>
           <Link
-            href={`/form/${item.id}`}
+            href={`/form/talep/${item.id}`}
             className={"text-blue-400 font-semibold"}
           >
             Detaya Git

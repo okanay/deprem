@@ -1,7 +1,8 @@
 export const StartDummyDataTalep = [
   {
-    id : "C1124A",
+    id : "HT1000",
     type: "ht",
+    typeName :"Hijyen Ürünleri Talebi",
     addressDes: "1234",
     city: "Gaziantep",
     details:
@@ -16,8 +17,9 @@ export const StartDummyDataTalep = [
     state : 0
   },
   {
-    id : "F1454S",
+    id : "CT1000",
     type: "ct",
+    typeName :"Çadır İhtiyacı Talebi",
     addressDes: "Fransa Paris Merkez Camii",
     city: "Adana",
     details:
@@ -32,8 +34,9 @@ export const StartDummyDataTalep = [
     state : 1
   },
   {
-    id : "B121FA",
+    id : "GT1000",
     type: "gt",
+    typeName :"Gıda Ürünleri Talebi",
     addressDes: "Fransa Paris Merkez Camii",
     city: "Kahramanmaraş",
     details:
@@ -48,24 +51,9 @@ export const StartDummyDataTalep = [
     state : 2
   },
   {
-    id : "A11024",
-    type: "ct",
-    addressDes: "1234",
-    city: "Hatay",
-    details:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    email: "okanay@gmail.com",
-    kvk: "true",
-    name: "Metin Şerefçam",
-    phone: "544 531 43 18",
-    status: 2,
-    street: "Defne",
-    time: 1676483386548,
-    state : 2
-  },
-  {
-    id : "B1921A",
-    type: "ht",
+    id : "IT1000",
+    type: "it",
+    typeName :"İlaç İhtiyacı Talebi",
     addressDes: "Fransa Paris Merkez Camii",
     city: "Kilis",
     details:
@@ -80,8 +68,9 @@ export const StartDummyDataTalep = [
     state : 0
   },
   {
-    id : "B12CFA",
+    id : "BT1000",
     type: "bt",
+    typeName :"Barınma İhtiyacı Talebi",
     addressDes: "Fransa Paris Merkez Camii",
     city: "Adıyaman",
     details:
@@ -97,8 +86,9 @@ export const StartDummyDataTalep = [
   },
 
   {
-    id : "C2124A",
+    id : "HT1001",
     type: "ht",
+    typeName :"Hijyen Ürünleri Talebi",
     addressDes: "1234",
     city: "Gaziantep",
     details:
@@ -113,8 +103,9 @@ export const StartDummyDataTalep = [
     state : 0
   },
   {
-    id : "F2454S",
+    id : "CT1001",
     type: "ct",
+    typeName :"Çadır İhtiyacı Talebi",
     addressDes: "Fransa Paris Merkez Camii",
     city: "Adana",
     details:
@@ -129,8 +120,9 @@ export const StartDummyDataTalep = [
     state : 1
   },
   {
-    id : "B221FA",
+    id : "GT1001",
     type: "gt",
+    typeName :"Gıda Ürünleri Talebi",
     addressDes: "Fransa Paris Merkez Camii",
     city: "Kahramanmaraş",
     details:
@@ -145,24 +137,9 @@ export const StartDummyDataTalep = [
     state : 2
   },
   {
-    id : "A21024",
-    type: "ct",
-    addressDes: "1234",
-    city: "Hatay",
-    details:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    email: "okanay@gmail.com",
-    kvk: "true",
-    name: "Metin Şerefçam",
-    phone: "544 531 43 18",
-    status: 2,
-    street: "Defne",
-    time: 1676483386548,
-    state : 2
-  },
-  {
-    id : "B2921A",
-    type: "ht",
+    id : "IT1001",
+    type: "it",
+    typeName :"İlaç İhtiyacı Talebi",
     addressDes: "Fransa Paris Merkez Camii",
     city: "Kilis",
     details:
@@ -177,8 +154,9 @@ export const StartDummyDataTalep = [
     state : 0
   },
   {
-    id : "B22CFA",
+    id : "BT1001",
     type: "bt",
+    typeName :"Barınma İhtiyacı Talebi",
     addressDes: "Fransa Paris Merkez Camii",
     city: "Adıyaman",
     details:
@@ -193,141 +171,12 @@ export const StartDummyDataTalep = [
     state : 1
   },
 
-  {
-    id : "C3124A",
-    type: "ht",
-    addressDes: "1234",
-    city: "Gaziantep",
-    details:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    email: "okanay@gmail.com",
-    kvk: "true",
-    name: "Okan Ay",
-    phone: "532 534 52 18",
-    status: 0,
-    street: "Nizip",
-    time: 1676585386548,
-    state : 0
-  },
-  {
-    id : "F3454S",
-    type: "ct",
-    addressDes: "Fransa Paris Merkez Camii",
-    city: "Adana",
-    details:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    email: "ahmetkaya@gmail.com",
-    kvk: "true",
-    name: "Ahmet Kaya",
-    phone: "544 154 92 21",
-    status: 2,
-    street: "Ceyhan",
-    time: 1676479386548,
-    state : 1
-  },
-  {
-    id : "B321FA",
-    type: "gt",
-    addressDes: "Fransa Paris Merkez Camii",
-    city: "Kahramanmaraş",
-    details:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    email: "kemalerdogan@gmail.com",
-    kvk: "true",
-    name: "Kemal Tayyip Erdogan",
-    phone: "535 415 2491",
-    status: 1,
-    street: "Onikişubat",
-    time: 1676481386548,
-    state : 2
-  },
-  {
-    id : "A31024",
-    type: "ct",
-    addressDes: "1234",
-    city: "Hatay",
-    details:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    email: "okanay@gmail.com",
-    kvk: "true",
-    name: "Metin Şerefçam",
-    phone: "544 531 43 18",
-    status: 2,
-    street: "Defne",
-    time: 1676483386548,
-    state : 2
-  },
-  {
-    id : "B3921A",
-    type: "ht",
-    addressDes: "Fransa Paris Merkez Camii",
-    city: "Kilis",
-    details:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    email: "ahmetkaya@gmail.com",
-    kvk: "true",
-    name: "Atabey Matuş",
-    phone: "535 416 24 11",
-    status: 1,
-    street: "Polateli",
-    time: 1676487386548,
-    state : 0
-  },
-  {
-    id : "B32CFA",
-    type: "bt",
-    addressDes: "Fransa Paris Merkez Camii",
-    city: "Adıyaman",
-    details:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    email: "kemalerdogan@gmail.com",
-    kvk: "true",
-    name: "Mert Aşçı",
-    phone: "535 412 23 91",
-    status: 2,
-    street: "Samsat",
-    time: 1676488386548,
-    state : 1
-  },
-
-  {
-    id : "B4921A",
-    type: "ht",
-    addressDes: "Fransa Paris Merkez Camii",
-    city: "Kilis",
-    details:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    email: "ahmetkaya@gmail.com",
-    kvk: "true",
-    name: "Atabey Matuş",
-    phone: "535 416 24 11",
-    status: 1,
-    street: "Polateli",
-    time: 1676487386548,
-    state : 0
-  },
-  {
-    id : "B42CFA",
-    type: "bt",
-    addressDes: "Fransa Paris Merkez Camii",
-    city: "Adıyaman",
-    details:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    email: "kemalerdogan@gmail.com",
-    kvk: "true",
-    name: "Mert Aşçı",
-    phone: "535 412 23 91",
-    status: 2,
-    street: "Samsat",
-    time: 1676488386548,
-    state : 1
-  },
 ];
-
 export const StartDummyDataDestek = [
   {
     id : "KD1000",
     type: "kd",
+    typeName :"Konaklama Destek",
     name: "Okan Ay",
     email: "okanay@gmail.com",
     phone: "532 534 52 18",
@@ -341,10 +190,27 @@ export const StartDummyDataDestek = [
     info2: "Süresiz",
     info3: "",
   },
-
+  {
+    id : "AKD1000",
+    type: "akd",
+    typeName :"Arama Kurtarma",
+    name: "Osman Asci",
+    email: "okanay@gmail.com",
+    phone: "532 534 52 18",
+    state : 1,
+    status: 0,
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    time: 1676995386548,
+    kvk: "true",
+    info1: "Deneyimsiz",
+    info2: "Sertifikasız",
+    info3: "",
+  },
   {
     id : "CD1000",
     type: "cd",
+    typeName :"Çevirmenlik Destek",
     name: "Mert Ay",
     email: "okanay@gmail.com",
     phone: "532 534 52 18",
@@ -358,10 +224,10 @@ export const StartDummyDataDestek = [
     info2: "Fransızca",
     info3: "Almanca",
   },
-
   {
-    id : "OBD100",
+    id : "OBD1000",
     type: "obd",
+    typeName :"Operasyonlarda Bulunabilirim",
     name: "Atabey Matus",
     email: "okanay@gmail.com",
     phone: "532 534 52 18",
@@ -375,10 +241,96 @@ export const StartDummyDataDestek = [
     info2: "Profesyönel",
     info3: "",
   },
+  {
+    id : "NTD1000",
+    type: "ntd",
+    typeName :"Nakliye ve Taşıma",
+    name: "Atabey Matus",
+    email: "okanay@gmail.com",
+    phone: "532 534 52 18",
+    state : 2,
+    status: 0,
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    time: 1676785386548,
+    kvk: "true",
+    info1: "Depremzede İnsan",
+    info2: "Edirne",
+    info3: "Lüleburgaz",
+  },
 
   {
-    id : "NTD100",
+    id : "KD1001",
+    type: "kd",
+    typeName :"Konaklama Destek",
+    name: "Okan Ay",
+    email: "okanay@gmail.com",
+    phone: "532 534 52 18",
+    state : 0,
+    status: 0,
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    time: 1676585386548,
+    kvk: "true",
+    info1: "4 Kişi",
+    info2: "Süresiz",
+    info3: "",
+  },
+  {
+    id : "AKD1001",
+    type: "akd",
+    typeName :"Arama Kurtarma",
+    name: "Osman Asci",
+    email: "okanay@gmail.com",
+    phone: "532 534 52 18",
+    state : 1,
+    status: 0,
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    time: 1676995386548,
+    kvk: "true",
+    info1: "Deneyimsiz",
+    info2: "Sertifikasız",
+    info3: "",
+  },
+  {
+    id : "CD1001",
+    type: "cd",
+    typeName :"Çevirmenlik Destek",
+    name: "Mert Ay",
+    email: "okanay@gmail.com",
+    phone: "532 534 52 18",
+    state : 0,
+    status: 0,
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    time: 1676785386548,
+    kvk: "true",
+    info1: "İngilizce",
+    info2: "Fransızca",
+    info3: "Almanca",
+  },
+  {
+    id : "OBD1001",
+    type: "obd",
+    typeName :"Operasyonlarda Bulunabilirim",
+    name: "Atabey Matus",
+    email: "okanay@gmail.com",
+    phone: "532 534 52 18",
+    state : 1,
+    status: 0,
+    details:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
+    time: 1676785386548,
+    kvk: "true",
+    info1: "Çadır Kurabilirim",
+    info2: "Profesyönel",
+    info3: "",
+  },
+  {
+    id : "NTD1001",
     type: "ntd",
+    typeName :"Nakliye ve Taşıma",
     name: "Atabey Matus",
     email: "okanay@gmail.com",
     phone: "532 534 52 18",

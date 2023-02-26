@@ -3,7 +3,7 @@ import TalepForm from "../../components/UI/Talep/TalepForm";
 import DestekForm from "../../components/UI/Destek/DestekForm";
 import { useEffect } from "react";
 
-const FormType = () => {
+const FormType = ({ty}) => {
   const router = useRouter();
   const formType = router.query.formType;
 

@@ -5,14 +5,16 @@ const FormIndex = () => {
 
   const router = useRouter()
 
-  useEffect(() => {
+  console.log(router.query);
 
-    router.push('/')
+  return (<div>
 
-  }, [])
-
-
-  return(<div>
+  <p>
+    {router.query.id}
+  </p>
+   <p>
+     {router.query.type}
+   </p>
 
   </div>)
 }

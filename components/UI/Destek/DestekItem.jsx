@@ -162,7 +162,7 @@ const DestekItem = ({ item }) => {
         >
           <p className={"text-gray-500/80"}>{time}</p>
           <Link
-            href={`/form/${item.id}`}
+            href={`/form/destek/${item.id}`}
             className={"text-blue-400 font-semibold"}
           >
             Detaya Git
