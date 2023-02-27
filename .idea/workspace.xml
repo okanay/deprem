@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/costumHooks/useGetDummyData.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/form/[...slug].js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helper/determine.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/UI/Destek/DestekItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/DestekItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Talep/TalepItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Talep/TalepItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper/DummyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/DummyData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper/getVersion.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getVersion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/form/[formType].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/form/[formType].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/form/[...slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/form/[...slug].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/svg/dkyxgy1bi8ele67vdhl.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,7 @@
       <workItem from="1677091877731" duration="18484000" />
       <workItem from="1677262756311" duration="609000" />
       <workItem from="1677366202375" duration="5153000" />
-      <workItem from="1677435838489" duration="5402000" />
+      <workItem from="1677435838489" duration="17174000" />
     </task>
     <servers />
   </component>

@@ -2,8 +2,8 @@ export const StartDummyDataTalep = [
   {
     id : "HT1000",
     type: "ht",
-    typeName :"Hijyen Ürünleri Talebi",
-    addressDes: "1234",
+    typeName :"Hijyen Ürünleri",
+    addressDes: "Akshya Nagar 1st Block 1st Cross, Rammurthy",
     city: "Gaziantep",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
@@ -19,8 +19,8 @@ export const StartDummyDataTalep = [
   {
     id : "CT1000",
     type: "ct",
-    typeName :"Çadır İhtiyacı Talebi",
-    addressDes: "Fransa Paris Merkez Camii",
+    typeName :"Çadır İhtiyacı",
+    addressDes: "Akshya Nagar 1st Block 1st Cross, Rammurthy",
     city: "Adana",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
@@ -36,8 +36,8 @@ export const StartDummyDataTalep = [
   {
     id : "GT1000",
     type: "gt",
-    typeName :"Gıda Ürünleri Talebi",
-    addressDes: "Fransa Paris Merkez Camii",
+    typeName :"Gıda Ürünleri",
+    addressDes: "Akshya Nagar 1st Block 1st Cross, Rammurthy",
     city: "Kahramanmaraş",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
@@ -53,8 +53,8 @@ export const StartDummyDataTalep = [
   {
     id : "IT1000",
     type: "it",
-    typeName :"İlaç İhtiyacı Talebi",
-    addressDes: "Fransa Paris Merkez Camii",
+    typeName :"İlaç İhtiyacı",
+    addressDes: "Akshya Nagar 1st Block 1st Cross, Rammurthy",
     city: "Kilis",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
@@ -70,8 +70,8 @@ export const StartDummyDataTalep = [
   {
     id : "BT1000",
     type: "bt",
-    typeName :"Barınma İhtiyacı Talebi",
-    addressDes: "Fransa Paris Merkez Camii",
+    typeName :"Barınma İhtiyacı",
+    addressDes: "Akshya Nagar 1st Block 1st Cross, Rammurthy",
     city: "Adıyaman",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
@@ -88,8 +88,9 @@ export const StartDummyDataTalep = [
   {
     id : "HT1001",
     type: "ht",
-    typeName :"Hijyen Ürünleri Talebi",
-    addressDes: "1234",
+    typeName :"Hijyen Ürünleri",
+    addressDes: "Akshya Nagar 1st Block 1st Cross, Rammurthy",
+
     city: "Gaziantep",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
@@ -105,8 +106,9 @@ export const StartDummyDataTalep = [
   {
     id : "CT1001",
     type: "ct",
-    typeName :"Çadır İhtiyacı Talebi",
-    addressDes: "Fransa Paris Merkez Camii",
+    typeName :"Çadır İhtiyacı",
+    addressDes: "Akshya Nagar 1st Block 1st Cross, Rammurthy",
+
     city: "Adana",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
@@ -122,8 +124,8 @@ export const StartDummyDataTalep = [
   {
     id : "GT1001",
     type: "gt",
-    typeName :"Gıda Ürünleri Talebi",
-    addressDes: "Fransa Paris Merkez Camii",
+    typeName :"Gıda Ürünleri",
+    addressDes: "Akshya Nagar 1st Block 1st Cross, Rammurthy",
     city: "Kahramanmaraş",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
@@ -139,8 +141,8 @@ export const StartDummyDataTalep = [
   {
     id : "IT1001",
     type: "it",
-    typeName :"İlaç İhtiyacı Talebi",
-    addressDes: "Fransa Paris Merkez Camii",
+    typeName :"İlaç İhtiyacı",
+    addressDes: "Akshya Nagar 1st Block 1st Cross, Rammurthy",
     city: "Kilis",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
@@ -156,8 +158,9 @@ export const StartDummyDataTalep = [
   {
     id : "BT1001",
     type: "bt",
-    typeName :"Barınma İhtiyacı Talebi",
-    addressDes: "Fransa Paris Merkez Camii",
+    typeName :"Barınma İhtiyacı",
+    addressDes: "Akshya Nagar 1st Block 1st Cross, Rammurthy",
+
     city: "Adıyaman",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
