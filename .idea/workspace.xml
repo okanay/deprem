@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/svg/dislike.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/like.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/DummyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/DummyData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Re-Useables/KVK.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Re-Useables/KVK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/ContactMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/ContactMe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/getVersion.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getVersion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/destek/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/destek/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/form/[...slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/form/[...slug].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talep/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talep/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +68,8 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/helper" />
       <recent name="$PROJECT_DIR$/public/svg" />
+      <recent name="$PROJECT_DIR$/helper" />
       <recent name="$PROJECT_DIR$/components/UI/Talep" />
       <recent name="$PROJECT_DIR$/components/UI/Re-Useables" />
       <recent name="$PROJECT_DIR$/components/UI/Elements" />
@@ -98,7 +105,7 @@
       <workItem from="1677262756311" duration="609000" />
       <workItem from="1677366202375" duration="5153000" />
       <workItem from="1677435838489" duration="17223000" />
-      <workItem from="1677514722215" duration="841000" />
+      <workItem from="1677514722215" duration="5914000" />
     </task>
     <servers />
   </component>
@@ -113,7 +120,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/components/sections/EmergencyResponse.js</url>
-          <line>108</line>
+          <line>103</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

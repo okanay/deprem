@@ -19,7 +19,7 @@ const talepFilter = [
     description: "Hepsi",
     color: "slate-600",
     hover: "group-hover:border-slate-400",
-    url: "/",
+    url: "/#talep",
   },
   {
     name: "TFBarinma",

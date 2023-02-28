@@ -78,124 +78,119 @@ const EmergencyResponse = () => {
     },
   ];
 
-
-
   return (
-    <>
-      <div className={"bg-gray-50/80 pt-5 px-4 pb-8"}>
-        <div className={"flex flex-col gap-12"}>
-          <div>
+    <div className={"bg-gray-50/80 pt-5 px-4 pb-8"}>
+      <div className={"flex flex-col gap-12"}>
+        <div id={"talep"}>
+          <div className={"flex flex-row justify-between items-center mb-3"}>
+            <h1
+              className={
+                "text-[1.2rem] font-semibold text-neutral-700 text-start"
+              }
+            >
+              <span className={"text-slate-600/90"}>İhtiyaç </span>
+              <span className={"font-light font-serif"}>Oluştur</span>
+            </h1>
 
-            <div className={"flex flex-row justify-between items-center mb-3"}>
-              <h1
+            <Link
+              href={"/talep"}
+              className={
+                "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-blue-400/90 shadow shadow-blue-400/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-red-400/90 hover:text-slate-50"
+              }
+            >
+              TAM-LİSTE
+            </Link>
+          </div>
+          {YardimAl.map((item) => {
+            return (
+              <div
+                key={item.key}
                 className={
-                  "text-[1.2rem] font-semibold text-neutral-700 text-start"
+                  "mx-3 py-4 rounded-lg shadow-md shadow-neutral-600/10 mb-3"
                 }
               >
-                <span className={"text-slate-600/90"}>İhtiyaç </span>
-                <span className={"font-light font-serif"}>Oluştur</span>
-              </h1>
-
-              <Link
-                href={"/talep"}
-                className={
-                  "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-blue-400/90 shadow shadow-blue-400/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-red-400/90 hover:text-slate-50"
-                }
-              >
-                TAM-LİSTE
-              </Link>
-            </div>
-
-            {YardimAl.map((item) => {
-              return (
-                <div
-                  key={item.key}
+                <Link
+                  href={item.url}
                   className={
-                    "mx-3 py-4 rounded-lg shadow-md shadow-neutral-600/10 mb-3"
+                    "group px-4 font-light space-x-4 text-slate-600 text-[0.9rem] phone:text-lg"
                   }
                 >
-                  <Link
-                    href={item.url}
-                    className={
-                      "group px-4 font-light space-x-4 text-slate-600 text-[0.9rem] phone:text-lg"
-                    }
-                  >
-                    <span>
-                      <Image
-                        src={item.src}
-                        width={"300"}
-                        height={"300"}
-                        alt={item.alt}
-                        className={
-                          "w-6 h-6 duration-300 group-hover:animate-pulse inline mr-4"
-                        }
-                      />
-                      <span className={"duration-500 group-hover:text-red-500"}>
-                        {item.description}
-                      </span>
+                  <span>
+                    <Image
+                      src={item.src}
+                      width={"300"}
+                      height={"300"}
+                      alt={item.alt}
+                      className={
+                        "w-6 h-6 duration-300 group-hover:animate-pulse inline mr-4"
+                      }
+                    />
+                    <span className={"duration-500 group-hover:text-red-500"}>
+                      {item.description}
                     </span>
-                  </Link>
-                </div>
-              );
-            })}
+                  </span>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+        <div id={"destek"}>
+          <div className={"flex flex-row justify-between items-center mb-3"}>
+            <h1
+              className={
+                "text-[1.2rem] font-semibold text-neutral-700 text-start"
+              }
+            >
+              <span className={"text-slate-600/90"}>Destek </span>
+              <span className={"font-light font-serif"}>Oluştur</span>
+            </h1>
+
+            <Link
+              href={"/destek"}
+              className={
+                "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-blue-400/90 shadow shadow-blue-400/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-emerald-400/90 hover:text-slate-50"
+              }
+            >
+              TAM-LİSTE
+            </Link>
           </div>
-          <div>
-            <div className={"flex flex-row justify-between items-center mb-3"}>
-              <h1
+          {YardimVer.map((item) => {
+            return (
+              <div
+                key={item.key}
                 className={
-                  "text-[1.2rem] font-semibold text-neutral-700 text-start"
+                  "mx-3 py-4 rounded-lg shadow-md shadow-neutral-600/10 mb-3"
                 }
               >
-                <span className={"text-slate-600/90"}>Destek </span>
-                <span className={"font-light font-serif"}>Oluştur</span>
-              </h1>
-
-              <Link
-                href={"/destek"}
-                className={
-                  "py-2 px-2 rounded-md bg-slate-50 border border-slate-800/20 text-blue-400/90 shadow shadow-blue-400/30 uppercase font-bold text-sm transition-colors duration-300 hover:bg-emerald-400/90 hover:text-slate-50"
-                }
-              >
-                TAM-LİSTE
-              </Link>
-            </div>
-
-            {YardimVer.map((item) => {
-              return (
-                <div
-                  key={item.key}
+                <Link
+                  href={item.url}
                   className={
-                    "mx-3 py-4 rounded-lg shadow-md shadow-neutral-600/10 mb-3"
+                    "group px-4 font-light space-x-4 text-slate-600 text-slate-600 text-[0.9rem] phone:text-lg"
                   }
                 >
-                  <Link
-                    href={item.url}
-                    className={
-                      "group px-4 font-light space-x-4 text-slate-600 text-slate-600 text-[0.9rem] phone:text-lg"
-                    }
-                  >
-                    <span>
-                      <Image
-                        src={item.src}
-                        width={"300"}
-                        height={"300"}
-                        alt={item.alt}
-                        className={
-                          "w-6 h-6 duration-300 group-hover:animate-pulse inline mr-4"
-                        }
-                      />
-                      <span className={"duration-500 group-hover:text-emerald-400/90"}>
-                        {item.description}
-                      </span>
+                  <span>
+                    <Image
+                      src={item.src}
+                      width={"300"}
+                      height={"300"}
+                      alt={item.alt}
+                      className={
+                        "w-6 h-6 duration-300 group-hover:animate-pulse inline mr-4"
+                      }
+                    />
+                    <span
+                      className={"duration-500 group-hover:text-emerald-400/90"}
+                    >
+                      {item.description}
                     </span>
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
+                  </span>
+                </Link>
+              </div>
+            );
+          })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,25 +1,20 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import KVK from "../UI/Re-Useables/KVK";
 
 const ContactMe = () => {
   return (
     <div
       id={"contact-me"}
-      className={
-        "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto text-center"
-      }
-    >
-      <h1
-        className={
-          "text-[1.4rem] font-semibold text-neutral-700 text-start mb-5"
-        }
-      >
+      className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 mx-auto text-center px-4"}>
+
+      <h1 className={"text-[1.4rem] font-semibold text-neutral-700 text-start mb-5"}>
         <span className={"text-slate-600/90 "}>Mesaj</span>{" "}
         <span className={"font-light font-serif"}>Gönder</span>
       </h1>
 
-      <form className={"flex flex-col gap-4 justify-between"} onSubmit={event => event.preventDefault()}>
+      <form className={"flex flex-col gap-4 justify-between "} onSubmit={event => event.preventDefault()}>
         <div className={"relative py-2"}>
           <input
             className={
@@ -46,7 +41,6 @@ const ContactMe = () => {
             Adınız
           </label>
         </div>
-
         <div className={"relative py-2"}>
           <input
             className={
@@ -73,7 +67,6 @@ const ContactMe = () => {
             Email Adresiniz
           </label>
         </div>
-
         <div className={"relative py-2"}>
             <textarea
               className={
@@ -101,19 +94,8 @@ const ContactMe = () => {
             Düşüncelerinizi belirtin.
           </label>
         </div>
-        <div className={'text-[0.7rem] text-gray-400 pb-2 text-start'}>
-          <p>
-            6698 sayılı KVKK kapsamında “Uygulamamıza depremzede ya da
-            depremzede yakını olarak kaydolan kullanıcılardan ad, soyadı,
-            iletişim bilgisi, log kaydı ve depremzedenin sisteme girilen ve
-            kendileri tarafından alenileştirilmiş konum verilerini
-            topluyoruz.” Veri işleme hukuki sebeplerimizi, amaçlarımızı görmek
-            ve haklarınızı öğrenmek için <Link href={'/kvk'} className={'text-gray-800 font-semilbold'}>Aydınlatma Metnini</Link> ziyaret etmek
-            ister misiniz?{" "}
-          </p>
-        </div>
-
-        <div className={"flex flex-col-4 justify-between items-center content-center"}>
+        <KVK/>
+          <div className={"flex flex-col-4 justify-between items-center content-center"}>
 
           <div className="mb-2 relative">
             <input
@@ -143,8 +125,9 @@ const ContactMe = () => {
             Gönder
           </button>
         </div>
-      </form>
+        </form>
     </div>
+
   );
 };
 
