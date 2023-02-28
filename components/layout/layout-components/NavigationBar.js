@@ -26,7 +26,7 @@ const NavigationBar = () => {
           />
         </div>
       </div>
-      <HamburgerHiddenMenues hamburger={hamburger} />
+      <HamburgerHiddenMenues hamburger={hamburger} hamburgerState={hamburgerState} />
     </div>
   );
 };

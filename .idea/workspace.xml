@@ -9,10 +9,7 @@
       <change beforePath="$PROJECT_DIR$/components/layout/layout-components/HamburgerHiddenMenues.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout-components/HamburgerHiddenMenues.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/layout/layout-components/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout-components/NavigationBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/layout/layout-components/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout-components/footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/politika.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/politika.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/getVersion.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getVersion.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +100,7 @@
       <workItem from="1677262756311" duration="609000" />
       <workItem from="1677366202375" duration="5153000" />
       <workItem from="1677435838489" duration="17223000" />
-      <workItem from="1677514722215" duration="12412000" />
+      <workItem from="1677514722215" duration="14539000" />
     </task>
     <servers />
   </component>
