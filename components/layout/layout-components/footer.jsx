@@ -1,6 +1,4 @@
-import Logo from "../../UI/Re-Useables/Logo";
 import Link from "next/link";
-import { useQuery } from "react-query";
 import { getVersion } from "/helper/getVersion";
 
 const Footer = () => {
@@ -18,17 +16,17 @@ const Footer = () => {
             </h2>
             <ul className="text-gray-600">
               <li className="mb-3">
-                <Link href="https://ahbap.org/" className="hover:underline">
+                <Link href="/" className="hover:underline">
                   AHBAP
                 </Link>
               </li>
               <li className="mb-3">
-                <Link href="https://www.afad.gov.tr/" className="hover:underline">
+                <Link href="/" className="hover:underline">
                   AFAD
                 </Link>
               </li>
               <li>
-                <Link href="https://www.kizilay.org.tr/deprem2023/" className="hover:underline">
+                <Link href="/" className="hover:underline">
                   KIZILAY
                 </Link>
               </li>
@@ -46,7 +44,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/hakkimda" className="hover:underline">
+                <Link href="/components/about" className="hover:underline">
                   HAKKIMDA
                 </Link>
               </li>

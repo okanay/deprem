@@ -34,14 +34,14 @@ const Politika = () => {
           bilgilendirmek amacıyla hazırlanmıştır. Amacımız depremden
           etkilenenlere gerekli yardım ve desteği sağlamaktır ve yardım sağlamak
           amacıyla bilgileri devlet kurumları ve sivil toplum kuruluşları
-          (STK'lar) ile paylaşabiliriz. Kişisel bilgilerinizin gizliliğini
+          STKlar ile paylaşabiliriz. Kişisel bilgilerinizin gizliliğini
           korumayı ve 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”
           veya “Kanun”) ve ilgili mevzuat kapsamında ilgili tüm yasalara uymayı
           taahhüt ediyoruz. Bu politika, kişisel bilgilerinizin toplanması,
           kullanılması, saklanması ve paylaşılmasına ilişkin haklarınızı ve
           yükümlülüklerimizi ortaya koymaktadır. İşbu metin ile, veri sorumlusu
           sıfatıyla KVKK’nın 10. maddesinde belirtilen aydınlatma yükümlülüğünü
-          yerine getirmekte ve böylelikle, 'afetharita.com' aracılığıyla
+          yerine getirmekte ve böylelikle, afetharita.com aracılığıyla
           erişilen (“İnternet Sitesi”) üzerinden gerçekleştirdiğiniz faaliyetler
           özelinde işlemiş olduğumuz kişisel verilerinizin işlenme süreçleri
           hakkında siz ziyaretçilerimizi detaylıca bilgilendirmeyi
@@ -70,7 +70,7 @@ const Politika = () => {
           alenileştirilmiş kişisel verilerin işlenmesi, hukuki sebeplerine
           dayanılarak islenecektir. Verilerin Aktarımı Uygulamamız aracılığıyla
           toplanan kişisel verileri, deprem mağdurlarına yardım ve destek
-          sağlamak amacıyla ilgili devlet kurumları ve STK'larla paylaşabiliriz.
+          sağlamak amacıyla ilgili devlet kurumları ve STKlarla paylaşabiliriz.
           Kişisel verilerin tüm alıcıları, bilgileri bu gizlilik bildirimine ve
           KVKK dahil olmak üzere ilgili veri koruma yasalarına uygun olarak
           kullanmakla yükümlüdür. Deprem mağdurlarına yardım ve destek sağlama
@@ -90,10 +90,10 @@ const Politika = () => {
           iletebilirsiniz. Değişiklikler Uygulamalarımızdaki değişiklikleri
           yansıtmak için bu gizlilik bildirimini zaman zaman güncelleyebiliriz.
           Güncellenmiş bildirimi uygulamamızda yayınlayarak ve bu bildirimin
-          sonundaki "Son Güncelleme Tarihi "ni güncelleyerek her türlü
+          sonundaki Son Güncelleme Tarihi ni güncelleyerek her türlü
           değişikliği size bildireceğiz. İletişim Bilgileri Bu politika veya
           kişisel verilerinizi nasıl işlediğimiz hakkında herhangi bir sorunuz
-          veya endişeniz varsa, lütfen 'legal@afetharitasi.com' adresinden
+          veya endişeniz varsa, lütfen legal@afetharitasi.com adresinden
           bizimle iletişime geçin. Ekibimiz size yardımcı olmaktan ve
           sorularınızı yanıtlamaktan mutluluk duyacaktır. Son Güncelleme Tarihi:
           7 Şubat 2023

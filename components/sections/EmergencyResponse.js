@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import FormTitle from "../UI/Re-Useables/FormTitle";
 
 const EmergencyResponse = () => {
   const YardimAl = [
@@ -117,6 +116,8 @@ const EmergencyResponse = () => {
                 >
                   <span>
                     <Image
+                      priority={true}
+                      loading={"eager"}
                       src={item.src}
                       width={"300"}
                       height={"300"}
@@ -170,6 +171,8 @@ const EmergencyResponse = () => {
                 >
                   <span>
                     <Image
+                      priority={true}
+                      loading={"eager"}
                       src={item.src}
                       width={"300"}
                       height={"300"}
