@@ -300,7 +300,7 @@ const TalepForm = ({ formName, formFullListURL, type }) => {
           <Kvk />
 
           {/* FORM SECTION - 5 || ERRORS */}
-          <div>
+          <div className={'mt-4'}>
             {Object.values(talepFormik.errors).length > 0 && (
               <h1
                 className={

@@ -174,8 +174,8 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
           <Kvk />
 
           {/* FORM SECTION - 5 || ERRORS */}
-          <div>
-            {Object.values(destekFormik.errors).length > 0 && (
+          <div className={'mt-4'}>
+          {Object.values(destekFormik.errors).length > 0 && (
               <h1
                 className={
                   "text-red-500 bg-red-200 border-l-[3px] border-orange-400 text-center text-sm text-semibold py-2 px-1 mb-4 mx-4"
