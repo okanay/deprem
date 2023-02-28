@@ -8,11 +8,11 @@ const Kvk = () => {
   };
 
   return (
-    <div className={"relative"}>
+    <div className={""}>
       {display === true && (
         <div
           className={
-            "text-start absolute h-[41rem] max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto left-0 z-20 -top-[22.5rem] bg-white border border-gray-900/30"
+            "text-start absolute h-[41rem] max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto left-0 bottom-56 z-20 bg-white border-t border-b border-gray-900/30"
           }
         >
           <div
