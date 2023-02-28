@@ -69,7 +69,7 @@ const HamburgerHiddenMenues = ({ hamburger, hamburgerState }) => {
               onClick={() => {
                 hamburgerState();
               }}
-              href={"/"}
+              href={"/giris"}
               className={
                 "px-2 py-2 mr-1 rounded-[2.5px] border border-slate-400/20 bg-slate-50/90"
               }
@@ -80,7 +80,7 @@ const HamburgerHiddenMenues = ({ hamburger, hamburgerState }) => {
               onClick={() => {
                 hamburgerState();
               }}
-              href={"/"}
+              href={"/kayit"}
               className={
                 "px-2 py-2 mr-1 rounded-[2.5px] text-white border border-slate-50/20 bg-blue-500/80"
               }
