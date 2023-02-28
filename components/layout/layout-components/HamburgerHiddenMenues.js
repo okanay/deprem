@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import Image from "next/image";
 
-const HamburgerHiddenMenues = ({ hamburger }) => {
+const HamburgerHiddenMenues = ({ hamburger, hamburgerState }) => {
   const hamburgerMenu = {
     hidden: {
       opacity: 0.8,
@@ -22,7 +22,6 @@ const HamburgerHiddenMenues = ({ hamburger }) => {
   };
 
   return (
-
     <m.div
       variants={hamburgerMenu}
       initial={"hidden"}
@@ -36,13 +35,28 @@ const HamburgerHiddenMenues = ({ hamburger }) => {
           }
         >
           <div className="flex flex-row">
-            <Link href={"/"} className={"px-2  text-gray-600"}>
+            <Link
+              onClick={() => {
+                hamburgerState();
+              }}
+              href={"/politika"}
+              className={"px-2  text-gray-600"}
+            >
               POLİTİKA
             </Link>
-            <Link href={"/"} className={"px-2  text-gray-600"}>
+            <Link
+              onClick={() => {
+                hamburgerState();
+              }}
+              href={"/"}
+              className={"px-2  text-gray-600"}
+            >
               HAKKIMDA
             </Link>
             <Link
+              onClick={() => {
+                hamburgerState();
+              }}
               href={"/#contact-me"}
               className={"px-2 text-gray-600 cursor-pointer"}
             >
@@ -52,6 +66,9 @@ const HamburgerHiddenMenues = ({ hamburger }) => {
 
           <div className="flex flex-row gap-1">
             <Link
+              onClick={() => {
+                hamburgerState();
+              }}
               href={"/"}
               className={
                 "px-2 py-2 mr-1 rounded-[2.5px] border border-slate-400/20 bg-slate-50/90"
@@ -60,6 +77,9 @@ const HamburgerHiddenMenues = ({ hamburger }) => {
               Giriş Yap
             </Link>
             <Link
+              onClick={() => {
+                hamburgerState();
+              }}
               href={"/"}
               className={
                 "px-2 py-2 mr-1 rounded-[2.5px] text-white border border-slate-50/20 bg-blue-500/80"
