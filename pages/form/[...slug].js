@@ -41,7 +41,7 @@ const FormItem = () => {
 
           {/* Isim, Form Adi */}
           <div className={"flex flex-row justify-between items-center mt-6"}>
-            <div className={"relative flex flex-col justify-start items-start"}>
+            <div className={"relative flex flex-col justify-start items-start text-sm phoneLG:text-[1rem]"}>
               <div
                 className={
                   "flex flex-row justify-start items-center gap-2 pt-1"
@@ -58,7 +58,7 @@ const FormItem = () => {
                 />
                 <h1
                   className={
-                    "text-[1.1rem] font-light font-light text-neutral-600"
+                    "font-light font-light text-neutral-600"
                   }
                 >
                   {data.name}
@@ -73,11 +73,7 @@ const FormItem = () => {
               </div>
             </div>
 
-            <p
-              className={
-                "px-1 py-0.5 border-b border-neutral-800 text-[1.1rem] font-serif text-neutral-600"
-              }
-            >
+            <p className={"px-1 py-0.5 border-b border-neutral-800 text-xs phoneLG:text-[1rem] font-serif text-neutral-600"}>
               {data.typeName}
             </p>
           </div>
@@ -179,8 +175,8 @@ const FormItem = () => {
             }}
             className={`py-1 text-sm font-OpenSans duration-300 font-semibold transition ${
               messageState === "Comments"
-                ? "text-blue-400 hover:text-blue-300"
-                : "text-neutral-400 hover:text-neutral-600"
+                ? "text-blue-400"
+                : "text-neutral-400"
             } `}
           >
             Yorum Yap
@@ -192,8 +188,8 @@ const FormItem = () => {
             }}
             className={`py-1 text-sm font-OpenSans duration-300 font-semibold transition ${
               messageState === "Message"
-                ? "text-blue-400 hover:text-blue-300"
-                : "text-neutral-400 hover:text-neutral-600"
+                ? "text-blue-400"
+                : "text-neutral-400"
             }`}
           >
             Mesaj Gönder

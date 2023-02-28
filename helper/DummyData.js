@@ -77,12 +77,12 @@ export const StartDummyDataTalep = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
     email: "kemalerdogan@gmail.com",
     kvk: "true",
-    name: "Mert Aşçı",
+    name: "Okan Ay",
     phone: "535 412 23 91",
     status: 2,
     street: "Samsat",
     time: 1676488386548,
-    state : 1
+    state : 0
   },
 
   {
