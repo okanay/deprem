@@ -106,13 +106,14 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
   };
 
   return (
-    <div className={"flex flex-col text-sm mt-2 mb-4"}>
-      <div className={"flex flex-col justify-between items-start gap-4"}>
-        <div className="flex flex-row justify-start items-start gap-2">
+    <div className={"flex flex-col py-0.5 text-sm mt-2 mb-4"}>
+      <div className={"flex flex-row justify-start items-start gap-4"}>
+          <div className={"flex flex-col gap-4"}>
+          <div className="flex flex-row justify-start items-start gap-2">
           {/* Kalkış Noktası */}
           <div>
             <select
-              className={`text-gray-700 form-select appearance-none focus-visible:border-neutral-800 block w-32 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
+              className={`text-gray-700 form-select appearance-none focus-visible:border-neutral-800 block w-32 phoneLG:w-56 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
               onChange={handleInfo1Change}
               value={selectedInfo1.text}
             >
@@ -132,12 +133,12 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
             Lütfen hangi şehirden kalkış yapabileceğinizi belirtin.
           </p>
         </div>
-        <div className="flex flex-row justify-start items-start gap-2">
+          <div className="flex flex-row justify-start items-start gap-2">
           {/* Varış Noktası */}
           <div>
             <select
               disabled={selectedInfo1.value === ''}
-              className={`text-gray-700 form-select disabled:bg-gray-200/80 appearance-none focus-visible:border-neutral-800 block w-32 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
+              className={`text-gray-700 form-select disabled:bg-gray-200/80 appearance-none focus-visible:border-neutral-800 block w-32 phoneLG:w-56 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
               onChange={handleInfo2Change}
               value={selectedInfo2.value}
             >
@@ -157,12 +158,12 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
             Lütfen hangi şehir için nakliye veya taşıma yapabileceğinizi belirtin.
           </p>
         </div>
-        <div className="flex flex-row justify-start items-start gap-2">
+          <div className="flex flex-row justify-start items-start gap-2">
           {/*Nakliye Tipi*/}
           <div>
             <select
               disabled={selectedInfo2.value === ''}
-              className={`text-gray-700 form-select disabled:bg-gray-200/80 appearance-none focus-visible:border-neutral-800 block w-32 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
+              className={`text-gray-700 form-select disabled:bg-gray-200/80 appearance-none focus-visible:border-neutral-800 block w-32 phoneLG:w-56 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
               onChange={handleInfo3Change}
               value={selectedInfo3.value}
             >
@@ -182,6 +183,7 @@ const NakliyeDestek = ({ destekFormik, destekSchema, setValidationSchema, }) => 
             Lütfen yapabileceğiniz nakliyenin ne olduğu hakkında bilgi verin.
           </p>
 
+        </div>
         </div>
       </div>
     </div>

@@ -94,12 +94,12 @@ const AramaKurtarma = ({ destekFormik, destekSchema, setValidationSchema, }) => 
   return (
     <div className={"flex flex-col py-0.5 text-sm mt-2 mb-4"}>
       <div className={"flex flex-row justify-start items-start gap-4"}>
-        <div className={"flex flex-col gap-4"}>
-
-          {/* Görev */}
+          <div className={"flex flex-col gap-4"}>
+          <div className="flex flex-row justify-start items-start gap-2">
+          {/* Kalkış Noktası */}
           <div>
             <select
-              className={`text-gray-700 form-select appearance-none focus-visible:border-neutral-800 block w-32 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
+              className={`text-gray-700 form-select appearance-none focus-visible:border-neutral-800 block w-32 phoneLG:w-56 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
               onChange={handleInfo1Change}
               value={selectedInfo1.value}
             >
@@ -110,24 +110,7 @@ const AramaKurtarma = ({ destekFormik, destekSchema, setValidationSchema, }) => 
             </select>
           </div>
 
-          {/*Deneyim*/}
-          <div>
-            <select
-              disabled={selectedInfo1.value === ''}
-              className={`text-gray-700 form-select disabled:bg-gray-200/80 appearance-none focus-visible:border-neutral-800 block w-32 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
-              onChange={handleInfo2Change}
-              value={selectedInfo2.value}
-            >
-              <option defaultValue={''}>Deneyim</option>
-              {Info2Data.map(item => { return (
-                <option key={item.key} value={item.value}>{item.value}</option>
-              )})}
-            </select>
-          </div>
-        </div>
-
-        <div className={"flex flex-col gap-4"}>
-
+          {/* Info1 Aciklama*/}
           <p
             className={`text-start text-[0.7rem] ${
               destekFormik.errors.info1 ? "text-red-500" : "text-gray-400"
@@ -135,14 +118,31 @@ const AramaKurtarma = ({ destekFormik, destekSchema, setValidationSchema, }) => 
           >
             Arama kurtarma için eğitim sertifikasına sahip misiniz?
           </p>
+        </div>
+          <div className="flex flex-row justify-start items-start gap-2">
+
+          <select
+            disabled={selectedInfo1.value === ''}
+            className={`text-gray-700 form-select disabled:bg-gray-200/80 appearance-none focus-visible:border-neutral-800 block w-32 phoneLG:w-56 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
+            onChange={handleInfo2Change}
+            value={selectedInfo2.value}
+          >
+            <option defaultValue={''}>Deneyim</option>
+            {Info2Data.map(item => { return (
+              <option key={item.key} value={item.value}>{item.value}</option>
+            )})}
+          </select>
+
+          {/* Info2 Aciklama*/}
           <p
             className={`text-start text-[0.7rem] ${
-              destekFormik.errors.info2 ? "text-red-500" : "text-gray-400"
+              destekFormik.errors.info1 ? "text-red-500" : "text-gray-400"
             } text-start`}
           >
             Daha önce benzer arama kurtarma operasyonlarına katıldınız mı?
           </p>
 
+        </div>
         </div>
       </div>
     </div>

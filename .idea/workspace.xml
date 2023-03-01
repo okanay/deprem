@@ -6,8 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Destek/AramaKurtarma.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/AramaKurtarma.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Destek/KonaklamaDetay.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/KonaklamaDetay.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Destek/NakliyeDestek.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/NakliyeDestek.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Destek/OperasyonDetay.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/OperasyonDetay.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Re-Useables/KVK.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Re-Useables/KVK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Talep/TalepForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Talep/TalepForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/layout-components/HamburgerHiddenMenues.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout-components/HamburgerHiddenMenues.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/ContactMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/ContactMe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/EmergencyResponse.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/sections/TwitterHelperAccounts.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/TwitterHelperAccounts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/destek/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/destek/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/form/[...slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/form/[...slug].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/giris/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/giris/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/kayit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/kayit/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/politika.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/politika.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/talep/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/talep/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +116,7 @@
       <workItem from="1677366202375" duration="5153000" />
       <workItem from="1677435838489" duration="17223000" />
       <workItem from="1677514722215" duration="17547000" />
-      <workItem from="1677688703264" duration="7473000" />
+      <workItem from="1677688703264" duration="12493000" />
     </task>
     <servers />
   </component>
@@ -126,6 +143,12 @@
           <url>file://$PROJECT_DIR$/helper/DummyData.js</url>
           <line>87</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/components/UI/Destek/KonaklamaDetay.jsx</url>
+          <line>13</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

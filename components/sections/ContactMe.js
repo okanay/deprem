@@ -7,7 +7,7 @@ const ContactMe = () => {
   return (
     <div
       id={"contact-me"}
-      className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone tablet:max-w-screen-tablet w-full py-8 mx-auto text-center px-4"}>
+      className={"bg-gray-50 max-w-screen-tablet w-full py-8 mx-auto text-center px-4"}>
 
       <h1 className={"text-[1.4rem] font-semibold text-neutral-700 text-start mb-5"}>
         <span className={"text-slate-600/90 "}>Mesaj</span>{" "}

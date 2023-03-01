@@ -134,7 +134,7 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
     error: destekFormik.errors.details,
   };
 
-  return (<div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone tablet:max-w-screen-tablet w-full w-full py-8 px-4 mx-auto"}>
+  return (<div className={"bg-gray-50 max-w-screen-tablet w-full py-8 px-4 mx-auto"}>
       <div className={"flex flex-col justify-between gap-7"}>
         {/* Dikkat Uyarisi */}
         <RedAlert title={"Lütfen Dikkat!"}>

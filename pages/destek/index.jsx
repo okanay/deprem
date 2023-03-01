@@ -346,7 +346,7 @@ const DestekIndex = () => {
   };
 
   return (
-    <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone tablet:max-w-screen-tablet  w-full m-20 my-8 mx-auto py-8"}>
+    <div className={"bg-gray-50 max-w-screen-tablet w-full w-full m-20 my-8 mx-auto py-8"}>
 
       {/* UYARI - BASLIK  */}
       <div className={"px-4"}>

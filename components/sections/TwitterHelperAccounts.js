@@ -38,7 +38,7 @@ const TwitterHelperAccounts = () => {
   return (
     <div
       className={
-        "max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone tablet:max-w-screen-tablet w-full mx-auto text-center pt-4"
+        "max-w-screen-tablet w-full mx-auto text-center pt-4"
       }
     >
       <div className={"flex flex-row justify-between items-center px-4"}>
@@ -62,13 +62,12 @@ const TwitterHelperAccounts = () => {
 
       {/* GIZLENMIS FULL LISTE */}
       {show && (
-        <div className={"absolute z-20 bg-slate-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG tablet:max-w-screen-tablet phone:max-w-screen-phone w-full mx-auto "}>
+        <div className={"absolute z-20 bg-slate-50 max-w-screen-tablet w-full mx-auto "}>
 
          <div className="flex flex-col justify-start">
 
-          <div className="flex flex-row justify-between w-full items-center pb-10 text-sm bg-white">
-
-            <div className="flex flex-col justify-center items-center gap-10 w-full">
+          <div className="flex flex-row justify-around w-full items-center pb-10 text-xs phoneLG:text-sm bg-white border-b border-gray-400/40">
+            <div className="flex flex-col justify-center items-center gap-10 w-full ">
               <p className={'font-semibold w-full bg-slate-100 py-4'}>KULLANICI ADI</p>
 
               {TwitterAccounts.map((item, index) => {
@@ -79,7 +78,6 @@ const TwitterHelperAccounts = () => {
               })}
 
             </div>
-
             <div className="flex flex-col justify-center items-center gap-10 w-full">
               <p className={'font-semibold w-full bg-slate-100 py-4'}>TAKİPÇİ SAYISI</p>
 

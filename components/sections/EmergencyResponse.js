@@ -79,7 +79,7 @@ const EmergencyResponse = () => {
 
   return (
     <div className={"bg-gray-50/80 pt-5 px-4 pb-8"}>
-      <div className={"flex flex-col gap-12"}>
+      <div className={"flex flex-col gap-12 max-w-screen-tablet w-full"}>
         <div id={"talep"}>
           <div className={"flex flex-row justify-between items-center mb-3"}>
             <h1
