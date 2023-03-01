@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/getVersion.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/getVersion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/giris/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/giris/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/kayit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/kayit/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/TwitterHelperAccounts.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/TwitterHelperAccounts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +98,7 @@
       <workItem from="1677366202375" duration="5153000" />
       <workItem from="1677435838489" duration="17223000" />
       <workItem from="1677514722215" duration="17547000" />
-      <workItem from="1677688703264" duration="4257000" />
+      <workItem from="1677688703264" duration="4453000" />
     </task>
     <servers />
   </component>
