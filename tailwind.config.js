@@ -9,7 +9,7 @@ module.exports = {
     screens: {
       'phoneXS': "375px",
       'phone': "390px",
-      'phoneLG': "430px",
+      'phoneLG': "440px",
       // => @media (min-width: 540px) { ... }
       'tablet': '640px',
       // => @media (min-width: 640px) { ... }

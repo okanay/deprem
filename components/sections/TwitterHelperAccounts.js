@@ -38,7 +38,7 @@ const TwitterHelperAccounts = () => {
   return (
     <div
       className={
-        "max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto text-center pt-4"
+        "max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone tablet:max-w-screen-tablet w-full mx-auto text-center pt-4"
       }
     >
       <div className={"flex flex-row justify-between items-center px-4"}>
@@ -62,56 +62,54 @@ const TwitterHelperAccounts = () => {
 
       {/* GIZLENMIS FULL LISTE */}
       {show && (
-        <div
-          className={
-            "absolute z-20 bg-slate-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto pt-4"
-          }
-        >
-          <div className={"h-full flex flex-col"}>
-            <div className="relative overflow-x-auto shadow-sm sm:rounded-lg">
-              <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 table-auto">
-                <thead className="text-xs text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                  <tr>
-                    <th scope="col" className="px-6 py-3">
-                      KULLANICI ADI
-                    </th>
-                    <th scope="col" className="px-6 py-3">
-                      TAKİPÇİ SAYISI
-                    </th>
-                    <th scope="col" className="px-6 py-3">
-                      BAĞLANTI
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {TwitterAccounts.map((item, index) => {
-                    return (
-                      <tr
-                        key={`${item.key} TL${index}`}
-                        className="h-16 bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                      >
-                        <th
-                          scope="row"
-                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                        >
-                          {item.name}
-                        </th>
-                        <td className="px-4 py-4">{item.follower}</td>
-                        <div className={'w-fit h-16 flex flex-col justify-center text-xs'}>
-                          <Link
-                            href={item.profileUrl}
-                            className="bg-neutral-50 border border-gray-600/20 rounded text-neutral-700 py-2 px-3 transition duration-150 hover:bg-neutral-700 hover:text-gray-50/90"
-                          >
-                            <td>Mesaj Gönder</td>
-                          </Link>
-                        </div>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+        <div className={"absolute z-20 bg-slate-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG tablet:max-w-screen-tablet phone:max-w-screen-phone w-full mx-auto "}>
+
+         <div className="flex flex-col justify-start">
+
+          <div className="flex flex-row justify-between w-full items-center pb-10 text-sm bg-white">
+
+            <div className="flex flex-col justify-center items-center gap-10 w-full">
+              <p className={'font-semibold w-full bg-slate-100 py-4'}>KULLANICI ADI</p>
+
+              {TwitterAccounts.map((item, index) => {
+                return ( <div key={`${item.key} Table${index}`} className="">
+                    {item.name}
+                  </div>
+                );
+              })}
+
+            </div>
+
+            <div className="flex flex-col justify-center items-center gap-10 w-full">
+              <p className={'font-semibold w-full bg-slate-100 py-4'}>TAKİPÇİ SAYISI</p>
+
+              {TwitterAccounts.map((item, index) => {
+                return ( <div key={`${item.key} Table${index}`} className="">
+                    {item.follower}
+                  </div>
+                );
+              })}
+
+            </div>
+            <div className="flex flex-col justify-center items-center gap-10 w-full">
+              <p className={'font-semibold w-full bg-slate-100 py-4'}>BAĞLANTI</p>
+
+              {TwitterAccounts.map((item, index) => {
+                return ( <div key={`${item.key} Table${index}`} className="">
+                    <Link
+                      href={item.profileUrl}
+                      className="px-2 py-3 phoneLG:p-4 bg-blue-400 text-white rounded-lg border border-white"
+                    >
+                      Mesaj Gönder
+                    </Link>
+                  </div>
+                );
+              })}
+
             </div>
           </div>
+
+         </div>
         </div>
       )}
 
@@ -154,3 +152,4 @@ const TwitterHelperAccounts = () => {
 };
 
 export default TwitterHelperAccounts;
+

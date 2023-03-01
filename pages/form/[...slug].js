@@ -36,7 +36,7 @@ const FormItem = () => {
   return (
     <div
       className={
-        "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full"
+        "bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone tablet:max-w-screen-tablet  w-full"
       }
     >
       {/* Uyari / Isim, Form Adi / Info1, Info2, Info3 / Detay / Adres /  Yorum Yap, Mesaj Gönder  / Bir seyler yaz.. = Gonder Butonu*/}

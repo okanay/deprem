@@ -4,7 +4,7 @@ const Politika = () => {
   return (
     <div
       className={
-        "text-start h-[44rem] max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto z-20 bg-gray-50 border-t border-b border-gray-900/30"
+        "text-start h-[44rem] max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone tablet:max-w-screen-tablet w-full w-full mx-auto z-20 bg-gray-50 border-t border-b border-gray-900/30"
       }
     >
       <div

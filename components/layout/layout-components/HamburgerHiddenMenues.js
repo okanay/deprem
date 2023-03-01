@@ -26,7 +26,7 @@ const HamburgerHiddenMenues = ({ hamburger, hamburgerState }) => {
       variants={hamburgerMenu}
       initial={"hidden"}
       animate={hamburger === "hidden" ? "hidden" : "open"}
-      className={`absolute top-[6rem] rounded-md text-center bg-gradient-to-tl from-gray-100 via-slate-50 to-gray-100 border border-gray-200/90 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto h-20`}
+      className={`absolute top-[6rem] rounded-md text-center bg-gradient-to-tl from-gray-100 via-slate-50 to-gray-100 border border-gray-200/90 tablet:max-w-screen-tablet  max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto h-20`}
     >
       <div className="h-full w-full flex justify-center items-center text-[0.9rem] text-gray-800">
         <nav

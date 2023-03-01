@@ -214,7 +214,7 @@ const TalepForm = ({ formName, formFullListURL, type }) => {
   };
 
   return (
-    <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full py-8 px-4 mx-auto"}>
+    <div className={"bg-gray-50 max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone tablet:max-w-screen-tablet  w-full py-8 px-4 mx-auto"}>
       <div className={"flex flex-col justify-between gap-6"}>
         {/* Dikkat Uyarisi */}
         <RedAlert title={"Lütfen Dikkat!"}>

@@ -12,7 +12,7 @@ const Kvk = () => {
       {display === true && (
         <div
           className={
-            "text-start absolute h-[41rem] max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full mx-auto left-0 bottom-44 z-20 bg-white border-t border-b border-gray-900/30"
+            "text-start absolute h-[41rem] max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone tablet:max-w-screen-tablet  w-full mx-auto left-0 bottom-44 z-20 bg-white border-t border-b border-gray-900/30"
           }
         >
           <div

@@ -34,7 +34,7 @@ const LoginIndex = () =>{
   });
 
   return (
-    <div className="max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone w-full h-[30rem] bg-gray-50">
+    <div className="max-w-screen-phoneXS phoneLG:max-w-screen-phoneLG phone:max-w-screen-phone tablet:max-w-screen-tablet w-full h-[30rem] bg-gray-50">
       <div className={"flex flex-col items-center justify-center gap-3 pt-12"}>
         <h1 className="text-3xl font-bold text-center cursor-pointer">
           Kullanıcı Girişi!
