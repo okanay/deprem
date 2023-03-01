@@ -76,7 +76,7 @@ const LoginIndex = () =>{
               type={"submit"}
               className="py-2 px-8 text-xl text-white bg-blue-400 rounded-lg"
             >
-              Kayıt Ol
+              Giriş Yap
             </button>
 
             <p className="text-xs text-neutral-600 mt-2">
