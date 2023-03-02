@@ -121,6 +121,7 @@ const AramaKurtarma = ({ destekFormik, destekSchema, setValidationSchema, }) => 
         </div>
           <div className="flex flex-row justify-start items-start gap-2">
 
+          <div>
           <select
             disabled={selectedInfo1.value === ''}
             className={`text-gray-700 form-select disabled:bg-gray-200/80 appearance-none focus-visible:border-neutral-800 block w-32 phoneLG:w-56 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
@@ -132,8 +133,8 @@ const AramaKurtarma = ({ destekFormik, destekSchema, setValidationSchema, }) => 
               <option key={item.key} value={item.value}>{item.value}</option>
             )})}
           </select>
-
-          {/* Info2 Aciklama*/}
+          </div>
+            {/* Info2 Aciklama*/}
           <p
             className={`text-start text-[0.7rem] ${
               destekFormik.errors.info1 ? "text-red-500" : "text-gray-400"

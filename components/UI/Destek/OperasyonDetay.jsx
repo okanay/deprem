@@ -150,6 +150,8 @@ const OperasyonDetay = ({
             </p>
           </div>
           <div className="flex flex-row justify-start items-start gap-2">
+
+            <div>
             <select
               disabled={selectedInfo1.value === ""}
               className={`text-gray-700 form-select disabled:bg-gray-200/80 appearance-none focus-visible:border-neutral-800 block w-32 phoneLG:w-56 px-3 py-1.5 text-base font-normal bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none`}
@@ -165,6 +167,7 @@ const OperasyonDetay = ({
                 );
               })}
             </select>
+            </div>
 
             {/* Info2 Aciklama*/}
             <p
