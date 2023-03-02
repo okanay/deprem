@@ -8,6 +8,7 @@ import {
   QueryClientProvider,
 } from "react-query";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 // import { Provider } from "react-redux";
 // import store from "../src/app/store";
@@ -17,11 +18,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Script
-        strategy={"afterInteractive"}
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-3FD9YLP5HK"
-      ></Script>
+      <Script strategy={"afterInteractive"} async src="https://www.googletagmanager.com/gtag/js?id=G-3FD9YLP5HK" />
       <Script strategy={"afterInteractive"} id={"google-analytics"}>
         {`
         
@@ -32,10 +29,10 @@ function MyApp({ Component, pageProps }) {
         gtag('config', 'G-3FD9YLP5HK');
         `}
       </Script>
-
       <div className={"scroll-smooth"}>
         <Layout>
           <Component {...pageProps} />
+          <Analytics />
         </Layout>
       </div>
     </QueryClientProvider>

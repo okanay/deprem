@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
+    "@vercel/analytics": "^0.1.11",
     "formik": "^2.2.9",
     "framer-motion": "^9.0.1",
     "framer-motion-carousel": "^2.0.1",
