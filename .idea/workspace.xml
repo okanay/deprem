@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout/layout-components/HamburgerHiddenMenues.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout-components/HamburgerHiddenMenues.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/ContactMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/ContactMe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/DummyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/DummyData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +60,11 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/public/svg" />
       <recent name="$PROJECT_DIR$/helper" />
       <recent name="$PROJECT_DIR$/components/UI/Talep" />
-      <recent name="$PROJECT_DIR$/components/UI/Re-Useables" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -103,7 +99,7 @@
       <workItem from="1677435838489" duration="17223000" />
       <workItem from="1677514722215" duration="17547000" />
       <workItem from="1677688703264" duration="12684000" />
-      <workItem from="1677728205310" duration="863000" />
+      <workItem from="1677728205310" duration="1753000" />
     </task>
     <servers />
   </component>
