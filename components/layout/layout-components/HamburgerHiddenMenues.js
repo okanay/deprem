@@ -29,11 +29,7 @@ const HamburgerHiddenMenues = ({ hamburger, hamburgerState }) => {
       className={`absolute top-[6rem] max-w-screen-tablet w-full rounded-md text-center bg-gradient-to-tl from-gray-100 via-slate-50 to-gray-100 border border-gray-200/90 mx-auto h-20`}
     >
       <div className="h-full w-full flex justify-center items-center text-[0.9rem] text-gray-800">
-        <nav
-          className={
-            "flex flex-row w-full items-center gap-5 justify-center font-semibold text-[0.6rem] phone:text-[0.71rem] phoneLG:text-[0.8rem]"
-          }
-        >
+        <nav className={"flex flex-row w-full items-center gap-5 justify-between font-semibold text-[0.6rem] phone:text-[0.71rem] phoneLG:text-[0.8rem] phoneLG:px-4 px-2"}>
           <div className="flex flex-row">
             <Link
               onClick={() => {
@@ -63,8 +59,7 @@ const HamburgerHiddenMenues = ({ hamburger, hamburgerState }) => {
               İLETİŞİM
             </Link>
           </div>
-
-          <div className="flex flex-row gap-1">
+          <div className="flex flex-row gap-1 tablet:gap-2">
             <Link
               onClick={() => {
                 hamburgerState();

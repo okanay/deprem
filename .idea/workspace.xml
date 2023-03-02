@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ca3a8b60-b37d-4cc6-87e3-ed1b20343bce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Destek/AramaKurtarma.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/AramaKurtarma.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UI/Destek/OperasyonDetay.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/OperasyonDetay.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/Destek/DestekForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/layout-components/HamburgerHiddenMenues.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout-components/HamburgerHiddenMenues.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/ContactMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/ContactMe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/DummyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/helper/DummyData.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +103,7 @@
       <workItem from="1677435838489" duration="17223000" />
       <workItem from="1677514722215" duration="17547000" />
       <workItem from="1677688703264" duration="12684000" />
-      <workItem from="1677728205310" duration="102000" />
+      <workItem from="1677728205310" duration="863000" />
     </task>
     <servers />
   </component>

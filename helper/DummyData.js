@@ -13,7 +13,7 @@ export const StartDummyDataTalep = [
     phone: "532 534 52 18",
     status: 0,
     street: "Nizip",
-    time: 1676585386548,
+    time: 1677718423817,
     state : 0
   },
   {
@@ -30,7 +30,7 @@ export const StartDummyDataTalep = [
     phone: "544 154 92 21",
     status: 2,
     street: "Ceyhan",
-    time: 1676479386548,
+    time: 1677726423817,
     state : 1
   },
   {
@@ -47,7 +47,7 @@ export const StartDummyDataTalep = [
     phone: "535 415 2491",
     status: 1,
     street: "Onikişubat",
-    time: 1676481386548,
+    time: 1677726423817,
     state : 2
   },
   {
@@ -64,7 +64,7 @@ export const StartDummyDataTalep = [
     phone: "535 416 24 11",
     status: 1,
     street: "Polateli",
-    time: 1676487386548,
+    time: 1677726423817,
     state : 0
   },
   {
@@ -81,7 +81,7 @@ export const StartDummyDataTalep = [
     phone: "535 412 23 91",
     status: 2,
     street: "Samsat",
-    time: 1676488386548,
+    time: 1677723423817,
     state : 0
   },
 
@@ -100,7 +100,7 @@ export const StartDummyDataTalep = [
     phone: "532 534 52 18",
     status: 0,
     street: "Nizip",
-    time: 1676585386548,
+    time: 1677729423817,
     state : 0
   },
   {
@@ -114,11 +114,11 @@ export const StartDummyDataTalep = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
     email: "ahmetkaya@gmail.com",
     kvk: "true",
-    name: "Ahmet Kaya",
+    name: "Ahmet Naya",
     phone: "544 154 92 21",
     status: 2,
     street: "Ceyhan",
-    time: 1676479386548,
+    time: 1677726623817,
     state : 1
   },
   {
@@ -135,7 +135,7 @@ export const StartDummyDataTalep = [
     phone: "535 415 2491",
     status: 1,
     street: "Onikişubat",
-    time: 1676481386548,
+    time: 1677726423817,
     state : 2
   },
   {
@@ -152,7 +152,7 @@ export const StartDummyDataTalep = [
     phone: "535 416 24 11",
     status: 1,
     street: "Polateli",
-    time: 1676487386548,
+    time: 1677724383817,
     state : 0
   },
   {
@@ -170,7 +170,7 @@ export const StartDummyDataTalep = [
     phone: "535 412 23 91",
     status: 2,
     street: "Samsat",
-    time: 1676488386548,
+    time: 1677726423817,
     state : 1
   },
 
@@ -187,7 +187,7 @@ export const StartDummyDataDestek = [
     status: 0,
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    time: 1676585386548,
+    time: 1677726213817,
     kvk: "true",
     info1: "4 Kişi",
     info2: "Süresiz",
@@ -204,7 +204,7 @@ export const StartDummyDataDestek = [
     status: 0,
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    time: 1676995386548,
+    time: 1677723423817,
     kvk: "true",
     info1: "Deneyimsiz",
     info2: "Sertifikasız",
@@ -221,7 +221,7 @@ export const StartDummyDataDestek = [
     status: 0,
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    time: 1676785386548,
+    time: 1677725423817,
     kvk: "true",
     info1: "İngilizce",
     info2: "Fransızca",
@@ -238,7 +238,7 @@ export const StartDummyDataDestek = [
     status: 0,
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    time: 1676785386548,
+    time: 1677726223817,
     kvk: "true",
     info1: "Çadır Kurabilirim",
     info2: "Profesyönel",
@@ -255,7 +255,7 @@ export const StartDummyDataDestek = [
     status: 0,
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    time: 1676785386548,
+    time: 1677726423817,
     kvk: "true",
     info1: "Depremzede İnsan",
     info2: "Edirne",
@@ -273,7 +273,7 @@ export const StartDummyDataDestek = [
     status: 0,
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    time: 1676585386548,
+    time: 1677725823817,
     kvk: "true",
     info1: "4 Kişi",
     info2: "Süresiz",
@@ -290,7 +290,7 @@ export const StartDummyDataDestek = [
     status: 0,
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    time: 1676995386548,
+    time: 1677725423817,
     kvk: "true",
     info1: "Deneyimsiz",
     info2: "Sertifikasız",
@@ -307,7 +307,7 @@ export const StartDummyDataDestek = [
     status: 0,
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    time: 1676785386548,
+    time: 1677726323817,
     kvk: "true",
     info1: "İngilizce",
     info2: "Fransızca",
@@ -324,7 +324,7 @@ export const StartDummyDataDestek = [
     status: 0,
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    time: 1676785386548,
+    time: 1677726723817,
     kvk: "true",
     info1: "Çadır Kurabilirim",
     info2: "Profesyönel",
@@ -341,7 +341,7 @@ export const StartDummyDataDestek = [
     status: 0,
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae, consectetur ea earum explicabo incidunt, molestiae natus necessitatibus perferendis perspiciatis quasi quis repellat similique, tempora vel. Consequuntur ducimus nam quam!",
-    time: 1676785386548,
+    time: 1677726223817,
     kvk: "true",
     info1: "Depremzede İnsan",
     info2: "Edirne",

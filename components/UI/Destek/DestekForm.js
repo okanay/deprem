@@ -134,6 +134,8 @@ const DestekForm = ({ formName, formFullListURL, type }) => {
     error: destekFormik.errors.details,
   };
 
+  console.log(new Date().getTime());
+
   return (<div className={"bg-gray-50 max-w-screen-tablet w-full py-8 px-4 mx-auto"}>
       <div className={"flex flex-col justify-between gap-7"}>
         {/* Dikkat Uyarisi */}

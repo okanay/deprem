@@ -7,7 +7,7 @@ const Layout = (props) => {
 
   return (
     <div
-      className={"relative bg-transparent max-w-screen-tablet w-full mx-auto border border-gray-900/30 font-OpenSans"}>
+      className={"relative bg-transparent max-w-screen-tablet w-full mx-auto border-l border-r border-gray-400/40 font-OpenSans"}>
       <Head>
         <title>Destek Ol</title>
       </Head>
